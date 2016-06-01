@@ -1,0 +1,13 @@
+name = search api feature
+core = 7.x
+package = Features
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[search_api_index][] = sitewide_index
+features[search_api_server][] = database_server
+features[views_view][] = search_view
+features_exclude[dependencies][ctools] = ctools

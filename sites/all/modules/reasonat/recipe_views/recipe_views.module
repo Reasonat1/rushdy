@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the recipe views feature.
+ */
+
+include_once 'recipe_views.features.inc';

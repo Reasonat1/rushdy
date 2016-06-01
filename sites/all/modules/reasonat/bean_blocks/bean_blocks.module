@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bean blocks feature.
+ */
+
+include_once 'bean_blocks.features.inc';
