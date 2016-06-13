@@ -1,0 +1,4 @@
+name = CKEditor Youtube
+description = Integrates the Youtube plugin for CKEditor
+core = 7.x
+dependencies[] = wysiwyg

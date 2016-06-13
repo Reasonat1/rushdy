@@ -1,0 +1,25 @@
+/**
+ * Implements hook_wysiwyg_plugin().
+ */
+function ckeditor_youtube_wysiwyg_plugin($editor, $version) {
+  $plugins = array();
+  if ($editor == 'ckeditor' && version_compare($version, '4.0', '>=')) {
+    $plugins['youtube'] = array(
+      'url' => 'http://ckeditor.com/addon/youtube',
+      'path' => wysiwyg_get_path('ckeditor_plugins') . '/youtube',
+      'buttons' => array(
+        'Youtube' => t('Youtube'),
+       ),
+       'options' => array(
+         'youtube_width' => '640',
+         'youtube_height' => '480',
+         'youtube_related' => TRUE,
+         'youtube_older' => FALSE,
+         'youtube_privacy' => FALSE,
+       ),
+       'load' => TRUE,
+       'internal' => FALSE,
+    );
+  }
+  return $plugins;
+}
