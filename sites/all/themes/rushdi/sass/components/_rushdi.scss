@@ -1,0 +1,93 @@
+/* @font-face {
+    font-family: 'SPBO';
+    src: url('../fonts/SourceSansPro-Bold.eot');
+    src: url('../fonts/SourceSansPro-Bold.eot?iefix') format('eot'),
+         url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+         url('../fonts/SourceSansPro-Bold.svg#webfontXqjqfm2I') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }*/ 
+
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == l {
+    @media  (min-width: 768px) and (max-width: 1095px){ @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+}
+
+/******   colors  *********/
+
+ $default: #282725;
+ $blue: #00b7e1;
+
+/********  mixin *********/
+
+@mixin width(){
+  width: 1360px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+/******** general  *******/
+
+body{
+	font-family: OpenSans;
+	color: $default;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#main{
+	@include width();
+}
+
+#page{
+	width: 100%;
+	max-width: 100%;
+}
+
+.block{
+	margin-bottom: 0;
+}
+/*******  header  ***********/
+
+#header{
+	border-top: 24px solid $blue;
+	border-bottom: 2px solid #ededed;
+	@include width();
+	padding-top: 20px;
+	#logo{
+		float: left;
+	}
+	.region-header{
+		float: right;
+		clear: right;
+		padding-top: 15px;
+		padding-bottom:  5px;
+		#block-bean-social-icons-header{
+			float: right;
+			margin-left: 60px;
+			height: 26px;
+			.field-name-field-social-icons > .field-items > .field-item{
+				display: inline-block;
+				margin-left: 14px;
+			}
+		}
+		#block-megamenu-main-menu{
+			float: right;
+			.megamenu-skin-minimal {
+			    background-color: transparent;
+			}
+		}
+	}
+}
