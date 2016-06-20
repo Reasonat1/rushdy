@@ -1703,7 +1703,7 @@ tr.selected td {
 /* line 804, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1466337963');
+  background-image: url('../images/progress.gif?1466080449');
 }
 
 /**
@@ -1910,23 +1910,55 @@ body {
 #footer #block-block-2 li:last-child {
   border: none;
 }
-/* line 125, ../sass/components/_rushdi.scss */
-#footer #block-menu-menu-footer-menu ul {
-  height: 90px;
+/* line 124, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu {
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
 }
-/* line 129, ../sass/components/_rushdi.scss */
-#footer #block-menu-menu-footer-menu .menu__item.is-leaf, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed {
-  list-style: none;
-  width: 33.333%;
-  float: left;
-  display: inline;
+/* line 128, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu ul {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 }
 /* line 134, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu .menu__item.is-leaf, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed {
+  list-style: none;
+}
+/* line 136, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu .menu__item.is-leaf a, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed a {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
+}
+/* line 146, ../sass/components/_rushdi.scss */
+#footer #block-block-7 {
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 146, ../sass/components/_rushdi.scss */
+  #footer #block-block-7 {
+    width: 100%;
+  }
+}
+/* line 153, ../sass/components/_rushdi.scss */
+#footer #block-block-3 {
+  background-color: #d1c5ab;
+  margin-right: 0px;
+  float: right;
+}
+/* line 157, ../sass/components/_rushdi.scss */
+#footer #block-block-3 a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+/* line 165, ../sass/components/_rushdi.scss */
+#footer #block-bean-social-icons-header--2 {
+  clear: both;
 }
 
 /* SMACSS theme rules */
