@@ -1703,7 +1703,7 @@ tr.selected td {
 /* line 804, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1466080449');
+  background-image: url('../images/progress.gif?1466337963');
 }
 
 /**
@@ -1946,17 +1946,18 @@ body {
 /* line 153, ../sass/components/_rushdi.scss */
 #footer #block-block-3 {
   background-color: #d1c5ab;
-  margin-right: 0px;
+  margin-right: -3%;
+  height: 72px;
   float: right;
 }
-/* line 157, ../sass/components/_rushdi.scss */
+/* line 158, ../sass/components/_rushdi.scss */
 #footer #block-block-3 a {
   text-decoration: none;
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
 }
-/* line 165, ../sass/components/_rushdi.scss */
+/* line 166, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 {
   clear: both;
 }
