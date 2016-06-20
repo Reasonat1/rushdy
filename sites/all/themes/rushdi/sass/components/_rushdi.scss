@@ -27,6 +27,8 @@
 
  $default: #282725;
  $blue: #00b7e1;
+ $background_footer: #231f20;
+ $color_footer: #ffffff;
 
 /********  mixin *********/
 
@@ -87,10 +89,17 @@ body{
 			float: right;
 			.megamenu-skin-minimal {
 			    background-color: transparent;
+				text-transform:uppercase;
+				
+				a {color:black;
+					text-decoration:none;
+				}
+				
 			}
 		}
 	}
 }
+
 /*** Removing paddings in content ***/
 #content {
 	padding-left:0;
@@ -144,3 +153,47 @@ body{
 	}
 }
 	
+#footer {
+	@include width();
+	background-color:$background_footer;
+	color:$color_footer;
+	#block-block-2 {	
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			}
+
+				li { 
+				display: inline-block;
+				text-transform:uppercase;
+				border-right: 1px solid $color_footer;
+				padding-right:5px;
+				font-size: 14px;
+				line-height: 14px;
+				}
+				li:last-child {border:none;}
+				}
+	#block-menu-menu-footer-menu {
+		ul {
+		height: 90px;
+		
+		}
+		
+	.menu__item.is-leaf, .menu__item.is-collapsed {
+			list-style: none;
+			width:33.333%;
+			float:left;
+			display:inline;
+				a {
+				text-transform:uppercase;
+				color:$color_footer;
+				text-decoration:none;
+				font-size: 14px;
+				}
+			}
+	
+	}
+
+	
+}

@@ -1804,7 +1804,7 @@ tr.selected td {
 /******   colors  *********/
 /********  mixin *********/
 /******** general  *******/
-/* line 43, ../sass/components/_rushdi.scss */
+/* line 45, ../sass/components/_rushdi.scss */
 body {
   font-family: OpenSans;
   color: #282725;
@@ -1812,7 +1812,7 @@ body {
   line-height: 24px;
 }
 
-/* line 50, ../sass/components/_rushdi.scss */
+/* line 52, ../sass/components/_rushdi.scss */
 #main {
   width: 1360px;
   max-width: 100%;
@@ -1821,19 +1821,19 @@ body {
   box-sizing: border-box;
 }
 
-/* line 54, ../sass/components/_rushdi.scss */
+/* line 56, ../sass/components/_rushdi.scss */
 #page {
   width: 100%;
   max-width: 100%;
 }
 
-/* line 59, ../sass/components/_rushdi.scss */
+/* line 61, ../sass/components/_rushdi.scss */
 .block {
   margin-bottom: 0;
 }
 
 /*******  header  ***********/
-/* line 64, ../sass/components/_rushdi.scss */
+/* line 66, ../sass/components/_rushdi.scss */
 #header {
   border-top: 24px solid #00b7e1;
   border-bottom: 2px solid #ededed;
@@ -1844,68 +1844,74 @@ body {
   box-sizing: border-box;
   padding-top: 20px;
 }
-/* line 69, ../sass/components/_rushdi.scss */
+/* line 71, ../sass/components/_rushdi.scss */
 #header #logo {
   float: left;
 }
-/* line 72, ../sass/components/_rushdi.scss */
+/* line 74, ../sass/components/_rushdi.scss */
 #header .region-header {
   float: right;
   clear: right;
   padding-top: 15px;
   padding-bottom: 5px;
 }
-/* line 77, ../sass/components/_rushdi.scss */
+/* line 79, ../sass/components/_rushdi.scss */
 #header .region-header #block-bean-social-icons-header {
   float: right;
   margin-left: 60px;
   height: 26px;
 }
-/* line 81, ../sass/components/_rushdi.scss */
+/* line 83, ../sass/components/_rushdi.scss */
 #header .region-header #block-bean-social-icons-header .field-name-field-social-icons > .field-items > .field-item {
   display: inline-block;
   margin-left: 14px;
 }
-/* line 86, ../sass/components/_rushdi.scss */
+/* line 88, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu {
   float: right;
 }
-/* line 88, ../sass/components/_rushdi.scss */
+/* line 90, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal {
   background-color: transparent;
+  text-transform: uppercase;
+}
+/* line 94, ../sass/components/_rushdi.scss */
+#header .region-header #block-megamenu-main-menu .megamenu-skin-minimal a {
+  color: black;
+  text-decoration: none;
 }
 
 /*** Removing paddings in content ***/
-/* line 95, ../sass/components/_rushdi.scss */
+/* line 104, ../sass/components/_rushdi.scss */
 #content {
   padding-left: 0;
   padding-right: 0;
 }
 
 /*** Highlighted homepage banner ***/
-/* line 101, ../sass/components/_rushdi.scss */
+/* line 110, ../sass/components/_rushdi.scss */
 .region-highlighted {
   position: relative;
   border-bottom: 1px solid #333;
   padding: 0 3%;
   margin: 0 -4.66%;
 }
-/* line 106, ../sass/components/_rushdi.scss */
+/* line 115, ../sass/components/_rushdi.scss */
 .region-highlighted .field-type-image {
   height: 430px;
   width: 65%;
 }
-/* line 109, ../sass/components/_rushdi.scss */
+/* line 118, ../sass/components/_rushdi.scss */
 .region-highlighted .field-type-image img {
   position: absolute;
   z-index: -1;
 }
-/* line 114, ../sass/components/_rushdi.scss */
+/* line 123, ../sass/components/_rushdi.scss */
 .region-highlighted .field:not(.field-type-image) {
   position: absolute;
   left: 65%;
 }
-/* line 118, ../sass/components/_rushdi.scss */
+/* line 127, ../sass/components/_rushdi.scss */
 .region-highlighted .field-name-field-hp-slogan {
   color: #00b7e1;
   font-size: 24px;
@@ -1913,20 +1919,20 @@ body {
   width: 282px;
   margin-top: 230px;
 }
-/* line 125, ../sass/components/_rushdi.scss */
+/* line 134, ../sass/components/_rushdi.scss */
 .region-highlighted .field-name-field-hp-link-1 a {
   color: #97d4da;
   font-size: 16px;
   line-height: 24px;
 }
-/* line 130, ../sass/components/_rushdi.scss */
+/* line 139, ../sass/components/_rushdi.scss */
 .region-highlighted .field-name-field-hp-link-2 a {
   color: #97d4da;
   font-size: 16px;
   line-height: 24px;
   margin-left: 150px;
 }
-/* line 136, ../sass/components/_rushdi.scss */
+/* line 145, ../sass/components/_rushdi.scss */
 .region-highlighted .block-title {
   position: absolute;
   left: 65%;
@@ -1935,6 +1941,54 @@ body {
   font-size: 56px;
   line-height: 48px;
   margin-top: 85px;
+}
+
+/* line 156, ../sass/components/_rushdi.scss */
+#footer {
+  width: 1360px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+  background-color: #231f20;
+  color: #ffffff;
+}
+/* line 161, ../sass/components/_rushdi.scss */
+#footer #block-block-2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 167, ../sass/components/_rushdi.scss */
+#footer #block-block-2 li {
+  display: inline-block;
+  text-transform: uppercase;
+  border-right: 1px solid #ffffff;
+  padding-right: 5px;
+  font-size: 14px;
+  line-height: 14px;
+}
+/* line 175, ../sass/components/_rushdi.scss */
+#footer #block-block-2 li:last-child {
+  border: none;
+}
+/* line 178, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu ul {
+  height: 90px;
+}
+/* line 183, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu .menu__item.is-leaf, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed {
+  list-style: none;
+  width: 33.333%;
+  float: left;
+  display: inline;
+}
+/* line 188, ../sass/components/_rushdi.scss */
+#footer #block-menu-menu-footer-menu .menu__item.is-leaf a, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* SMACSS theme rules */
