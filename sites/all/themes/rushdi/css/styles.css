@@ -1703,7 +1703,7 @@ tr.selected td {
 /* line 804, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1466080449');
+  background-image: url('../images/progress.gif?1466337963');
 }
 
 /**
@@ -1881,69 +1881,7 @@ body {
   text-decoration: none;
 }
 
-/*** Removing paddings in content ***/
-/* line 104, ../sass/components/_rushdi.scss */
-#content {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/*** Highlighted homepage banner ***/
-/* line 110, ../sass/components/_rushdi.scss */
-.region-highlighted {
-  position: relative;
-  border-bottom: 1px solid #333;
-  padding: 0 3%;
-  margin: 0 -4.66%;
-}
-/* line 115, ../sass/components/_rushdi.scss */
-.region-highlighted .field-type-image {
-  height: 430px;
-  width: 65%;
-}
-/* line 118, ../sass/components/_rushdi.scss */
-.region-highlighted .field-type-image img {
-  position: absolute;
-  z-index: -1;
-}
-/* line 123, ../sass/components/_rushdi.scss */
-.region-highlighted .field:not(.field-type-image) {
-  position: absolute;
-  left: 65%;
-}
-/* line 127, ../sass/components/_rushdi.scss */
-.region-highlighted .field-name-field-hp-slogan {
-  color: #00b7e1;
-  font-size: 24px;
-  line-height: 32px;
-  width: 282px;
-  margin-top: 230px;
-}
-/* line 134, ../sass/components/_rushdi.scss */
-.region-highlighted .field-name-field-hp-link-1 a {
-  color: #97d4da;
-  font-size: 16px;
-  line-height: 24px;
-}
-/* line 139, ../sass/components/_rushdi.scss */
-.region-highlighted .field-name-field-hp-link-2 a {
-  color: #97d4da;
-  font-size: 16px;
-  line-height: 24px;
-  margin-left: 150px;
-}
-/* line 145, ../sass/components/_rushdi.scss */
-.region-highlighted .block-title {
-  position: absolute;
-  left: 65%;
-  width: 168px;
-  color: #000000;
-  font-size: 56px;
-  line-height: 48px;
-  margin-top: 85px;
-}
-
-/* line 156, ../sass/components/_rushdi.scss */
+/* line 103, ../sass/components/_rushdi.scss */
 #footer {
   width: 1360px;
   max-width: 100%;
@@ -1953,13 +1891,13 @@ body {
   background-color: #231f20;
   color: #ffffff;
 }
-/* line 161, ../sass/components/_rushdi.scss */
+/* line 108, ../sass/components/_rushdi.scss */
 #footer #block-block-2 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 167, ../sass/components/_rushdi.scss */
+/* line 114, ../sass/components/_rushdi.scss */
 #footer #block-block-2 li {
   display: inline-block;
   text-transform: uppercase;
@@ -1968,22 +1906,22 @@ body {
   font-size: 14px;
   line-height: 14px;
 }
-/* line 175, ../sass/components/_rushdi.scss */
+/* line 122, ../sass/components/_rushdi.scss */
 #footer #block-block-2 li:last-child {
   border: none;
 }
-/* line 178, ../sass/components/_rushdi.scss */
+/* line 125, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu ul {
   height: 90px;
 }
-/* line 183, ../sass/components/_rushdi.scss */
+/* line 129, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu .menu__item.is-leaf, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed {
   list-style: none;
   width: 33.333%;
   float: left;
   display: inline;
 }
-/* line 188, ../sass/components/_rushdi.scss */
+/* line 134, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu .menu__item.is-leaf a, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed a {
   text-transform: uppercase;
   color: #ffffff;
