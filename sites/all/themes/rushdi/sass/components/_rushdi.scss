@@ -122,17 +122,16 @@ body{
 				li:last-child {border:none;}
 				}
 	#block-menu-menu-footer-menu {
-		height:100%;
-		width:100%;
-		max-width:800px;
 		ul {
-		columns: 3;
-		-webkit-columns: 3;
-		-moz-columns: 3;
+		height: 90px;
+		
 		}
 		
 	.menu__item.is-leaf, .menu__item.is-collapsed {
 			list-style: none;
+			width:33.333%;
+			float:left;
+			display:inline;
 				a {
 				text-transform:uppercase;
 				color:$color_footer;
@@ -141,26 +140,6 @@ body{
 				}
 			}
 	
-	}
-	
-	#block-block-7 {
-		float: left;
-		@include res(s-m){
-			width: 100%;
-		}
-	}
-	
-	#block-block-3 {
-
-		float:right;
-		a {
-		font-size: 24px;
-		font-weight: 700;
-		}
-	}
-	
-	#block-bean-social-icons-header--2 {
-		clear:both;
 	}
 
 	
