@@ -91,3 +91,56 @@ body{
 		}
 	}
 }
+/*** Removing paddings in content ***/
+#content {
+	padding-left:0;
+	padding-right:0;
+}
+
+/*** Highlighted homepage banner ***/
+.region-highlighted{
+	position:relative;
+	border-bottom:1px solid #333;
+	padding:0 3%;
+	margin:0 -4.66%;
+	.field-type-image{
+		height:430px;
+		width:65%;
+		img{
+			position:absolute;
+			z-index:-1;
+		}
+	}
+	.field:not(.field-type-image){
+	position:absolute;
+	left:65%;
+	}
+	.field-name-field-hp-slogan{
+	color:  #00b7e1;
+	font-size: 24px;
+	line-height: 32px;
+	width:282px;
+	margin-top:230px;
+	}
+	.field-name-field-hp-link-1 a{
+	color:  #97d4da;
+	font-size: 16px;
+	line-height: 24px;
+	}
+	.field-name-field-hp-link-2 a{
+	color:  #97d4da;
+	font-size: 16px;
+	line-height: 24px;
+	margin-left:150px;
+	}
+	.block-title{
+		position:absolute;
+		left:65%;
+		width:168px;
+		color:  #000000;
+		font-size: 56px;
+		line-height: 48px;
+		margin-top:85px;
+	}
+}
+	
