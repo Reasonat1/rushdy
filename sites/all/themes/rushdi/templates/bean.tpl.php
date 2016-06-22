@@ -32,7 +32,7 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php
       print render($content);
-      dpm($entity);
+      dpm($variables);
     ?>
   </div>
   <div>
