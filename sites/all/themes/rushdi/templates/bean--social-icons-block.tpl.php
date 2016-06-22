@@ -30,6 +30,7 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="hp-bean-title">
-      <?php print $bean_title; ?>
+      <?php print $title; ?>
   </div>
+  dpm($content);
 </div>
