@@ -34,7 +34,7 @@
       print render($content);
     ?>
   </div>
-  <div>
-  	<p>test more</p>
+  <div class="hp-bean-title">
+      <?php print $bean_title; ?>
   </div>
 </div>
