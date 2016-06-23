@@ -46,7 +46,7 @@
      </div>
      <div class="recipe-container-left-related-product-area">
       <?php
-        $my_block = module_invoke('views', 'block_view', 'block-views-product-display-view-block-1');
+        $my_block = module_invoke('views', 'block_view', 'block-views-product-display-view-block_1');
         print render($my_block['content']); 
       ?>
      </div>
