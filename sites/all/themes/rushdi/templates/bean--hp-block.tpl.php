@@ -28,9 +28,28 @@
  */
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <div class="hp-bean-title">
-      <?php print $title; ?>
+  <div id="hp-bean-container">
+	<div id="hp-bean-container-image">
+		<?php print render($content['field_hp_image_main']); ?>
+	</div>
+	<div id="hp-bean-container-text">
+		<div id="top-text">
+			<div class="hp-bean-title">
+			  <?php print $title; ?>
+			</div>
+			<div class="hp-bean-slogan">
+			  <?php print render($content['field_hp_slogan']); ?>
+			</div>
+		</div>
+		<div id="bottom-text">
+			<div class="hp-bean-link1">
+			  <?php print render($content['field_hp_link_1']); ?>
+			</div>
+			<div class="hp-bean-link2">
+			  <?php print render($content['field_hp_link_2']); ?>
+			</div>
+		</div>
+	</div>
   </div>
-  dpm($content);
+  
 </div>
