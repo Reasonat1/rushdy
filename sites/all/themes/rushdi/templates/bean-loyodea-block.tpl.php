@@ -27,7 +27,6 @@
  * @see template_process()
  */
 ?>
-dfdf
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div id="hp-bean-container">
 		<div class="bean-image">

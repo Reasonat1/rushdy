@@ -32,7 +32,6 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php
       print render($content);
-      dpm($variables);
     ?>
   </div>
 </div>
