@@ -1,4 +1,3 @@
-dfd
 <?php
 /**
  * @file
