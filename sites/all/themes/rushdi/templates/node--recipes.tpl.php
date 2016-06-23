@@ -11,12 +11,7 @@
 ​
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
-      <?php print render($title_prefix); ?>
-      <?php if (!$page && $title): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-​
+
       <?php if ($display_submitted): ?>
         <p class="submitted">
           <?php print $user_picture; ?>
@@ -35,7 +30,6 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
-​
   <div id="recipe-container">
    <div id="recipe-container-left">
      <div class="recipe-container-left-main-recipe-image">
@@ -52,8 +46,8 @@
      </div>
    </div>
    <div id="recipe-container-right">
-     <div class="recipe-container-right-node-tiltle">
-      <?php print render($title_prefix); ?>
+     <div class="recipe-container-right-node-title">
+           <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
       <?php endif; ?>
