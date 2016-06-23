@@ -1,4 +1,3 @@
-dfdfdf
 <?php
 /**
  * @file
@@ -37,6 +36,16 @@ dfdfdf
     hide($content['links']);
     print render($content);
   ?>
+
+  <div id="recipe-container">
+    <div id="recipe-container-left">
+      
+    </div>
+    <div id="recipe-container-right">
+      
+    </div>
+    
+  </div>
 
   <?php print render($content['links']); ?>
 
