@@ -3,7 +3,10 @@
 function rushdi_process_page(&$variables) {
   $menu_item = menu_get_item();
   if ($menu_item['path'] == 'node/%') {
-    $variables['title'] = '';
+    $node = menu_get_object('node');
+    if ($node->type == 'recipes') {
+      $variables['title'] = '';
+    }
   }
 }
 
