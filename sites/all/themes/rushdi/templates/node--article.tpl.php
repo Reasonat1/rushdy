@@ -49,6 +49,9 @@
       <?php endif; ?>
       <?php print render($title_suffix); ?>
      </div>
+    <div class="article-container-left-image_mobile">
+      <?php print render($content['field_article_image']); ?>
+     </div>
      <div class="article-container-right-body">
       <?php print render($content['body']); ?>
      </div>
