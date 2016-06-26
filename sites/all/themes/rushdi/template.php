@@ -23,7 +23,10 @@ function rushdi_preprocess_node(&$variables) {
     $term_ref = field_get_items('node', $node, $field_name);
     if ($term_ref) {
       $name = $term_ref[0]['taxonomy_term']->name;
-      $variables['classes_array'][] = drupal_html_class($name);
+      $variables['resipe_color_class'] = drupal_html_class($name);
+    }
+    else {
+      $variables['resipe_color_class'] = '';
     }
   }
 }
