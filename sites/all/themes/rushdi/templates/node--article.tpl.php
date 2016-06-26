@@ -42,13 +42,6 @@
      </div>
    </div>
    <div id="article-container-right">
-     <div class="article-container-right-node-title">
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-     </div>
      <div class="article-container-right-body">
       <?php print render($content['body']); ?>
      </div>
