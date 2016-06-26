@@ -21,8 +21,10 @@ function rushdi_preprocess_node(&$variables) {
   if (isset($fields[$node->type])) {
     $field_name = $fields[$node->type];
     $term_ref = field_get_items('node', $node, $field_name);
-    $name = $term_ref[0]['taxonomy_term']->name;
-    $variables['classes_array'][] = drupal_html_class('node-recipe-type-' . $name);
+    if ($term_ref) {
+      $name = $term_ref[0]['taxonomy_term']->name;
+      $variables['classes_array'][] = drupal_html_class($name);
+    }
   }
 }
 
