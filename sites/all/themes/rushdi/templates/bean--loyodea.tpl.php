@@ -26,7 +26,6 @@
  * @see template_preprocess_entity()
  * @see template_process()
  */
- dpm($variables);
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div id="hp-bean-container">
