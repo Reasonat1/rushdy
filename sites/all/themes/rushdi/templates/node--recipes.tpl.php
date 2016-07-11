@@ -65,6 +65,12 @@
         <?php endforeach; ?>
        </div>
      <?php endif; ?>
+	 <div class="recipe-container-left-main-recipe-image-mobile">
+      <?php print render($content['field_recipe_image']); ?>
+     </div>
+     <div class="recipe-container-left-sharing-area-mobile">
+      <?php print render($content['field_sharing_recipe']); ?>
+     </div>
      <div class="recipe-container-right-servsnumber">
       <?php print render($content['field_number_of_servs']); ?>
      </div>

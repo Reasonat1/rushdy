@@ -1703,7 +1703,7 @@ tr.selected td {
 /* line 804, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1466080449');
+  background-image: url('../images/progress.gif?1467112921');
 }
 
 /**
@@ -1804,144 +1804,255 @@ tr.selected td {
 /******   colors  *********/
 /********  mixin *********/
 /********  fonts *********/
-/*not working for some reason*/
 @font-face {
-  font-family: 'knockout30';
+  font-family: "Knockout 30 A";
   src: url("/sites/all/themes/rushdi/fonts/Knockout30.otf");
 }
 @font-face {
-  font-family: 'knockout50';
+  font-family: "Knockout 30 B";
+  src: url("/sites/all/themes/rushdi/fonts/Knockout30.otf");
+}
+@font-face {
+  font-family: "Knockout 50 B";
   src: url("/sites/all/themes/rushdi/fonts/Knockout50.otf");
 }
 @font-face {
-  font-family: 'knockout70';
+  font-family: "Knockout 50 A";
+  src: url("/sites/all/themes/rushdi/fonts/Knockout50.otf");
+}
+@font-face {
+  font-family: "Knockout 70 A";
   src: url("/sites/all/themes/rushdi/fonts/Knockout70.otf");
   font-weight: normal;
 }
+@font-face {
+  font-family: "Knockout 70 B";
+  src: url("/sites/all/themes/rushdi/fonts/Knockout70.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url("/sites/all/themes/rushdi/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+}
 /******** general  *******/
-/* line 60, ../sass/components/_rushdi.scss */
+/* line 89, ../sass/components/_rushdi.scss */
 body {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   color: #282725;
   font-size: 18px;
   line-height: 24px;
 }
 
-/* line 67, ../sass/components/_rushdi.scss */
-#main {
-  width: 1440px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 80px;
-  box-sizing: border-box;
+/* line 96, ../sass/components/_rushdi.scss */
+a {
+  text-decoration: none;
+  color: #00b7e1;
 }
 
-/* line 71, ../sass/components/_rushdi.scss */
+/* line 101, ../sass/components/_rushdi.scss */
+#main {
+  width: 1390px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* line 106, ../sass/components/_rushdi.scss */
 #page {
   width: 100%;
   max-width: 100%;
 }
 
-/* line 76, ../sass/components/_rushdi.scss */
+/* line 111, ../sass/components/_rushdi.scss */
 .block {
   margin-bottom: 0;
 }
 
-/* line 79, ../sass/components/_rushdi.scss */
+/* line 114, ../sass/components/_rushdi.scss */
 #content {
   padding-right: 0;
   padding-left: 0;
 }
 
-/* line 84, ../sass/components/_rushdi.scss */
+/* line 119, ../sass/components/_rushdi.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
 /*cause of knockout weighting*/
+@media (max-width: 767px) {
+  /* line 122, ../sass/components/_rushdi.scss */
+  .masonry-processed {
+    width: 100% !important;
+  }
+}
+/* line 127, ../sass/components/_rushdi.scss */
+.wrapper-width {
+  width: 1390px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+/* line 132, ../sass/components/_rushdi.scss */
+#page-title {
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  font-size: 56px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+/* line 141, ../sass/components/_rushdi.scss */
+a.phone {
+  pointer-events: none;
+  cursor: default;
+  color: #282725;
+}
+@media (max-width: 767px) {
+  /* line 141, ../sass/components/_rushdi.scss */
+  a.phone {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}
+
 /*******  header  ***********/
-/* line 88, ../sass/components/_rushdi.scss */
+/* line 152, ../sass/components/_rushdi.scss */
 #header {
   border-top: 24px solid #00b7e1;
   border-bottom: 1px solid rgba(41, 40, 38, 0.25);
-  width: 1440px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 80px;
-  box-sizing: border-box;
+  width: 100%;
   padding-top: 20px;
+  overflow: hidden;
 }
-/* line 93, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 152, ../sass/components/_rushdi.scss */
+  #header {
+    padding-bottom: 15px;
+  }
+}
+/* line 161, ../sass/components/_rushdi.scss */
 #header #logo {
   float: left;
 }
-/* line 96, ../sass/components/_rushdi.scss */
+/* line 164, ../sass/components/_rushdi.scss */
 #header .region-header {
   float: right;
   clear: right;
   padding-top: 15px;
   padding-bottom: 5px;
 }
-/* line 101, ../sass/components/_rushdi.scss */
+/* line 169, ../sass/components/_rushdi.scss */
 #header .region-header #block-bean-social-icons-header {
   float: right;
   margin-left: 60px;
   height: 26px;
   margin-top: 5px;
 }
-/* line 106, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 169, ../sass/components/_rushdi.scss */
+  #header .region-header #block-bean-social-icons-header {
+    display: none;
+  }
+}
+/* line 177, ../sass/components/_rushdi.scss */
 #header .region-header #block-bean-social-icons-header .field-name-field-social-icons > .field-items > .field-item {
   display: inline-block;
   margin-left: 14px;
 }
-/* line 110, ../sass/components/_rushdi.scss */
+/* line 181, ../sass/components/_rushdi.scss */
 #header .region-header #block-bean-social-icons-header .field-name-field-social-icons > .field-items > .field-item.even {
   margin-left: 0;
 }
-/* line 114, ../sass/components/_rushdi.scss */
+/* line 185, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu {
   float: right;
 }
-/* line 116, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 185, ../sass/components/_rushdi.scss */
+  #header .region-header #block-megamenu-main-menu {
+    width: 100%;
+  }
+}
+/* line 190, ../sass/components/_rushdi.scss */
+#header .region-header #block-megamenu-main-menu ul {
+  background-color: #fff !important;
+}
+/* line 193, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal {
   background-color: transparent;
   text-transform: uppercase;
 }
-/* line 119, ../sass/components/_rushdi.scss */
+/* line 196, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal li {
   margin-right: 27px;
 }
-/* line 122, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 196, ../sass/components/_rushdi.scss */
+  #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    display: block;
+    border-bottom: 1px solid rgba(41, 40, 38, 0.25);
+  }
+  /* line 204, ../sass/components/_rushdi.scss */
+  #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal li a {
+    font-family: "Knockout 50 A", "Knockout 50 B";
+    font-size: 30px;
+    padding: 20px 0;
+    display: block;
+  }
+}
+/* line 212, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal li.last {
   margin-right: 0;
 }
-/* line 125, ../sass/components/_rushdi.scss */
+/* line 215, ../sass/components/_rushdi.scss */
 #header .region-header #block-megamenu-main-menu .megamenu-skin-minimal a {
   color: black;
-  text-decoration: none;
-  font-family: 'knockout50';
+  font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 14px;
 }
 
-/* line 137, ../sass/components/_rushdi.scss */
+/* line 226, ../sass/components/_rushdi.scss */
+.footer-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #231f20;
+}
+
+/* line 232, ../sass/components/_rushdi.scss */
 #footer {
   min-height: 484px;
-  width: 1440px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 80px;
-  box-sizing: border-box;
-  background-color: #231f20;
   color: #ffffff;
 }
-/* line 143, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 232, ../sass/components/_rushdi.scss */
+  #footer {
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  /* line 238, ../sass/components/_rushdi.scss */
+  #footer #block-block-2 {
+    text-align: center;
+  }
+}
+/* line 242, ../sass/components/_rushdi.scss */
 #footer #block-block-2 ul {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-top: 100px;
 }
-/* line 149, ../sass/components/_rushdi.scss */
+/* line 248, ../sass/components/_rushdi.scss */
 #footer #block-block-2 li {
   display: inline-block;
   text-transform: uppercase;
@@ -1949,18 +2060,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 5px;
   font-size: 14px;
   line-height: 14px;
-  font-family: 'knockout30';
+  font-family: "Knockout 30 A", "Knockout 30 B";
 }
-/* line 158, ../sass/components/_rushdi.scss */
+/* line 257, ../sass/components/_rushdi.scss */
 #footer #block-block-2 li:last-child {
   border: none;
 }
-/* line 162, ../sass/components/_rushdi.scss */
+/* line 261, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu {
   width: 100%;
   max-width: 800px;
 }
-/* line 165, ../sass/components/_rushdi.scss */
+/* line 264, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu ul {
   columns: 3;
   -webkit-columns: 3;
@@ -1970,196 +2081,423 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   padding-left: 100px;
 }
-/* line 175, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 264, ../sass/components/_rushdi.scss */
+  #footer #block-menu-menu-footer-menu ul {
+    padding-left: 0;
+    padding-top: 40px;
+    clear: both;
+  }
+}
+/* line 278, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu .menu__item.is-leaf, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed {
   list-style: none;
 }
-/* line 177, ../sass/components/_rushdi.scss */
+/* line 280, ../sass/components/_rushdi.scss */
 #footer #block-menu-menu-footer-menu .menu__item.is-leaf a, #footer #block-menu-menu-footer-menu .menu__item.is-collapsed a {
   text-transform: uppercase;
   color: #ffffff;
-  text-decoration: none;
   font-size: 14px;
-  font-family: 'knockout30';
+  font-family: "Knockout 30 A", "Knockout 30 B";
 }
-/* line 188, ../sass/components/_rushdi.scss */
+/* line 289, ../sass/components/_rushdi.scss */
+#footer .is-expanded {
+  display: none;
+}
+/* line 293, ../sass/components/_rushdi.scss */
 #footer #block-block-7 {
   float: left;
   margin-top: 48px;
 }
 @media (max-width: 767px) {
-  /* line 188, ../sass/components/_rushdi.scss */
+  /* line 293, ../sass/components/_rushdi.scss */
   #footer #block-block-7 {
     width: 100%;
   }
 }
-/* line 194, ../sass/components/_rushdi.scss */
+/* line 299, ../sass/components/_rushdi.scss */
 #footer #block-block-7 p {
   margin: 0;
 }
-/* line 199, ../sass/components/_rushdi.scss */
+/* line 303, ../sass/components/_rushdi.scss */
 #footer #block-block-3 {
-  background-image: url(../images/fot-flah.png);
-  margin-right: -80px;
-  height: 72px;
-  float: right;
-  width: 475px;
+  background: url(../images/fot-flah.png) no-repeat center center;
   margin-top: 55px;
+  position: absolute;
+  right: 0;
 }
-/* line 206, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 303, ../sass/components/_rushdi.scss */
+  #footer #block-block-3 {
+    display: none;
+  }
+}
+/* line 311, ../sass/components/_rushdi.scss */
 #footer #block-block-3 p {
   margin: 0;
   margin-left: 40px;
   line-height: 70px;
-  text-indent: 40px;
+  padding-right: 16px;
 }
-/* line 212, ../sass/components/_rushdi.scss */
+/* line 317, ../sass/components/_rushdi.scss */
 #footer #block-block-3 a {
-  text-decoration: none;
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
 }
-/* line 221, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 324, ../sass/components/_rushdi.scss */
+  #footer #block-bean-social-icons-header--2 {
+    position: absolute;
+    top: 48px;
+    right: 10px;
+  }
+}
+/* line 330, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 a img {
   display: none;
 }
-/* line 224, ../sass/components/_rushdi.scss */
+/* line 333, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 .field-item a {
   width: 30px;
   height: 30px;
   float: left;
   display: block;
 }
-/* line 230, ../sass/components/_rushdi.scss */
+/* line 339, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 .field-item.even a {
   background-image: url(../images/fb-icon-white.png);
 }
-/* line 233, ../sass/components/_rushdi.scss */
+/* line 342, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 .field-item.odd a {
   background-image: url(../images/ttr-icon-white.png);
 }
-/* line 237, ../sass/components/_rushdi.scss */
+/* line 346, ../sass/components/_rushdi.scss */
 #footer #block-bean-social-icons-header--2 > .entity > .content > .field > .field-items > .field-item {
   float: left;
   margin-right: 10px;
 }
-/* line 240, ../sass/components/_rushdi.scss */
+/* line 349, ../sass/components/_rushdi.scss */
 #footer #block-block-6 {
   margin: 0;
   margin-top: 100px;
-  font-family: 'knockout30';
+  font-family: "Knockout 30 A", "Knockout 30 B";
   font-size: 13px;
 }
-
-/*highlighted block in homepage*/
-/* line 249, ../sass/components/_rushdi.scss */
-.region-highlighted {
-  height: 430px;
-  border-bottom: 1px solid rgba(41, 40, 38, 0.25);
-  font-family: 'knockout70';
-  margin: 0 -80px;
-  padding: 0 80px;
-  text-transform: uppercase;
-}
 @media (max-width: 767px) {
-  /* line 249, ../sass/components/_rushdi.scss */
-  .region-highlighted {
-    height: 208px;
+  /* line 349, ../sass/components/_rushdi.scss */
+  #footer #block-block-6 {
+    text-align: center;
   }
 }
-/* line 259, ../sass/components/_rushdi.scss */
-.region-highlighted .block-title {
+
+/*********** responsive menu  ****************/
+@media (max-width: 767px) {
+  /* line 363, ../sass/components/_rushdi.scss */
+  .region-header {
+    right: -100%;
+    position: fixed;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    z-index: 250;
+    top: 91px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* line 373, ../sass/components/_rushdi.scss */
+  .menu-open .region-header {
+    right: 0;
+  }
+}
+/* line 378, ../sass/components/_rushdi.scss */
+.mobile-menu {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
   position: absolute;
-  left: 70%;
+  top: 47px;
+  right: 37px;
+}
+@media (max-width: 767px) {
+  /* line 378, ../sass/components/_rushdi.scss */
+  .mobile-menu {
+    display: block;
+  }
+}
+/* line 390, ../sass/components/_rushdi.scss */
+.mobile-menu span {
+  width: 40px;
+  height: 6px;
+  background-color: #000;
+  margin-bottom: 9px;
+  display: block;
+}
+
+/* line 399, ../sass/components/_rushdi.scss */
+.icon-bar {
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+/* line 405, ../sass/components/_rushdi.scss */
+.menu-open .mobile-menu span {
+  margin: 0;
+}
+/* line 408, ../sass/components/_rushdi.scss */
+.menu-open .mobile-menu .bar1 {
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-top: 16px;
+}
+/* line 414, ../sass/components/_rushdi.scss */
+.menu-open .mobile-menu .bar2 {
+  display: none;
+}
+/* line 417, ../sass/components/_rushdi.scss */
+.menu-open .mobile-menu .bar3 {
+  margin-top: -5px;
+  transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+/*highlighted block*/
+/* line 426, ../sass/components/_rushdi.scss */
+.region-highlighted {
+  height: auto;
+  border-bottom: 1px solid rgba(41, 40, 38, 0.25);
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  text-transform: uppercase;
+  overflow: hidden;
+}
+/* line 432, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-hp-block, .region-highlighted #block-bean-loyodea {
+  width: 1390px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  /* line 432, ../sass/components/_rushdi.scss */
+  .region-highlighted #block-bean-hp-block, .region-highlighted #block-bean-loyodea {
+    padding: 0;
+  }
+}
+/* line 438, ../sass/components/_rushdi.scss */
+.region-highlighted #hp-bean-container-image, .region-highlighted .bean-image {
+  float: left;
+  margin-right: 10%;
+  margin-bottom: -7px;
+  width: 63%;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 438, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-image, .region-highlighted .bean-image {
+    margin-right: 3%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 438, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-image, .region-highlighted .bean-image {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* line 451, ../sass/components/_rushdi.scss */
+.region-highlighted #hp-bean-container-text, .region-highlighted #bean-container-text {
+  float: right;
+  width: 27%;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 451, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-text, .region-highlighted #bean-container-text {
+    width: 34%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 451, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-text, .region-highlighted #bean-container-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  /* line 461, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-text #top-text, .region-highlighted #bean-container-text #top-text {
+    margin-top: 10px !important;
+  }
+}
+@media (max-width: 480px) {
+  /* line 466, ../sass/components/_rushdi.scss */
+  .region-highlighted #hp-bean-container-text .hp-bean-slogan, .region-highlighted #bean-container-text .hp-bean-slogan {
+    margin: 10px 0 !important;
+  }
+}
+/* line 472, ../sass/components/_rushdi.scss */
+.region-highlighted .hp-bean-title, .region-highlighted .bean-title {
   font-size: 56px;
   line-height: 48px;
   color: #000;
   max-width: 168px;
-  margin-top: 80px;
   font-weight: normal;
 }
 @media (max-width: 767px) {
-  /* line 259, ../sass/components/_rushdi.scss */
-  .region-highlighted .block-title {
+  /* line 472, ../sass/components/_rushdi.scss */
+  .region-highlighted .hp-bean-title, .region-highlighted .bean-title {
     font-size: 44px;
     margin-top: 5px;
-    left: 65%;
     line-height: 38px;
   }
 }
-/* line 275, ../sass/components/_rushdi.scss */
-.region-highlighted .field {
-  position: absolute;
-  left: 70%;
-}
-@media (max-width: 767px) {
-  /* line 275, ../sass/components/_rushdi.scss */
-  .region-highlighted .field {
-    left: 65%;
+@media (max-width: 480px) {
+  /* line 472, ../sass/components/_rushdi.scss */
+  .region-highlighted .hp-bean-title, .region-highlighted .bean-title {
+    max-width: 94%;
+    text-align: center;
+    padding: 0 3%;
   }
 }
-/* line 282, ../sass/components/_rushdi.scss */
-.region-highlighted .field-type-image {
-  left: 80px;
-  z-index: -1;
+/* line 490, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-loyodea .bean-title {
+  max-width: 300px;
 }
-@media (max-width: 767px) {
-  /* line 282, ../sass/components/_rushdi.scss */
-  .region-highlighted .field-type-image {
-    left: 0;
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 490, ../sass/components/_rushdi.scss */
+  .region-highlighted #block-bean-loyodea .bean-title {
+    font-size: 33px;
   }
 }
-/* line 289, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 490, ../sass/components/_rushdi.scss */
+  .region-highlighted #block-bean-loyodea .bean-title {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+/* line 502, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-loyodea .field-collection-view {
+  margin: 0;
+  padding: 0;
+}
+/* line 506, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-loyodea .field-collection-container {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* line 510, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-loyodea .field-collection-container .field-items .field-item {
+  margin: 0;
+}
+/* line 513, ../sass/components/_rushdi.scss */
+.region-highlighted #block-bean-loyodea .bean-slogan {
+  color: #00b7e1;
+}
+/* line 517, ../sass/components/_rushdi.scss */
 .region-highlighted .field-name-field-hp-slogan {
   font-size: 24px;
   line-height: 32px;
   color: #00b7e1;
-  width: 282px;
-  margin-top: 250px;
+  line-height: 21px;
 }
-@media (max-width: 767px) {
-  /* line 289, ../sass/components/_rushdi.scss */
-  .region-highlighted .field-name-field-hp-slogan {
-    line-height: 26px;
-    margin-top: 125px;
-    width: 190px;
-  }
-}
-/* line 300, ../sass/components/_rushdi.scss */
+/* line 522, ../sass/components/_rushdi.scss */
 .region-highlighted .field-name-field-hp-slogan p {
   margin: 0;
 }
-/* line 304, ../sass/components/_rushdi.scss */
+/* line 526, ../sass/components/_rushdi.scss */
 .region-highlighted .field-type-link-field a {
-  font-family: 'knockout50';
+  font-family: "Knockout 50 A", "Knockout 50 B";
   color: #97d4da;
-  text-decoration: none;
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  /* line 304, ../sass/components/_rushdi.scss */
+  /* line 526, ../sass/components/_rushdi.scss */
   .region-highlighted .field-type-link-field a {
     display: none;
   }
 }
-/* line 313, ../sass/components/_rushdi.scss */
-.region-highlighted .field-name-field-hp-link-1 {
-  margin-top: 333px;
+/* line 534, ../sass/components/_rushdi.scss */
+.region-highlighted #bottom-text {
+  overhidden: hidden;
+  /* margin-bottom:85px; */
 }
-/* line 316, ../sass/components/_rushdi.scss */
-.region-highlighted .field-name-field-hp-link-2 {
-  margin-top: 333px;
-  margin-left: 170px;
+/* line 537, ../sass/components/_rushdi.scss */
+.region-highlighted #bottom-text .hp-bean-link1 {
+  float: left;
+}
+/* line 540, ../sass/components/_rushdi.scss */
+.region-highlighted #bottom-text .hp-bean-link2 {
+  float: left;
+  margin-left: 46px;
 }
 
 /*Recipes block in homepage*/
-/* line 323, ../sass/components/_rushdi.scss */
+/* line 548, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-1 {
-  font-family: knockout70;
+  font-family: "Knockout 70 A", "Knockout 70 B";
   text-transform: uppercase;
+  /*.jcarousel-container.jcarousel-container-horizontal {
+  	width:100%;
+  	height:auto;
+  	padding:0;
+  	border:0 none;
+  	background:none transparent;
+  	.jcarousel-clip-horizontal{
+  		width:100%;
+  	}
+  	.jcarousel-prev{
+  		background-image:url(../images/car-arr-left.png);
+  		left:-50px;
+  		top:49%;
+  		@include res(s-m){
+  			background-image:url(../images/car-arr-left-m.png);
+  			left:-80px;
+  		}
+  	}
+  	.jcarousel-next{
+  		background-image:url(../images/car-arr-right.png);
+  		right:-50px;
+  		top:49%;
+  		@include res(s-m){
+  			background-image:url(../images/car-arr-right-m.png);
+  			right:-80px;
+  		}
+  	}
+  	.jcarousel-prev, .jcarousel-next{
+  		height:45px;
+  		width:26px;
+  		background-position:0 0;
+  		@include res(s-m){
+  			width:60px;
+  			height:84px;
+  		}
+  	}
+  	.jcarousel-prev:hover, .jcarousel-next:hover{
+  		background-position:0 0;
+  	}
+  	.jcarousel-item {
+  		width:406px !important;
+  		height:auto;
+  		border:0 none;
+  		margin:0 30px 0 0;
+  		.views-field-title {
+  			color:#fff;
+  			margin-bottom:8px;
+  			background:$red;
+  			letter-spacing:1px;
+  			padding:3px;
+  			font-size:20px;
+  		}
+  	}
+  }*/
 }
-/* line 326, ../sass/components/_rushdi.scss */
+/* line 551, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-1 .block-title {
   text-align: center;
   font-size: 30px;
@@ -2168,95 +2506,100 @@ h1, h2, h3, h4, h5, h6 {
   /*reset*/
   margin-top: 60px;
 }
-/* line 333, ../sass/components/_rushdi.scss */
+/* line 558, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-1 .view-header {
   color: #282725;
   text-align: center;
-  font-family: knockout30;
+  font-family: "Knockout 30 A", "Knockout 30 B";
   line-height: 1;
   /*reset*/
   margin-bottom: 50px;
 }
-/* line 339, ../sass/components/_rushdi.scss */
+/* line 564, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-1 .view-header p {
   margin: 0;
 }
-/* line 343, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border: 0 none;
-  background: none transparent;
+/* line 568, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .views-field-title a {
+  color: #fff;
 }
-/* line 349, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-clip-horizontal {
-  width: 100%;
-}
-/* line 352, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-prev {
+/* line 625, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .owl-prev {
   background-image: url(../images/car-arr-left.png);
   left: -50px;
+  top: 49%;
 }
 @media (max-width: 767px) {
-  /* line 352, ../sass/components/_rushdi.scss */
-  #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-prev {
+  /* line 625, ../sass/components/_rushdi.scss */
+  #block-views-recipes-displays-block-1 .owl-prev {
     background-image: url(../images/car-arr-left-m.png);
+    left: 0;
   }
 }
-/* line 359, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-next {
+/* line 634, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .owl-next {
   background-image: url(../images/car-arr-right.png);
   right: -50px;
+  top: 49%;
 }
 @media (max-width: 767px) {
-  /* line 359, ../sass/components/_rushdi.scss */
-  #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-next {
+  /* line 634, ../sass/components/_rushdi.scss */
+  #block-views-recipes-displays-block-1 .owl-next {
     background-image: url(../images/car-arr-right-m.png);
+    right: 0;
   }
 }
-/* line 366, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-prev, #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-next {
+/* line 643, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .owl-prev, #block-views-recipes-displays-block-1 .owl-next {
+  position: absolute;
   height: 45px;
   width: 26px;
   background-position: 0 0;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
-  /* line 366, ../sass/components/_rushdi.scss */
-  #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-prev, #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-next {
+  /* line 643, ../sass/components/_rushdi.scss */
+  #block-views-recipes-displays-block-1 .owl-prev, #block-views-recipes-displays-block-1 .owl-next {
     width: 60px;
     height: 84px;
   }
 }
-/* line 375, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-prev:hover, #block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-next:hover {
+/* line 655, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .owl-prev:hover, #block-views-recipes-displays-block-1 .owl-next:hover {
   background-position: 0 0;
 }
-/* line 378, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-item {
-  width: 406px !important;
-  height: auto;
-  border: 0 none;
-  margin: 0 30px 0 0;
-}
-/* line 383, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-1 .jcarousel-container.jcarousel-container-horizontal .jcarousel-item .views-field-title {
+/* line 659, ../sass/components/_rushdi.scss */
+#block-views-recipes-displays-block-1 .owl-item .views-field-title {
   color: #fff;
   margin-bottom: 8px;
-  background: #e84754;
+  background-color: #e84754;
   letter-spacing: 1px;
-  padding: 3px;
+  padding: 3px 6px;
   font-size: 20px;
 }
-
-/*Masonary in homepage*/
-/* line 397, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block {
-  font-family: knockout70;
-  text-transform: uppercase;
+@media (max-width: 767px) {
+  /* line 659, ../sass/components/_rushdi.scss */
+  #block-views-recipes-displays-block-1 .owl-item .views-field-title {
+    text-align: center;
+  }
 }
-/* line 400, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .block-title {
+
+/*Masonary*/
+/* line 675, ../sass/components/_rushdi.scss */
+.masonry-view, .view-recipes-page.view-display-id-page_with_page_title_1 {
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  text-transform: uppercase;
+  width: 103%;
+}
+@media (max-width: 767px) {
+  /* line 675, ../sass/components/_rushdi.scss */
+  .masonry-view, .view-recipes-page.view-display-id-page_with_page_title_1 {
+    width: 100%;
+  }
+}
+/* line 682, ../sass/components/_rushdi.scss */
+.masonry-view .block-title, .view-recipes-page.view-display-id-page_with_page_title_1 .block-title {
   text-align: center;
   font-size: 30px;
   color: #000;
@@ -2264,244 +2607,1231 @@ h1, h2, h3, h4, h5, h6 {
   /*reset*/
   margin-top: 60px;
 }
-/* line 407, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .view-header {
+/* line 689, ../sass/components/_rushdi.scss */
+.masonry-view .view-header, .view-recipes-page.view-display-id-page_with_page_title_1 .view-header {
   color: #282725;
   text-align: center;
-  font-family: knockout30;
+  font-family: "Knockout 30 A", "Knockout 30 B";
   line-height: 1;
   /*reset*/
   margin-bottom: 50px;
 }
-/* line 413, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .view-header p {
+/* line 695, ../sass/components/_rushdi.scss */
+.masonry-view .view-header p, .view-recipes-page.view-display-id-page_with_page_title_1 .view-header p {
   margin: 0;
 }
-/* line 417, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .masonry-item {
-  width: 100%;
-  max-width: 406px;
+/* line 699, ../sass/components/_rushdi.scss */
+.masonry-view .masonry-processed, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-processed {
+  width: 100% !important;
+}
+/* line 702, ../sass/components/_rushdi.scss */
+.masonry-view .masonry-item, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item {
+  /*width:100%;
+  max-width:406px;*/
   background: none transparent;
   padding: 0;
   margin: 0 0 40px 0;
   border: 0 none;
+  width: 33%;
 }
-/* line 424, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .masonry-item .views-field-title {
+@media (max-width: 767px) {
+  /* line 702, ../sass/components/_rushdi.scss */
+  .masonry-view .masonry-item, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    top: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 702, ../sass/components/_rushdi.scss */
+  .masonry-view .masonry-item, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item {
+    max-width: 100%;
+  }
+  /* line 719, ../sass/components/_rushdi.scss */
+  .masonry-view .masonry-item img, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item img {
+    width: 100%;
+  }
+}
+/* line 723, ../sass/components/_rushdi.scss */
+.masonry-view .masonry-item .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item .views-field-title {
   color: #fff;
   padding: 16px;
   background: #e84754;
-  font-family: knockout50;
+  font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 28px;
   line-height: 30px;
   text-transform: none;
+  box-sizing: border-box;
+  width: 94%;
 }
-/* line 432, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .masonry-item .views-field-title a {
+@media (max-width: 767px) {
+  /* line 723, ../sass/components/_rushdi.scss */
+  .masonry-view .masonry-item .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item .views-field-title {
+    width: 97%;
+  }
+}
+/* line 736, ../sass/components/_rushdi.scss */
+.masonry-view .masonry-item .views-field-title a, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item .views-field-title a {
   color: #fff;
-  text-decoration: none;
 }
-/* line 437, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .masonry-item img {
-  width: 100%;
+/* line 740, ../sass/components/_rushdi.scss */
+.masonry-view .masonry-item .views-field-field-article-image, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item .views-field-field-article-image {
+  padding-right: 6%;
 }
-/* line 441, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-1 .views-field-title {
+@media (max-width: 767px) {
+  /* line 740, ../sass/components/_rushdi.scss */
+  .masonry-view .masonry-item .views-field-field-article-image, .view-recipes-page.view-display-id-page_with_page_title_1 .masonry-item .views-field-field-article-image {
+    padding-right: 3%;
+  }
+}
+/* line 747, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-1 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-1 .views-field-title {
   background: #97ca4b;
 }
-/* line 444, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-2 .views-field-title {
+/* line 750, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-2 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-2 .views-field-title {
   background: #c9883a;
 }
-/* line 447, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-3 .views-field-title {
+/* line 753, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-3 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-3 .views-field-title {
   background: #e84754;
 }
-/* line 450, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-4 .views-field-title {
+/* line 756, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-4 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-4 .views-field-title {
   background: #9e2b68;
 }
-/* line 453, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-5 .views-field-title {
+/* line 759, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-5 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-5 .views-field-title {
   background: #00b7e1;
 }
-/* line 456, ../sass/components/_rushdi.scss */
-#block-views-articles-view-block .views-row-6 .views-field-title {
+/* line 762, ../sass/components/_rushdi.scss */
+.masonry-view .views-row-6 .views-field-title, .view-recipes-page.view-display-id-page_with_page_title_1 .views-row-6 .views-field-title {
   background: #97ca4b;
 }
 
-/*CHECK*/
-/*Masonary*/
-/* line 465, ../sass/components/_rushdi.scss */
-.masonry-width {
-  width: 406px;
-}
-
-/*homepagetitle -- NEEDS TO BE REMOVED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* line 467, ../sass/components/_rushdi.scss */
-.front h1.title {
-  display: none;
-}
-
-/*DONE CHECK*/
 /*Recipe page*/
-/* line 473, ../sass/components/_rushdi.scss */
-.node-type-recipes h1.title {
-  float: right;
-  width: 65%;
+@media (min-width: 768px) and (max-width: 3840px) {
+  /* line 770, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-container-left-main-recipe-image-mobile {
+    display: none;
+  }
+  /* line 773, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-container-left-sharing-area-mobile {
+    display: none;
+  }
+}
+/* line 777, ../sass/components/_rushdi.scss */
+.node-type-recipes #recipe-container-left {
+  float: left;
+  margin-right: 2%;
+  width: 32%;
+  margin-top: 55px;
+}
+@media (max-width: 767px) {
+  /* line 777, ../sass/components/_rushdi.scss */
+  .node-type-recipes #recipe-container-left {
+    display: none;
+  }
+}
+/* line 786, ../sass/components/_rushdi.scss */
+.node-type-recipes #recipe-container-right {
+  float: left;
+  width: 66%;
+}
+@media (max-width: 767px) {
+  /* line 786, ../sass/components/_rushdi.scss */
+  .node-type-recipes #recipe-container-right {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 793, ../sass/components/_rushdi.scss */
+  .node-type-recipes .field-name-field-sharing-recipe {
+    display: none;
+  }
+}
+/* line 798, ../sass/components/_rushdi.scss */
+.node-type-recipes .views-field-field-gallery {
+  background-color: #efefef;
+  padding: 50px 0;
+}
+/* line 801, ../sass/components/_rushdi.scss */
+.node-type-recipes .views-field-field-gallery img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 806, ../sass/components/_rushdi.scss */
+.node-type-recipes .node-title {
   font-size: 32px;
-  font-family: 'knockout50';
+  font-family: "Knockout 50 A", "Knockout 50 B";
   background: #e84754;
   text-align: center;
   color: #fff;
   margin-top: 55px;
 }
-/* line 483, ../sass/components/_rushdi.scss */
-.node-type-recipes .field-name-field-recipe-image {
-  margin-top: 55px;
-  float: left;
+@media (max-width: 767px) {
+  /* line 806, ../sass/components/_rushdi.scss */
+  .node-type-recipes .node-title {
+    line-height: 1.333;
+    padding: 8px;
+  }
 }
-/* line 487, ../sass/components/_rushdi.scss */
-.node-type-recipes .field-name-field-sharing-recipe {
+/* line 818, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-conatiner-right-recipe-tags-icons {
+  float: right;
+  margin: 10px 0;
+}
+@media (max-width: 767px) {
+  /* line 818, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-conatiner-right-recipe-tags-icons {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* line 825, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-conatiner-right-recipe-tags-icons .field-name-field-category-icon {
   float: left;
+  margin-left: 6px;
+}
+@media (max-width: 767px) {
+  /* line 825, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-conatiner-right-recipe-tags-icons .field-name-field-category-icon {
+    display: inline-block;
+    float: none;
+  }
+}
+/* line 834, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-servsnumber {
+  float: left;
+  width: 10%;
+  clear: right;
+}
+@media (max-width: 767px) {
+  /* line 834, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-container-right-servsnumber {
+    width: 100%;
+  }
+}
+/* line 842, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-ingredients {
+  float: left;
+  width: 90%;
+}
+@media (max-width: 767px) {
+  /* line 842, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-container-right-ingredients {
+    width: 100%;
+  }
+}
+/* line 848, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-ingredients .field-items {
+  line-height: 44px;
+  margin-top: 12px;
+}
+/* line 852, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-ingredients .field-item {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+}
+@media (max-width: 767px) {
+  /* line 852, ../sass/components/_rushdi.scss */
+  .node-type-recipes .recipe-container-right-ingredients .field-item {
+    margin: 0;
+    width: 100%;
+  }
+}
+/* line 862, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-recipe-tags {
   clear: both;
+}
+/* line 864, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-recipe-tags .field-name-field-new-recipe-tags {
+  background: url(../images/tag-icon.png) left center no-repeat;
+  padding: 50px 0 50px 30px;
+  overflow: hidden;
+  margin-left: 10%;
+}
+/* line 869, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-recipe-tags .field-name-field-new-recipe-tags .field-item a {
+  font-size: 18px;
+  color: #00b7e1;
+  margin-right: 35px;
+  float: left;
+  display: block;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+}
+/* line 880, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-preperation-steps .field-collection-container {
+  margin: 0;
+  border: 0 none;
+}
+/* line 885, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-preperation-steps .field-item .field-name-field-step-number {
+  float: left;
+  color: #00b7e1;
+  width: 10%;
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  font-size: 24px;
+  text-align: center;
+}
+/* line 893, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-preperation-steps .field-item .field-name-field-step-content {
+  float: left;
+  width: 90%;
+}
+/* line 896, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-preperation-steps .field-item .field-name-field-step-content p {
+  margin: 0;
+}
+/* line 900, ../sass/components/_rushdi.scss */
+.node-type-recipes .recipe-container-right-preperation-steps .field-item .field-collection-view {
+  padding: 0;
+  margin: 0 0 30px 0;
+  border: 0 none;
+}
+/* line 907, ../sass/components/_rushdi.scss */
+.node-type-recipes .view-product-display-view.view-display-id-block_1 {
+  margin-top: 50px;
+}
+/* line 909, ../sass/components/_rushdi.scss */
+.node-type-recipes .view-product-display-view.view-display-id-block_1 .views-field-title a {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 26px;
+  color: #282725;
+  display: block;
+  padding-top: 10px;
+}
+/* line 918, ../sass/components/_rushdi.scss */
+.node-type-recipes #block-views-recipes-displays-block-2 .block-title {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 26px;
+  color: #282725;
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+}
+/* line 928, ../sass/components/_rushdi.scss */
+.node-type-recipes .field-type-addthis .field-label {
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  font-size: 20px;
+  color: #fff;
+  padding: 3px 6px;
+  background-color: #9e2b68;
+  text-align: center;
+  font-weight: normal;
+}
+
+/****  block bottom - 3  *******/
+/* line 942, ../sass/components/_rushdi.scss */
+.bottom-three-view {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+/* line 945, ../sass/components/_rushdi.scss */
+.bottom-three-view .block-title {
+  font-size: 30px;
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  line-height: 1;
+  margin: 30px 0 50px 0;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  /* line 945, ../sass/components/_rushdi.scss */
+  .bottom-three-view .block-title {
+    font-size: 45px;
+  }
+}
+/* line 955, ../sass/components/_rushdi.scss */
+.bottom-three-view .views-row {
+  float: left;
+  width: 32%;
+}
+@media (max-width: 480px) {
+  /* line 955, ../sass/components/_rushdi.scss */
+  .bottom-three-view .views-row {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 955, ../sass/components/_rushdi.scss */
+  .bottom-three-view .views-row {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  /* line 965, ../sass/components/_rushdi.scss */
+  .bottom-three-view .views-row.views-row-even {
+    float: right;
+  }
+}
+/* line 969, ../sass/components/_rushdi.scss */
+.bottom-three-view .views-row .views-field-title a {
+  color: #fff;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 20px;
+  text-align: center;
+  background: #9e2b68;
+  padding: 3px 6px;
+  display: block;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  /* line 980, ../sass/components/_rushdi.scss */
+  .bottom-three-view .views-row-3 {
+    display: none;
+  }
+}
+/* line 985, ../sass/components/_rushdi.scss */
+.bottom-three-view .views-row-even {
+  margin: 0 2%;
+}
+@media (max-width: 767px) {
+  /* line 985, ../sass/components/_rushdi.scss */
+  .bottom-three-view .views-row-even {
+    margin: 0 0 40px;
+  }
 }
 
 /*Recipes Lobby page*/
-/* line 495, ../sass/components/_rushdi.scss */
-.page-recipes h1.title {
-  font-family: 'knockout70';
-  font-size: 56px;
-  text-transform: uppercase;
-  margin-top: 40px;
-  line-height: 1;
-}
-/* line 502, ../sass/components/_rushdi.scss */
-.page-recipes .masonry-item {
+/* line 994, ../sass/components/_rushdi.scss */
+.page-recipes .views-row {
   width: 100%;
   max-width: 406px;
   background: none transparent;
   padding: 0;
   margin: 0 0 40px 0;
   border: 0 none;
+  float: left;
+  min-height: 640px;
 }
-/* line 509, ../sass/components/_rushdi.scss */
-.page-recipes .masonry-item .views-field-title {
+@media (max-width: 767px) {
+  /* line 994, ../sass/components/_rushdi.scss */
+  .page-recipes .views-row {
+    min-height: auto;
+  }
+}
+/* line 1006, ../sass/components/_rushdi.scss */
+.page-recipes .views-row .views-field-title {
   color: #fff;
   padding: 16px;
   background: #e84754;
-  font-family: knockout50;
+  font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 28px;
   line-height: 30px;
   text-transform: none;
+  margin-bottom: 5px;
 }
-/* line 517, ../sass/components/_rushdi.scss */
-.page-recipes .masonry-item .views-field-title a {
+/* line 1015, ../sass/components/_rushdi.scss */
+.page-recipes .views-row .views-field-title a {
   color: #fff;
-  text-decoration: none;
+}
+/* line 1020, ../sass/components/_rushdi.scss */
+.page-recipes .views-row:nth-child(3n+2) {
+  margin: 0 30px;
+}
+@media (max-width: 767px) {
+  /* line 1020, ../sass/components/_rushdi.scss */
+  .page-recipes .views-row:nth-child(3n+2) {
+    margin: 0 0 40px 0;
+  }
 }
 
 /*Product page*/
-/* line 527, ../sass/components/_rushdi.scss */
-.node-type-product-display h1.title {
+/* line 1030, ../sass/components/_rushdi.scss */
+.node-type-product-display .node-title {
   font-size: 26px;
-  font-family: 'knockout30';
-  line-height: 1;
-  margin-top: 40px;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  margin: 10px 0;
 }
-/* line 533, ../sass/components/_rushdi.scss */
-.node-type-product-display .field-name-field-gallery {
+/* line 1035, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left {
   float: left;
-  width: 50%;
+  width: 60%;
+  margin-right: 2%;
+  position: relative;
 }
-/* line 536, ../sass/components/_rushdi.scss */
-.node-type-product-display .field-name-field-gallery .jcbx-glry-classic {
-  background: none transparent !important;
+@media (max-width: 767px) {
+  /* line 1035, ../sass/components/_rushdi.scss */
+  .node-type-product-display .group-left {
+    width: 100%;
+  }
 }
-/* line 540, ../sass/components/_rushdi.scss */
+/* line 1043, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-controls {
+  position: absolute;
+  right: 0;
+  width: 83%;
+  z-index: 200;
+  top: 48%;
+}
+@media (max-width: 767px) {
+  /* line 1043, ../sass/components/_rushdi.scss */
+  .node-type-product-display .group-left .field-slideshow-controls {
+    width: 100%;
+  }
+}
+/* line 1052, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-controls a {
+  height: 45px;
+  opacity: 0.3;
+  position: absolute;
+  text-indent: -9999px;
+  width: 26px;
+}
+/* line 1059, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-controls .prev {
+  background: url("../images/car-arr-left.png") no-repeat center center;
+  left: 11px;
+}
+/* line 1063, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-controls .next {
+  background: url("../images/car-arr-right.png") no-repeat center center;
+  right: 11px;
+}
+/* line 1068, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-wrapper > .item-list {
+  float: left;
+  width: 13%;
+  margin-right: 4%;
+}
+@media (max-width: 767px) {
+  /* line 1068, ../sass/components/_rushdi.scss */
+  .node-type-product-display .group-left .field-slideshow-wrapper > .item-list {
+    display: none;
+  }
+}
+/* line 1075, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-wrapper > .item-list li {
+  list-style-type: none;
+}
+/* line 1078, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-wrapper > .item-list li.last {
+  margin-right: 0;
+}
+/* line 1081, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-wrapper > .item-list ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 1084, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow-wrapper > .item-list ul li {
+  margin-bottom: 28px;
+}
+/* line 1089, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow {
+  float: right;
+  width: 83% !important;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  /* line 1089, ../sass/components/_rushdi.scss */
+  .node-type-product-display .group-left .field-slideshow {
+    width: 100% !important;
+  }
+}
+/* line 1096, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-left .field-slideshow img {
+  padding: 18px 40px !important;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+/* line 1103, ../sass/components/_rushdi.scss */
+.node-type-product-display .group-right {
+  width: 38%;
+  float: right;
+}
+@media (max-width: 767px) {
+  /* line 1103, ../sass/components/_rushdi.scss */
+  .node-type-product-display .group-right {
+    width: 100%;
+  }
+}
+/* line 1110, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-field-product-weight {
-  float: left;
-  margin-left: 30px;
   text-transform: uppercase;
 }
-/* line 544, ../sass/components/_rushdi.scss */
-.node-type-product-display .field-field-product-weight .field-label {
-  display: none;
-  /*should be removed from HTML!*/
+/* line 1113, ../sass/components/_rushdi.scss */
+.node-type-product-display .click-to-see {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Knockout 50 A", "Knockout 50 B";
 }
-/* line 548, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 1113, ../sass/components/_rushdi.scss */
+  .node-type-product-display .click-to-see {
+    display: none;
+  }
+}
+/* line 1122, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-nutritional-values {
-  float: left;
-  margin-left: 30px;
-  text-transform: uppercase;
+  display: none;
+}
+/* line 1125, ../sass/components/_rushdi.scss */
+.node-type-product-display .field-name-field-bulletin-text {
+  margin: 30px 0;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+}
+/* line 1128, ../sass/components/_rushdi.scss */
+.node-type-product-display .field-name-field-bulletin-text ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 1132, ../sass/components/_rushdi.scss */
+.node-type-product-display .field-name-field-bulletin-text li {
+  list-style: none outside none;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 1138, ../sass/components/_rushdi.scss */
+.node-type-product-display .field-name-field-bulletin-text p {
+  margin-bottom: 25px;
 }
 
-/* line 554, ../sass/components/_rushdi.scss */
+/* line 1144, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-3 {
   clear: both;
 }
-/* line 556, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-3 .block-title {
-  line-height: 1;
-  font-family: 'knockout70';
-  margin: 75px 0 50px 0;
-  text-transform: uppercase;
-  text-align: center;
-}
-/* line 563, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-3 .views-row {
-  width: 406px;
-  margin: 0 30px 0 0;
-  float: left;
-}
-/* line 567, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-3 .views-row .views-field-title a {
-  background: #00b7e1;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'knockout50';
-  text-align: center;
-  padding: 3px;
-  margin-bottom: 5px;
-  display: block;
-  text-decoration: none;
-}
-/* line 579, ../sass/components/_rushdi.scss */
-#block-views-recipes-displays-block-3 .views-row-last {
-  margin: 0 0 0 0;
-}
 
-/* line 583, ../sass/components/_rushdi.scss */
+/* line 1147, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 {
   clear: both;
   overflow: hidden;
   margin-bottom: 50px;
 }
-/* line 587, ../sass/components/_rushdi.scss */
+/* line 1151, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .block-title {
   line-height: 1;
-  font-family: 'knockout70';
+  font-family: "Knockout 70 A", "Knockout 70 B";
   margin: 75px 0 50px 0;
   text-transform: uppercase;
   text-align: center;
   font-size: 30px;
 }
-/* line 595, ../sass/components/_rushdi.scss */
+/* line 1159, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row {
   width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
 }
-/* line 599, ../sass/components/_rushdi.scss */
+@media (max-width: 480px) {
+  /* line 1159, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row {
+    width: 100%;
+    margin: 0 0 20px;
+    float: none;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 1159, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row {
+    width: 48%;
+    margin: 0;
+  }
+  /* line 1171, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row.even {
+    float: right;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1175, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1181, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row .views-field-title {
+    text-align: center;
+  }
+}
+/* line 1185, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row .views-field-title a {
-  font-size: 18px;
   padding: 6px 0 0;
   color: #282725;
-  text-decoration: none;
 }
-/* line 606, ../sass/components/_rushdi.scss */
+@media (max-width: 767px) {
+  /* line 1191, ../sass/components/_rushdi.scss */
+  #block-views-product-display-view-block-2 .views-row-3, #block-views-product-display-view-block-2 .views-row-4, #block-views-product-display-view-block-2 .views-row-5 {
+    display: none;
+  }
+}
+/* line 1196, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row-last {
   margin: 0 0 0 0;
+}
+
+/*Article page*/
+/* line 1203, ../sass/components/_rushdi.scss */
+.node-type-article h1.title {
+  float: right;
+  width: 65%;
+  font-size: 32px;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  background: #c9883a;
+  text-align: center;
+  color: #fff;
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+/* line 1214, ../sass/components/_rushdi.scss */
+.node-type-article .field-name-field-sharing {
+  clear: both;
+}
+/* line 1216, ../sass/components/_rushdi.scss */
+.node-type-article .field-name-field-sharing .field-label {
+  font-wieght: normal;
+}
+@media (max-width: 767px) {
+  /* line 1214, ../sass/components/_rushdi.scss */
+  .node-type-article .field-name-field-sharing {
+    display: none;
+  }
+}
+/* line 1223, ../sass/components/_rushdi.scss */
+.node-type-article .field-type-text-with-summary {
+  font-size: 18px;
+}
+/* line 1226, ../sass/components/_rushdi.scss */
+.node-type-article .field-name-field-tags {
+  background: url(../images/tag-icon.png) left center no-repeat;
+  padding-left: 30px;
+}
+/* line 1229, ../sass/components/_rushdi.scss */
+.node-type-article .field-name-field-tags .field {
+  font-size: 18px;
+  color: #00b7e1;
+  margin-right: 35px;
+}
+
+/*Products lobby*/
+/* line 1239, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 {
+  width: 100%;
+}
+/* line 1241, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .group {
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  /* line 1241, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .group {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+/* line 1249, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .group .content {
+  width: 756px;
+  max-width: 94%;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+/* line 1256, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .group:last-child {
+  border: none;
+}
+/* line 1259, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 h3 {
+  text-align: center;
+  padding: 9px;
+  color: #fff;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 20px;
+  clear: both;
+  padding: 3px;
+  background-color: #00b7e1;
+}
+@media (max-width: 767px) {
+  /* line 1259, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 h3 {
+    font-size: 28px;
+    padding: 14px;
+  }
+}
+/* line 1273, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .views-field-field-gallery {
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  /* line 1273, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-field-field-gallery {
+    margin-bottom: 24px;
+  }
+}
+/* line 1279, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .views-row {
+  float: left;
+  width: 30%;
+}
+@media (max-width: 480px) {
+  /* line 1279, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row {
+    width: 100%;
+    float: none;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+  /* line 1287, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 1279, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row {
+    width: 48%;
+  }
+  /* line 1294, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row .views-row-even {
+    float: right;
+  }
+}
+/* line 1298, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .views-row .views-field-title a {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 26px;
+  color: #282725;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  /* line 1298, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row .views-field-title a {
+    font-size: 36px;
+    font-family: "Knockout 70 A", "Knockout 70 B";
+  }
+}
+/* line 1309, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .views-row-1.views-row-last {
+  float: none;
+  margin: 0 auto;
+}
+/* line 1313, ../sass/components/_rushdi.scss */
+.section-products #block-views-product-display-view-block-3 .views-row:nth-child(3n+3) {
+  margin: 0 5%;
+}
+@media (max-width: 767px) {
+  /* line 1313, ../sass/components/_rushdi.scss */
+  .section-products #block-views-product-display-view-block-3 .views-row:nth-child(3n+3) {
+    margin: 0 0 40px;
+  }
+}
+
+/*Articles lobby*/
+/* line 1324, ../sass/components/_rushdi.scss */
+.section-articles h1.title {
+  font-size: 56px;
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  margin: 45px 0 70px 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+/* line 1331, ../sass/components/_rushdi.scss */
+.section-articles .masonry-item {
+  /*width:100%;
+  max-width:406px;*/
+  background: none transparent;
+  padding: 0;
+  margin: 0 0 40px 0;
+  border: 0 none;
+}
+@media (max-width: 767px) {
+  /* line 1331, ../sass/components/_rushdi.scss */
+  .section-articles .masonry-item {
+    max-width: 100%;
+  }
+  /* line 1340, ../sass/components/_rushdi.scss */
+  .section-articles .masonry-item img {
+    width: 100%;
+  }
+}
+/* line 1344, ../sass/components/_rushdi.scss */
+.section-articles .masonry-item .views-field-title {
+  color: #fff;
+  padding: 16px;
+  background: #e84754;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 28px;
+  line-height: 30px;
+  text-transform: none;
+}
+/* line 1352, ../sass/components/_rushdi.scss */
+.section-articles .masonry-item .views-field-title a {
+  color: #fff;
+}
+/* line 1357, ../sass/components/_rushdi.scss */
+.section-articles .pager-load-more a {
+  font-size: 16px;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  text-transform: uppercase;
+  color: #97d4da;
+  margin-bottom: 100px;
+  display: block;
+}
+
+/*Title colors*/
+/* line 1368, ../sass/components/_rushdi.scss */
+.purple {
+  background-color: #9e2b68 !important;
+}
+
+/* line 1371, ../sass/components/_rushdi.scss */
+.blue {
+  background-color: #00b7e1 !important;
+}
+
+/* line 1374, ../sass/components/_rushdi.scss */
+.green {
+  background-color: #97ca4b !important;
+}
+
+/* line 1377, ../sass/components/_rushdi.scss */
+.red {
+  background-color: #e84754 !important;
+}
+
+/* line 1380, ../sass/components/_rushdi.scss */
+.brown {
+  background-color: #c9883a !important;
+}
+
+/*Contact us page*/
+/* line 1386, ../sass/components/_rushdi.scss */
+.page-node-56 .group-left {
+  width: 32%;
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 1386, ../sass/components/_rushdi.scss */
+  .page-node-56 .group-left {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* line 1394, ../sass/components/_rushdi.scss */
+  .page-node-56 .group-left .field-name-field-contact-image img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+/* line 1400, ../sass/components/_rushdi.scss */
+.page-node-56 .group-left .field-name-field-contact-us-body {
+  background-color: #e84754;
+  margin-top: 5px;
+  color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  /* line 1400, ../sass/components/_rushdi.scss */
+  .page-node-56 .group-left .field-name-field-contact-us-body {
+    margin-bottom: 50px;
+  }
+}
+/* line 1409, ../sass/components/_rushdi.scss */
+.page-node-56 .group-left .field-name-field-contact-us-body p {
+  margin: 0px;
+}
+/* line 1414, ../sass/components/_rushdi.scss */
+.page-node-56 .group-right {
+  width: 58%;
+  float: right;
+}
+@media (max-width: 767px) {
+  /* line 1414, ../sass/components/_rushdi.scss */
+  .page-node-56 .group-right {
+    width: 100%;
+  }
+}
+/* line 1421, ../sass/components/_rushdi.scss */
+.page-node-56 .field-name-field-contact-email, .page-node-56 .field-name-field-contact-phone-number {
+  width: 50%;
+  text-align: center;
+  float: left;
+  padding-top: 77px;
+}
+@media (max-width: 767px) {
+  /* line 1421, ../sass/components/_rushdi.scss */
+  .page-node-56 .field-name-field-contact-email, .page-node-56 .field-name-field-contact-phone-number {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+  }
+}
+/* line 1431, ../sass/components/_rushdi.scss */
+.page-node-56 .field-name-field-contact-email a, .page-node-56 .field-name-field-contact-phone-number a {
+  color: #282725;
+  padding-top: 77px;
+}
+@media (max-width: 767px) {
+  /* line 1431, ../sass/components/_rushdi.scss */
+  .page-node-56 .field-name-field-contact-email a, .page-node-56 .field-name-field-contact-phone-number a {
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: block;
+  }
+}
+/* line 1443, ../sass/components/_rushdi.scss */
+.page-node-56 .field-name-field-contact-email a {
+  background: url("../images/email.png") no-repeat top center;
+}
+@media (max-width: 767px) {
+  /* line 1446, ../sass/components/_rushdi.scss */
+  .page-node-56 .field-name-field-contact-phone-number {
+    margin-right: 20px;
+  }
+}
+/* line 1450, ../sass/components/_rushdi.scss */
+.page-node-56 .field-name-field-contact-phone-number a {
+  background: url("../images/phone.png") no-repeat top center;
+}
+@media (max-width: 767px) {
+  /* line 1454, ../sass/components/_rushdi.scss */
+  .page-node-56 .group-mailphone {
+    width: 120px;
+    margin: 0 auto;
+  }
+}
+/* line 1460, ../sass/components/_rushdi.scss */
+.page-node-56 .field-name-field-text-before-webform {
+  margin-top: 50px;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  /* line 1460, ../sass/components/_rushdi.scss */
+  .page-node-56 .field-name-field-text-before-webform {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/* line 1472, ../sass/components/_rushdi.scss */
+.page-node-56 form {
+  width: 100%;
+  float: left;
+}
+/* line 1475, ../sass/components/_rushdi.scss */
+.page-node-56 form .webform-component {
+  width: 48%;
+  margin: 0 0 20px 0;
+}
+@media (max-width: 767px) {
+  /* line 1475, ../sass/components/_rushdi.scss */
+  .page-node-56 form .webform-component {
+    width: 100%;
+  }
+}
+/* line 1482, ../sass/components/_rushdi.scss */
+.page-node-56 form .webform-component--full-name, .page-node-56 form .webform-component--email {
+  float: left;
+}
+/* line 1485, ../sass/components/_rushdi.scss */
+.page-node-56 form .webform-component--subject, .page-node-56 form .webform-component--message-content {
+  float: right;
+}
+/* line 1488, ../sass/components/_rushdi.scss */
+.page-node-56 form input {
+  border-bottom: 1px solid #282725;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding-left: 3px;
+}
+/* line 1495, ../sass/components/_rushdi.scss */
+.page-node-56 form label {
+  font-weight: normal;
+  padding-left: 3px;
+  padding-top: 10px;
+  line-height: 14px;
+}
+/* line 1501, ../sass/components/_rushdi.scss */
+.page-node-56 form .form-required {
+  color: #282725;
+}
+/* line 1504, ../sass/components/_rushdi.scss */
+.page-node-56 form textarea {
+  border: 1px solid #282725;
+}
+/* line 1507, ../sass/components/_rushdi.scss */
+.page-node-56 form .grippie {
+  display: none;
+}
+/* line 1510, ../sass/components/_rushdi.scss */
+.page-node-56 form .form-actions {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 14px;
+  float: right;
+  clear: right;
+}
+/* line 1515, ../sass/components/_rushdi.scss */
+.page-node-56 form .form-actions input {
+  border: none;
+  background-color: #282725;
+  color: #fff;
+  padding: 10px 38px;
+}
+
+/*Special page*/
+/* line 1527, ../sass/components/_rushdi.scss */
+.node-type-special-pages h1.title {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 32px;
+  color: #fff;
+  background: #97ca4b;
+  padding: 6px;
+  line-height: 1;
+  margin: 50px 0 6px;
+  text-align: center;
+}
+/* line 1537, ../sass/components/_rushdi.scss */
+.node-type-special-pages .paragraphs-items {
+  width: 815px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  /* line 1537, ../sass/components/_rushdi.scss */
+  .node-type-special-pages .paragraphs-items {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* line 1544, ../sass/components/_rushdi.scss */
+.node-type-special-pages .paragraphs-items .field-name-field-image-title {
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  text-transform: uppercase;
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 1550, ../sass/components/_rushdi.scss */
+.node-type-special-pages .paragraphs-items .field-name-field-video-title {
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  text-transform: uppercase;
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 1556, ../sass/components/_rushdi.scss */
+.node-type-special-pages .paragraphs-items .field-name-field-image-paragraph, .node-type-special-pages .paragraphs-items .field-name-field-video-embed {
+  text-align: center;
+}
+
+/*Masonry check*/
+                 /*NOT WORKING NEEDS TO WORK FROM UI AND NOT CSS
+.masonry-width {width:31.7% !important; margin-right:0 !important; margin-left:0 !important;}
+.masonry-processed {width:100% !important;}
+.masonry-width:nth-child(3n+2) {margin-right:2.45% !important; margin-left:2.45% !important;}*/
+/*Article page*/
+@media (min-width: 768px) and (max-width: 3840px) {
+  /* line 1571, ../sass/components/_rushdi.scss */
+  .node-type-article .recipe-container-left-main-recipe-image-mobile {
+    display: none;
+  }
+  /* line 1574, ../sass/components/_rushdi.scss */
+  .node-type-article .article-container-left-sharing-area-mobile {
+    display: none;
+  }
+}
+/* line 1578, ../sass/components/_rushdi.scss */
+.node-type-article #article-container-left {
+  float: left;
+  margin-right: 2%;
+  width: 32%;
+  margin-top: 55px;
+}
+@media (max-width: 767px) {
+  /* line 1578, ../sass/components/_rushdi.scss */
+  .node-type-article #article-container-left {
+    display: none;
+  }
+}
+/* line 1587, ../sass/components/_rushdi.scss */
+.node-type-article #article-container-right {
+  float: left;
+  width: 66%;
+}
+@media (max-width: 767px) {
+  /* line 1587, ../sass/components/_rushdi.scss */
+  .node-type-article #article-container-right {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1594, ../sass/components/_rushdi.scss */
+  .node-type-article .field-name-field-sharing-article {
+    display: none;
+  }
+}
+/* line 1599, ../sass/components/_rushdi.scss */
+.node-type-article .views-field-field-gallery {
+  background-color: #efefef;
+  padding: 50px 0;
+}
+/* line 1602, ../sass/components/_rushdi.scss */
+.node-type-article .views-field-field-gallery img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 1608, ../sass/components/_rushdi.scss */
+.node-type-article .article-container-right-node-title .node-title {
+  font-size: 32px;
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  text-align: center;
+  color: #fff;
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+/* line 1618, ../sass/components/_rushdi.scss */
+.node-type-article .field-type-addthis .field-label {
+  font-family: "Knockout 70 A", "Knockout 70 B";
+  font-size: 20px;
+  color: #fff;
+  padding: 3px 6px;
+  background-color: #9e2b68;
+  text-align: center;
+  font-weight: normal;
+}
+@media (min-width: 768px) and (max-width: 3840px) {
+  /* line 1629, ../sass/components/_rushdi.scss */
+  .node-type-article .article-container-left-image_mobile {
+    display: none;
+  }
+}
+
+/* line 1635, ../sass/components/_rushdi.scss */
+#block-views-articles-view-block-2 .block-title {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 26px;
+  color: #282725;
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* line 1644, ../sass/components/_rushdi.scss */
+.view-product-display-view.view-display-id-block_4 {
+  margin-top: 50px;
+  float: left;
+  width: 100%;
+}
+/* line 1648, ../sass/components/_rushdi.scss */
+.view-product-display-view.view-display-id-block_4 .views-field-title a {
+  font-family: "Knockout 50 A", "Knockout 50 B";
+  font-size: 26px;
+  color: #282725;
+  display: block;
+  padding-top: 10px;
 }
 
 /* SMACSS theme rules */

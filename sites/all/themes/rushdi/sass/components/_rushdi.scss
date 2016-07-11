@@ -21,6 +21,9 @@
   @if $media == s-m {
     @media (max-width: 767px) { @content; }
   }
+  @if $media == xl {
+	@media (min-width:768px) and (max-width: 3840px) { @content; }
+  }
 }
 
 /******   colors  *********/
@@ -29,43 +32,75 @@
  $blue: #00b7e1;
  $background_footer: #231f20;
  $color_footer: #ffffff;
-
+ $red: #e84754;
+ $gray: #f2f2f2;
 /********  mixin *********/
 
 @mixin width(){
-  width: 1440px;
+  width: 1390px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 3%;
   box-sizing: border-box;
 }
 
-/********  fonts *********//*not working for some reason*/
+/********  fonts *********/
 
 @font-face {
-	font-family: 'knockout30';
+	font-family: "Knockout 30 A";
 	src:url('/sites/all/themes/rushdi/fonts/Knockout30.otf');
 }
+
 @font-face {
-	font-family: 'knockout50';
+	font-family: "Knockout 30 B";
+	src:url('/sites/all/themes/rushdi/fonts/Knockout30.otf');
+}
+
+@font-face {
+			font-family: "Knockout 50 B";
 	src:url('/sites/all/themes/rushdi/fonts/Knockout50.otf');
 }
+
 @font-face {
-	font-family: 'knockout70';
+			font-family: "Knockout 50 A";
+	src:url('/sites/all/themes/rushdi/fonts/Knockout50.otf');
+}
+
+@font-face {
+	font-family: "Knockout 70 A";
 	src:url('/sites/all/themes/rushdi/fonts/Knockout70.otf');
 	font-weight:normal;
 }
+
+@font-face {
+	font-family: "Knockout 70 B";
+	src:url('/sites/all/themes/rushdi/fonts/Knockout70.otf');
+	font-weight:normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src:url('/sites/all/themes/rushdi/fonts/OpenSans-Regular.ttf');
+	font-weight:normal;
+}
+
 /******** general  *******/
 
 body{
-	font-family: OpenSans;
+	font-family: 'Open Sans', sans-serif;
 	color: $default;
 	font-size: 18px;
 	line-height: 24px;
 }
 
+a{
+	text-decoration: none;
+	color: $blue;
+}
+
 #main{
 	@include width();
+	overflow: hidden;
 }
 
 #page{
@@ -83,13 +118,46 @@ body{
 
 h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 
+@include res(s-m){ 
+	.masonry-processed {
+		width:100% !important;
+	}
+}
+
+.wrapper-width{
+	@include width();
+}
+
+
+#page-title {
+	font-family: "Knockout 70 A", "Knockout 70 B";
+	font-size:56px;
+	text-transform:uppercase;
+	margin-top:40px;
+	line-height:1;
+	margin-bottom:40px;
+}
+
+a.phone{
+    pointer-events: none;
+    cursor: default; 
+    color: $default;
+    @include res(s-m){
+      pointer-events: auto;
+      cursor: pointer;    
+    }
+}
 /*******  header  ***********/
 
 #header{
 	border-top: 24px solid $blue;
 	border-bottom: 1px solid rgba(41, 40, 38, 0.25);
-	@include width();
+	width: 100%;
 	padding-top: 20px;
+	overflow: hidden;
+	@include res(s-m){
+		padding-bottom: 15px;
+	}
 	#logo{
 		float: left;
 	}
@@ -103,6 +171,9 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 			margin-left: 60px;
 			height: 26px;
 			margin-top:5px;
+			@include res(s-m){
+				display: none;
+			}
 			.field-name-field-social-icons > .field-items > .field-item{
 				display: inline-block;
 				margin-left: 14px;
@@ -113,19 +184,37 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 		}
 		#block-megamenu-main-menu{
 			float: right;
+			@include res(s-m){
+				width: 100%;
+			}
+			ul{
+				background-color: #fff!important;
+			}
 			.megamenu-skin-minimal {
 			    background-color: transparent;
 				text-transform:uppercase;
 				li {
 					margin-right:27px;
+					@include res(s-m){
+						width: 100%;
+						text-align: center;
+						margin: 0;
+						display: block;
+						border-bottom: 1px solid rgba(41, 40, 38, 0.25);
+						a{
+							font-family: "Knockout 50 A", "Knockout 50 B";
+    						font-size: 30px;
+    						padding: 20px 0;
+    						display: block;
+						}
+					}
 				}
 				li.last {
 					margin-right:0;
 				}
 				a {
 					color:black;
-					text-decoration:none;
-					font-family:'knockout50';
+					font-family: "Knockout 50 A", "Knockout 50 B";
 					font-size:14px;
 				}
 				
@@ -134,12 +223,22 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	}
 }
 
+.footer-wrapper{
+	margin-top: 20px;
+	width: 100%;
+	background-color:$background_footer;
+}
+
 #footer {
 	min-height:484px;
-	@include width();
-	background-color:$background_footer;
 	color:$color_footer;
+	@include res(s-m){
+		position:relative;
+	}
 	#block-block-2 {	
+		@include res(s-m){ 
+			text-align:center;
+		}
 		ul {
 			margin: 0;
 			padding: 0;
@@ -153,7 +252,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 			padding-right:5px;
 			font-size: 14px;
 			line-height: 14px;
-			font-family:'knockout30';
+			font-family: "Knockout 30 A", "Knockout 30 B";
 		}
 		li:last-child {
 			border:none;
@@ -170,19 +269,25 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 		margin-top:40px;
 		padding:0;
 		padding-left:100px;
+		@include res(s-m){ 
+			padding-left:0;
+			padding-top:40px;
+			clear:both;
 		}
-		
+	}	
 	.menu__item.is-leaf, .menu__item.is-collapsed {
 			list-style: none;
 				a {
 					text-transform:uppercase;
 					color:$color_footer;
-					text-decoration:none;
 					font-size: 14px;
-					font-family:'knockout30';
+					font-family: "Knockout 30 A", "Knockout 30 B";
 				}
 			}
 	
+	}
+	.is-expanded {
+		display:none;
 	}
 	
 	#block-block-7 {
@@ -195,22 +300,21 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 			margin:0;
 		}
 	}
-	
 	#block-block-3 {
-		background-image:url(../images/fot-flah.png);
-		margin-right:-80px;
-		height:72px;
-		float:right;
-		width:475px;
+		background: url(../images/fot-flah.png) no-repeat center center;
 		margin-top:55px;
+		position: absolute;
+		right: 0;
+		@include res(s-m){
+			display:none;
+		}
 		p { 
 			margin:0;
 			margin-left:40px;
 			line-height:70px;
-			text-indent:40px;
+			padding-right: 16px;
 		}
 		a {
-			text-decoration:none;
 			color:$color_footer;
 			font-size: 24px;
 			font-weight: 700;
@@ -218,6 +322,11 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	}
 	
 	#block-bean-social-icons-header--2 {
+		@include res(s-m){
+			position:absolute;
+			top:48px;
+			right:10px;
+		}
 		a img {
 			display:none;
 		}
@@ -240,88 +349,204 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	#block-block-6 {	
 		margin: 0;
 		margin-top:100px;
-		font-family:'knockout30';
+		font-family: "Knockout 30 A", "Knockout 30 B";
 		font-size:13px;
+		@include res(s-m){ 
+			text-align:center;
+		}
 	}
 }
 
-/*highlighted block in homepage*/
+/*********** responsive menu  ****************/
+
+@include res(s-m){
+  .region-header{
+    right: -100%;
+    position: fixed;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    z-index: 250;
+    top: 91px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .menu-open .region-header{
+    right: 0;
+  }
+}
+
+.mobile-menu{
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  position: absolute;
+  top: 47px;
+  right: 37px;
+  @include res(s-m){
+    display: block;
+  }
+  span{
+    width: 40px;
+    height: 6px;
+    background-color: #000;
+    margin-bottom: 9px;
+    display: block;
+  }
+}
+
+.icon-bar{
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+.menu-open .mobile-menu{
+  span{
+    margin: 0;
+  }
+  .bar1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    margin-top: 16px;
+  }
+  .bar2{
+    display: none;
+  }
+  .bar3{
+    margin-top: -5px;
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+  }
+}
+
+/*highlighted block*/
 .region-highlighted {
-	height:430px;
+	height:auto;
 	border-bottom:1px solid rgba(41, 40, 38, 0.25);
-	font-family:'knockout70';
-	margin:0 -80px;
-	padding:0 80px;
+	font-family: "Knockout 70 A", "Knockout 70 B";
 	text-transform:uppercase;
-	@include res(s-m){
-		height:208px;
+	overflow: hidden;
+	#block-bean-hp-block, #block-bean-loyodea{
+		@include width();
+		@include res(s-m){
+			padding: 0;
+		}
 	}
-	.block-title {
-		position:absolute;
-		left:70%;
+	#hp-bean-container-image, .bean-image {
+		float:left;
+		margin-right:10%;
+		margin-bottom:-7px;
+		width:63%;
+		@include res(m){
+			margin-right: 3%;
+		}
+		@include res(s){
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	#hp-bean-container-text, #bean-container-text {
+		float:right;
+		width:27%;
+		@include res(m){
+			width: 34%;
+		}
+		@include res(s){
+			width: 100%;
+			text-align: center;
+		}
+		#top-text{
+			@include res(s){
+				margin-top: 10px!important;
+			}
+		}
+		.hp-bean-slogan{
+			@include res(s){
+				margin: 10px 0!important;
+			}
+		}
+	}
+	.hp-bean-title, .bean-title {
 		font-size:56px;
 		line-height:48px;
 		color:#000;
 		max-width:168px;
-		margin-top:80px;
 		font-weight:normal;
 		@include res(s-m){
 			font-size:44px;
 			margin-top:5px;
-			left:65%;
 			line-height:38px;
 		}
-	}
-	.field {
-		position:absolute;
-		left:70%;
-		@include res(s-m){
-			left:65%;
+		@include res(s){
+			max-width: 94%;
+			text-align: center;
+			padding: 0 3%;
 		}
 	}
-	.field-type-image {
-		left:80px;
-		z-index:-1;
-		@include res(s-m){
-			left:0;
+	#block-bean-loyodea{
+		.bean-title{
+			max-width: 300px;
+			@include res(m){
+				font-size: 33px;
+			}
+			@include res(s-m){
+				max-width: 100%;
+				width: 100%;
+				margin-top: 20px!important;
+				margin-bottom: 20px!important;
+			}
+		}
+		.field-collection-view{
+			margin: 0;
+			padding: 0;
+		}
+		.field-collection-container {
+		    border-bottom: none;
+		    margin-bottom: 0;
+		}
+		.field-collection-container .field-items .field-item{
+			margin: 0;
+		}
+		.bean-slogan{
+			color: $blue;
 		}
 	}
 	.field-name-field-hp-slogan {
 		font-size: 24px;
 		line-height:32px;
 		color:#00b7e1;
-		width:282px;
-		margin-top:250px;
-		@include res(s-m){
-			line-height:26px;
-			margin-top:125px;
-			width:190px;
-		}
+		line-height: 21px;
 		p{
 			margin:0;
 		}
 	}
 	.field-type-link-field  a {
-		font-family:'knockout50';
+		font-family: "Knockout 50 A", "Knockout 50 B";
 		color:#97d4da;
-		text-decoration:none;
 		font-size:16px;
 		@include res(s-m){
 			display:none;
 		}
 	}
-	.field-name-field-hp-link-1 {
-		margin-top:333px;
-	}
-	.field-name-field-hp-link-2{
-		margin-top:333px;
-		margin-left:170px;
+	#bottom-text {
+		overhidden:hidden;
+		/* margin-bottom:85px; */
+		.hp-bean-link1 {
+			float:left;
+		}
+		.hp-bean-link2{
+			float:left;
+			margin-left:46px;
+		}
 	}
 }
 
 /*Recipes block in homepage*/
 #block-views-recipes-displays-block-1 {
-	font-family:knockout70;
+	font-family: "Knockout 70 A", "Knockout 70 B";
 	text-transform:uppercase;
 	.block-title {
 		text-align:center;
@@ -333,14 +558,17 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	.view-header {
 		color:$default;
 		text-align:center;
-		font-family:knockout30;
+		font-family: "Knockout 30 A", "Knockout 30 B";
 		line-height:1;/*reset*/
 		margin-bottom:50px;
 		p{
 			margin:0;
 		}
 	}
-	.jcarousel-container.jcarousel-container-horizontal {
+	.views-field-title a{
+		color: #fff;
+	}
+	/*.jcarousel-container.jcarousel-container-horizontal {
 		width:100%;
 		height:auto;
 		padding:0;
@@ -352,15 +580,19 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 		.jcarousel-prev{
 			background-image:url(../images/car-arr-left.png);
 			left:-50px;
+			top:49%;
 			@include res(s-m){
 				background-image:url(../images/car-arr-left-m.png);
+				left:-80px;
 			}
 		}
 		.jcarousel-next{
 			background-image:url(../images/car-arr-right.png);
 			right:-50px;
+			top:49%;
 			@include res(s-m){
 				background-image:url(../images/car-arr-right-m.png);
+				right:-80px;
 			}
 		}
 		.jcarousel-prev, .jcarousel-next{
@@ -383,20 +615,70 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 			.views-field-title {
 				color:#fff;
 				margin-bottom:8px;
-				background:#e84754;
+				background:$red;
 				letter-spacing:1px;
 				padding:3px;
 				font-size:20px;
 			}
 		}
-	}
+	}*/
+		.owl-prev{
+			background-image:url(../images/car-arr-left.png);
+			left:-50px;
+			top:49%;
+			@include res(s-m){
+				background-image:url(../images/car-arr-left-m.png);
+				left:0;
+			}
+		}
+		.owl-next{
+			background-image:url(../images/car-arr-right.png);
+			right:-50px;
+			top:49%;
+			@include res(s-m){
+				background-image:url(../images/car-arr-right-m.png);
+				right:0;
+			}
+		}
+		.owl-prev, .owl-next{
+			position:absolute;
+			height:45px;
+			width:26px;
+			background-position:0 0;
+			text-indent:-9999px;
+			overflow:hidden;
+			@include res(s-m){
+				width:60px;
+				height:84px;
+			}
+		}
+		.owl-prev:hover, .owl-next:hover{
+			background-position:0 0;
+		}
+		.owl-item {
+			.views-field-title {
+				color:#fff;
+				margin-bottom:8px;
+				background-color:$red;
+				letter-spacing:1px;
+				padding:3px 6px;
+				font-size:20px;
+				@include res(s-m){
+					text-align: center;
+				}
+			}
+		}
 	
 }
 
-/*Masonary in homepage*/
-#block-views-articles-view-block {
-	font-family:knockout70;
+/*Masonary*/
+.masonry-view, .view-recipes-page.view-display-id-page_with_page_title_1 {
+	font-family: "Knockout 70 A", "Knockout 70 B";
 	text-transform:uppercase;
+	width: 103%;
+	@include res(s-m){
+		width: 100%;
+	}
 	.block-title {
 		text-align:center;
 		font-size:30px;
@@ -407,35 +689,59 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	.view-header {
 		color:$default;
 		text-align:center;
-		font-family:knockout30;
+		font-family: "Knockout 30 A", "Knockout 30 B";
 		line-height:1;/*reset*/
 		margin-bottom:50px;
 		p{
 			margin:0;
 		}
 	}
+	.masonry-processed{
+		width: 100%!important;
+	}
 	.masonry-item {
-		width:100%;
-		max-width:406px;
+		/*width:100%;
+		max-width:406px;*/
 		background:none transparent;
 		padding:0;
 		margin:0 0 40px 0;
 		border:0 none;
+		width: 33%;
+		@include res(s-m){
+	      position: relative!important;
+	      left: 0!important;
+	      right: 0!important;
+	      width: 100%;
+      		top: auto!important;
+    	}
+		@include res(s-m){ 
+			max-width:100%;
+			img {
+				width:100%;
+			}
+		}
 		.views-field-title {
 			color:#fff;
 			padding:16px;
-			background:#e84754;
-			font-family:knockout50;
+			background:$red;
+			font-family: "Knockout 50 A", "Knockout 50 B";
 			font-size:28px;
 			line-height:30px;
 			text-transform:none;
+			box-sizing: border-box;
+			width: 94%;
+			@include res(s-m){
+				width: 97%;
+			}
 			a{
 				color:#fff;
-				text-decoration:none;
 			}
 		}
-		img {
-			width:100%;
+		.views-field-field-article-image{
+			padding-right: 6%;
+			@include res(s-m){
+				padding-right: 3%;
+			}
 		}
 	}
 	.views-row-1 .views-field-title {
@@ -445,7 +751,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 		background:#c9883a;
 	}
 	.views-row-3 .views-field-title {
-		background:#e84754;
+		background:$red;
 	}
 	.views-row-4 .views-field-title {
 		background:#9e2b68;
@@ -458,127 +764,385 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	}
 }
 
-
-
-/*CHECK*/
-/*Masonary*/
-.masonry-width{width:406px;}
-/*homepagetitle -- NEEDS TO BE REMOVED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-.front h1.title {display:none;}
-/*DONE CHECK*/
-
-
 /*Recipe page*/
 .node-type-recipes {
-	h1.title {
-		float:right;
-		width:65%;
+	@include res(xl) {
+		.recipe-container-left-main-recipe-image-mobile {
+			display:none;
+		}
+		.recipe-container-left-sharing-area-mobile {
+			display:none;
+		}
+	}
+	#recipe-container-left {
+		float:left;
+		margin-right:2%;
+		width:32%;
+		margin-top:55px;
+		@include res(s-m){ 
+			display:none;
+		}
+	}
+	#recipe-container-right {
+		float:left;
+		width:66%;
+		@include res(s-m){ 
+			width:100%;
+		}
+	}
+	.field-name-field-sharing-recipe{
+		@include res(s-m){
+			display: none;
+		}
+	}
+	.views-field-field-gallery{
+		background-color: #efefef;
+		padding: 50px 0;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.node-title {
 		font-size:32px;
-		font-family:'knockout50';
-		background:#e84754;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		background:$red;
 		text-align:center;
 		color:#fff;
 		margin-top:55px;
+		@include res(s-m){ 
+			line-height:1.333;
+			padding:8px;
+		}
 	}
-	.field-name-field-recipe-image {
-		margin-top:55px;
-		float:left;
+	.recipe-conatiner-right-recipe-tags-icons {
+		float:right;
+		margin:10px 0;
+		@include res(s-m){ 
+			width:100%;
+			text-align:center;
+		}
+		.field-name-field-category-icon {
+			float:left;
+			margin-left:6px;
+			@include res(s-m){ 
+				display:inline-block;
+				float:none;
+			}
+		}
 	}
-	.field-name-field-sharing-recipe {
+	.recipe-container-right-servsnumber {
 		float:left;
+		width:10%;
+		clear:right;
+		@include res(s-m){ 
+			width:100%;
+		}
+	}
+	.recipe-container-right-ingredients {
+		float:left;
+		width:90%;
+		@include res(s-m){ 
+			width:100%;
+		}
+		.field-items{
+			line-height: 44px;
+			margin-top: 12px;
+		}
+		.field-item {
+			float:left;
+			width:49%;
+			margin-right:1%;
+			@include res(s-m){ 
+				margin:0;
+				width:100%;
+			}
+		}
+	}
+	.recipe-container-right-recipe-tags {
 		clear:both;
+		.field-name-field-new-recipe-tags {
+			background:url(../images/tag-icon.png) left center no-repeat;
+			padding:50px 0 50px 30px;
+			overflow:hidden;
+			margin-left:10%;
+			.field-item a {
+				font-size:18px;
+				color:#00b7e1;
+				margin-right:35px;
+				float:left;
+				display:block;
+				font-family: "Knockout 30 A", "Knockout 30 B";
+			}
+		}
+	}
+	.recipe-container-right-preperation-steps {
+		.field-collection-container {
+			margin:0;
+			border:0 none;
+		}
+		.field-item {
+			.field-name-field-step-number {
+				float:left;
+				color:#00b7e1;
+				width:10%;
+				font-family: "Knockout 70 A", "Knockout 70 B";
+				font-size:24px;
+				text-align:center;
+			}
+			.field-name-field-step-content {
+				float:left;
+				width:90%;
+				p {
+					margin:0;
+				}
+			}
+			.field-collection-view {
+				padding:0;
+				margin:0 0 30px 0;
+				border:0 none;
+			}
+		}
+	}
+	.view-product-display-view.view-display-id-block_1 {
+		margin-top:50px;
+		.views-field-title a {
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size:26px;
+			color:$default;
+			display:block;
+			padding-top:10px;
+		}
+	}
+	#block-views-recipes-displays-block-2 {
+		.block-title {
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size:26px;
+			color:$default;
+			display:block;
+			padding-top:10px;
+			text-align:center;
+		}
+	}
+	.field-type-addthis {
+		.field-label {
+			font-family: "Knockout 70 A", "Knockout 70 B";
+			font-size:20px;
+			color:#fff;
+			padding:3px 6px;
+			background-color:#9e2b68;
+			text-align:center;
+			font-weight:normal;
+		}
 	}
 }
 
+/****  block bottom - 3  *******/
+
+	.bottom-three-view {
+		margin-bottom:50px;
+		overflow:hidden;
+		.block-title { 
+			font-size:30px;
+			font-family: "Knockout 70 A", "Knockout 70 B";
+			line-height:1;
+			margin:30px 0 50px 0;
+			text-align:center;
+			@include res(s-m){
+				font-size: 45px;
+			}
+		}
+		.views-row { 
+			float:left;
+			width:32%;
+			@include res(s){ 
+				width:100%;
+				margin-bottom:40px;
+			}
+			@include res(m){ 
+				width:48%;
+				margin-bottom:40px;
+				&.views-row-even{
+					float: right;
+				}
+			}
+			.views-field-title a { 
+				color:#fff;
+				font-family: "Knockout 50 A", "Knockout 50 B";
+				font-size:20px;
+				text-align:center;
+				background:#9e2b68;
+				padding:3px 6px;
+				display:block;
+				margin-bottom:5px;
+			}
+		}
+		.views-row-3{
+			@include res(s-m){
+				display: none;
+			}
+		}
+		.views-row-even { 
+			margin:0 2%;
+			@include res(s-m){ 
+				margin:0 0 40px;
+			}
+		}
+	}
 /*Recipes Lobby page*/
 .page-recipes {
-	h1.title {
-		font-family:'knockout70';
-		font-size:56px;
-		text-transform:uppercase;
-		margin-top:40px;
-		line-height:1;
-	}
-	.masonry-item {
+	.views-row {
 		width:100%;
 		max-width:406px;
 		background:none transparent;
 		padding:0;
 		margin:0 0 40px 0;
 		border:0 none;
+		float:left;
+		min-height:640px;
+		@include res(s-m){ 
+			min-height:auto;
+		}
 		.views-field-title {
 			color:#fff;
 			padding:16px;
-			background:#e84754;
-			font-family:knockout50;
+			background:$red;
+			font-family: "Knockout 50 A", "Knockout 50 B";
 			font-size:28px;
 			line-height:30px;
 			text-transform:none;
+			margin-bottom:5px;
 			a{
 				color:#fff;
-				text-decoration:none;
 			}
+		}
+	}
+	.views-row:nth-child(3n+2) {
+		margin:0 30px;
+		@include res(s-m){ 
+			margin:0 0 40px 0;
 		}
 	}
 }
 
 /*Product page*/
 .node-type-product-display {
-	h1.title {
+	.node-title {
 		font-size:26px;
-		font-family:'knockout30';
-		line-height:1;
-		margin-top:40px;
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		margin: 10px 0;
 	}
-	.field-name-field-gallery {
+	.group-left {
 		float:left;
-		width:50%;
-		.jcbx-glry-classic {
-			background:none transparent !important;
+		width:60%;
+		margin-right:2%;
+		position: relative;
+		@include res(s-m){
+			width:100%;
+		}
+		.field-slideshow-controls{
+		    position: absolute;
+		    right: 0;
+		    width: 83%;
+		    z-index: 200;
+		    top: 48%;
+		    @include res(s-m){
+		    	width: 100%;
+		    }
+		    a{
+			    height: 45px;
+			    opacity: 0.3;
+			    position: absolute;
+			    text-indent: -9999px;
+			    width: 26px;
+		    }
+		    .prev{
+		    	background: url("../images/car-arr-left.png") no-repeat center center;
+		    	left: 11px;
+		    }
+		    .next{
+		    	background: url("../images/car-arr-right.png") no-repeat center center;
+		    	right: 11px;
+		    }
+		}
+		.field-slideshow-wrapper > .item-list{
+			float: left;
+			width: 13%;
+			margin-right: 4%;
+			@include res(s-m){
+				display: none;
+			}
+			li{
+				list-style-type: none;
+			}
+			li.last{
+				margin-right: 0;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+				li{
+					margin-bottom: 28px;
+				}
+			}
+		}
+		.field-slideshow{
+			float: right;
+			width: 83%!important;
+			box-sizing:border-box;
+			@include res(s-m){
+				width: 100%!important;
+			}
+			img{
+				padding: 18px 40px!important;
+				background-color: $gray;
+				box-sizing: border-box;
+			}
+		}
+	}
+	.group-right{
+		width: 38%;
+		float: right;
+		@include res(s-m){
+			width:100%;
 		}
 	}
 	.field-field-product-weight {
-		float:left;
-		margin-left:30px;
 		text-transform:uppercase;
-		.field-label {
-			display:none;/*should be removed from HTML!*/
+	}
+	.click-to-see {
+		text-transform:uppercase;
+		cursor: pointer;
+		font-size: 14px;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		@include res(s-m){ 
+			display:none;
 		}
 	}
-	.field-name-field-nutritional-values {
-		float:left;
-		margin-left:30px;
-		text-transform:uppercase;
+	.field-name-field-nutritional-values{
+		display: none;
+	}
+	.field-name-field-bulletin-text {
+		margin:30px 0;
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		ul {
+			padding:0;
+			margin:0;
+		}
+		li {
+			list-style:none outside none;
+			font-family: "Knockout 30 A", "Knockout 30 B";
+			font-size:18px;
+			margin-bottom:20px;
+		}
+		p{
+			margin-bottom: 25px;
+		}
 	}
 }
+
 #block-views-recipes-displays-block-3 {
 	clear:both;
-	.block-title {
-		line-height:1;
-		font-family:'knockout70';
-		margin:75px 0 50px 0;
-		text-transform:uppercase;
-		text-align:center;
-	}
-	.views-row {
-		width:406px;
-		margin:0 30px 0 0;
-		float:left;
-		.views-field-title a { 
-			background:#00b7e1;
-			color:#fff;
-			font-size:20px;
-			font-family:'knockout50';
-			text-align:center;
-			padding:3px;
-			margin-bottom:5px;
-			display:block;
-			text-decoration:none;
-		}
-	}
-	.views-row-last {
-		margin:0 0 0 0;
-	}
 }
 #block-views-product-display-view-block-2 {
 	clear:both;
@@ -586,7 +1150,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	margin-bottom:50px;
 	.block-title {
 		line-height:1;
-		font-family:'knockout70';
+		font-family: "Knockout 70 A", "Knockout 70 B";
 		margin:75px 0 50px 0;
 		text-transform:uppercase;
 		text-align:center;
@@ -596,14 +1160,496 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 		width:18%;
 		margin:0 2.5% 0 0;
 		float:left;
-		.views-field-title a { 
-			font-size:18px;
-			padding:6px 0 0;
-			color:$default;
-			text-decoration:none;
+		@include res(s){
+			width:100%;
+			margin:0 0 20px;
+			float:none;
+		}
+		@include res(m){
+			width: 48%;
+			margin: 0;
+			&.even{
+				float: right;
+			}
+		}
+		img{
+			@include res(s-m){
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.views-field-title{
+			@include res(s-m){
+				text-align: center;
+			}
+			a { 
+				padding:6px 0 0;
+				color:$default;
+			}
+		}
+	}
+	.views-row-3, .views-row-4, .views-row-5{
+		@include res(s-m){
+			display: none;
 		}
 	}
 	.views-row-last {
 		margin:0 0 0 0;
+	}
+}
+
+/*Article page*/
+.node-type-article {
+	h1.title {
+		float:right;
+		width:65%;
+		font-size:32px;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		background:#c9883a;
+		text-align:center;
+		color:#fff;
+		margin-top:55px;
+		margin-bottom:35px;
+	}
+	.field-name-field-sharing {
+		clear:both;
+		.field-label {
+			font-wieght:normal;
+		}
+		@include res(s-m){
+			display: none;
+		}
+	}
+	.field-type-text-with-summary {
+		font-size:18px;
+	}
+	.field-name-field-tags {
+		background:url(../images/tag-icon.png) left center no-repeat;
+		padding-left:30px;
+		.field {
+			font-size:18px;
+			color:#00b7e1;
+			margin-right:35px;
+		}
+	}
+}
+
+/*Products lobby*/
+.section-products {
+	#block-views-product-display-view-block-3 {
+		width:100%;
+		.group{
+			border-bottom: 1px solid #c7c7c7;
+			padding-bottom: 24px;
+			overflow: hidden;
+			@include res(s-m){
+				border: none;
+				padding-bottom: 0;
+			}
+			.content{
+				width: 756px;
+				max-width: 94%;
+				margin: 0 auto;
+				padding: 0 3%;
+			}
+		}
+		.group:last-child{
+			border:none;
+		}
+		h3 {
+			text-align:center;
+			padding:9px;
+			color:#fff;
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size:20px;
+			clear:both;
+			padding:3px;
+			background-color: $blue;
+			@include res(s-m){
+				font-size: 28px;
+				padding: 14px;
+			}
+		}
+		.views-field-field-gallery{
+			margin-bottom: 30px;
+			@include res(s-m){
+				margin-bottom: 24px;
+			}
+		}
+		.views-row {
+			float:left;
+			width:30%;
+			@include res(s){ 
+				width:100%;
+				float:none;
+				margin-bottom:65px;
+				text-align: center;
+				img{
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			@include res(m){
+				width:48%;
+				.views-row-even{
+					float: right;
+				}
+			}
+			.views-field-title a {
+				font-family: "Knockout 50 A", "Knockout 50 B";
+				font-size:26px;
+				color:$default;
+				text-align:center;
+				@include res(s-m){
+					font-size: 36px;
+					font-family: "Knockout 70 A", "Knockout 70 B";
+				}
+			}
+		}
+		.views-row-1.views-row-last{
+			float: none;
+			margin: 0 auto;
+		}
+		.views-row:nth-child(3n+3) {
+			margin:0 5%;
+			@include res(s-m){ 
+				margin:0 0 40px;
+			}
+		}
+	}
+}
+
+/*Articles lobby*/
+.section-articles {
+	h1.title {
+		font-size:56px;
+		font-family: "Knockout 70 A", "Knockout 70 B";
+		margin:45px 0 70px 0;
+		line-height:1;
+		text-transform:uppercase;
+	}
+	.masonry-item {
+		/*width:100%;
+		max-width:406px;*/
+		background:none transparent;
+		padding:0;
+		margin:0 0 40px 0;
+		border:0 none;
+		@include res(s-m){ 
+			max-width:100%;
+			img {
+				width:100%;
+			}
+		}
+		.views-field-title {
+			color:#fff;
+			padding:16px;
+			background:$red;
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size:28px;
+			line-height:30px;
+			text-transform:none;
+			a{
+				color:#fff;
+			}
+		}
+	}
+	.pager-load-more a {
+		font-size:16px;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		text-transform:uppercase;
+		color:#97d4da;
+		margin-bottom:100px;
+		display:block;
+	}
+}
+
+/*Title colors*/
+.purple {
+	background-color:#9e2b68 !important;
+}
+.blue {
+	background-color:#00b7e1 !important;
+}
+.green {
+	background-color:#97ca4b !important;
+}
+.red {
+	background-color:$red !important;
+}
+.brown {
+	background-color:#c9883a !important;
+}
+
+/*Contact us page*/
+.page-node-56 {
+	.group-left{
+		width: 32%;
+		float: left;
+		@include res(s-m){
+			width: 100%;
+		}
+		.field-name-field-contact-image{
+			@include res(m){
+				img{
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+		.field-name-field-contact-us-body {
+			background-color: $red;
+			margin-top: 5px;
+			color: #fff;
+			padding: 16px;
+			box-sizing: border-box;
+			@include res(s-m){
+				margin-bottom: 50px;
+			}
+			p{
+				margin: 0px;
+			}
+		}
+	}
+	.group-right{
+		width: 58%;
+		float: right;
+		@include res(s-m){
+			width: 100%;
+		}
+	}
+	.field-name-field-contact-email, .field-name-field-contact-phone-number{
+		width: 50%;
+		text-align: center;
+		float: left;
+		padding-top: 77px;
+		@include res(s-m){
+			width: 50px;
+			height: 50px;
+			padding: 0;
+		}
+		a{
+			color: $default;
+			padding-top: 77px;
+			@include res(s-m){
+				font-size: 0;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				display: block;
+			}
+		}
+	}
+	.field-name-field-contact-email a{
+		background: url("../images/email.png") no-repeat top center;
+	}
+	.field-name-field-contact-phone-number{
+		@include res(s-m){
+			margin-right: 20px;
+		}
+		a{
+			background: url("../images/phone.png") no-repeat top center;
+		}
+	}
+	.group-mailphone{
+		@include res(s-m){
+			width: 120px;
+			margin: 0 auto;
+		}
+	}
+	.field-name-field-text-before-webform{
+		margin-top: 50px;
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		text-align: center;
+		float: left;
+		width: 100%;
+		margin-bottom: 30px;
+		@include res(s-m){
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	form{
+		width: 100%;
+		float: left;
+		.webform-component{
+			width: 48%;
+			margin: 0 0 20px 0;
+			@include res(s-m){
+				width: 100%;
+			}
+		}
+		.webform-component--full-name, .webform-component--email{
+			float: left;
+		}
+		.webform-component--subject, .webform-component--message-content{
+			float: right;
+		}
+		input{
+			border-bottom: 1px solid $default;
+			border-right: none;
+			border-left: none;
+			border-top: none;
+			padding-left: 3px;
+		}
+		label{
+			font-weight: normal;
+			padding-left: 3px;
+			padding-top: 10px;
+			line-height: 14px;
+		}
+		.form-required{
+			color: $default;
+		}
+		textarea{
+			border: 1px solid $default;
+		}
+		.grippie{
+			display: none;
+		}
+		.form-actions{
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size: 14px;
+			float: right;
+			clear: right;
+			input{
+				border: none;
+				background-color: $default;
+				color: #fff;
+				padding: 10px 38px;
+			}
+		}
+	}
+}
+
+/*Special page*/
+.node-type-special-pages {
+	h1.title { 
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		font-size:32px;
+		color:#fff;
+		background:#97ca4b;
+		padding:6px;
+		line-height:1;
+		margin:50px 0 6px;
+		text-align:center;
+	}
+	.paragraphs-items  {
+		width:815px;
+		margin:0 auto;
+		@include res(s-m){ 
+			width:100%;
+			margin:0;
+		}
+		.field-name-field-image-title {
+			font-family: "Knockout 30 A", "Knockout 30 B";
+			text-transform:uppercase;
+			margin:20px 0;
+			text-align:center;
+		}
+		.field-name-field-video-title {
+			font-family: "Knockout 30 A", "Knockout 30 B";
+			text-transform:uppercase;
+			margin:20px 0;
+			text-align:center;
+		}
+		.field-name-field-image-paragraph, .field-name-field-video-embed  {
+			text-align:center;
+		}
+	}
+}
+
+/*Masonry check*//*NOT WORKING NEEDS TO WORK FROM UI AND NOT CSS
+.masonry-width {width:31.7% !important; margin-right:0 !important; margin-left:0 !important;}
+.masonry-processed {width:100% !important;}
+.masonry-width:nth-child(3n+2) {margin-right:2.45% !important; margin-left:2.45% !important;}*/
+
+
+/*Article page*/
+.node-type-article  {
+	@include res(xl) {
+		.recipe-container-left-main-recipe-image-mobile {
+			display:none;
+		}
+		.article-container-left-sharing-area-mobile {
+			display:none;
+		}
+	}
+	#article-container-left {
+		float:left;
+		margin-right:2%;
+		width:32%;
+		margin-top:55px;
+		@include res(s-m){ 
+			display:none;
+		}
+	}
+	#article-container-right {
+		float:left;
+		width:66%;
+		@include res(s-m){ 
+			width:100%;
+		}
+	}
+	.field-name-field-sharing-article {
+		@include res(s-m){
+			display: none;
+		}
+	}
+	.views-field-field-gallery{
+		background-color: #efefef;
+		padding: 50px 0;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.article-container-right-node-title {
+		.node-title {
+			font-size: 32px;
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			text-align: center;
+			color: #fff;
+			margin-top: 55px;
+			margin-bottom: 35px;
+		}
+	}
+	.field-type-addthis {
+		.field-label {
+			font-family: "Knockout 70 A", "Knockout 70 B";
+			font-size:20px;
+			color:#fff;
+			padding:3px 6px;
+			background-color:#9e2b68;
+			text-align:center;
+			font-weight:normal;
+		}
+	}
+	@include res(xl) {
+		.article-container-left-image_mobile {
+			display:none;
+		}
+	}
+}
+#block-views-articles-view-block-2 {
+	.block-title {
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		font-size:26px;
+		color:$default;
+		display:block;
+		padding-top:10px;
+		text-align:center;
+	}
+}
+.view-product-display-view.view-display-id-block_4 {
+	margin-top:50px;
+	float:left;
+	width:100%;
+	.views-field-title a {
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		font-size:26px;
+		color:$default;
+		display:block;
+		padding-top:10px;
 	}
 }
