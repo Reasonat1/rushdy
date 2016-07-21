@@ -1,12 +1,16 @@
-<?php 
+<?php
 
 /**
- * Implement hook_uninstall
- * 
+ * @file
+ * Commerce Ajax Cart install hooks.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
  * Remove all variables from DB
  */
 function commerce_ajax_cart_uninstall() {
-	variable_del('commerce_ajax_cart_position');
-	variable_del('commerce_ajax_cart_text');
-	variable_del('commerce_ajax_cart_view');
+  db_query("DELETE FROM {variable} WHERE name LIKE 'commerce_ajax_cart_%'");
+  cache_clear_all('variables', 'cache');
 }

@@ -7,7 +7,13 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+<?php if (!empty($content['field_article_color_title'])) {
+  $term = taxonomy_term_load($node->field_article_color_title['und'][0]['tid']);
+  $result = $term->name;
+}
+?>
+<article class="wrapper-<?php print $result; ?> node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php if ($display_submitted): ?>
@@ -37,6 +43,7 @@
      <div class="article-container-left-related-product-area">
       <?php
         $my_block = module_invoke('views', 'block_view', 'product_display_view-block_4');
+        print render($my_block['subject']);
         print render($my_block['content']); 
       ?>
      </div>

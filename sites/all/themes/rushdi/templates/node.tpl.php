@@ -7,15 +7,27 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
+
+<?php if (!empty($content['field_title_color'])) {
+  $term = taxonomy_term_load($node->field_title_color['und'][0]['tid']);
+  $result = $term->name;
+}
+
+?>
+
+<article class="wrapper-<?php print $result; ?> node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1<?php print $title_attributes; ?>><?php print $title; ?></h2>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+    <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-
       <?php if ($display_submitted): ?>
         <p class="submitted">
           <?php print $user_picture; ?>

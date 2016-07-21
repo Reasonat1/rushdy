@@ -53,3 +53,13 @@
 [26-Jun-2016 09:00:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<' in /home/rushdy/public_html/sites/all/themes/rushdi/templates/page.tpl.php on line 61
 [26-Jun-2016 09:00:59 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<' in /home/rushdy/public_html/sites/all/themes/rushdi/templates/page.tpl.php on line 61
 [26-Jun-2016 09:01:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/rushdy/public_html/sites/all/themes/rushdi/templates/page.tpl.php on line 62
+[13-Jul-2016 14:59:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<' in /home/sesame/public_html/sites/all/themes/rushdi/templates/node--recipes.tpl.php on line 92
+[13-Jul-2016 15:24:58 Asia/Jerusalem] PHP Fatal error:  Call to a member function label() on a non-object in /home/sesame/public_html/sites/all/modules/views/includes/admin.inc on line 2289
+[14-Jul-2016 10:26:52 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/sesame/public_html/sites/all/modules/taxonomy_field_formatter/taxonomy_field_formatter.module on line 78
+[17-Jul-2016 17:20:13 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54
+[17-Jul-2016 17:20:54 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54
+[17-Jul-2016 17:21:16 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54
+[17-Jul-2016 17:21:27 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54
+[17-Jul-2016 17:21:41 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 53
+[17-Jul-2016 17:21:44 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 53
+[17-Jul-2016 17:22:15 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54

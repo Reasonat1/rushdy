@@ -34,9 +34,9 @@
 	</div>
 	<div id="hp-bean-container-text">
 		<div id="top-text">
-			<div class="hp-bean-title">
+			<h1 class="hp-bean-title">
 			  <?php print $title; ?>
-			</div>
+			</h1>
 			<div class="hp-bean-slogan">
 			  <?php print render($content['field_hp_slogan']); ?>
 			</div>

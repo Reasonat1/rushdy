@@ -8,12 +8,17 @@
  */
 ?>
 
-<div id="page">
+      <div class="sticky-area">
     <div class="mobile-menu close">
       <span class="icon-bar bar1"></span>
       <span class="icon-bar bar2"></span>
       <span class="icon-bar bar3"></span>
     </div> 
+      <div class="top-wrapper">
+        <div class="wrapper-width">
+          <?php print render($page['top']); ?>
+        </div>
+      </div>
   <header class="header" id="header" role="banner">
   <div class="wrapper-width">
       <?php if ($logo): ?>
@@ -53,7 +58,13 @@
       <?php print render($page['header']); ?>
     </div>
   </header>
-      <?php print render($page['highlighted']); ?>
+  <div class="wrapper-menu-blocks">
+        <?php print render($page['menu_blocks']); ?>
+  </div>
+</div>
+<div id="page">
+      <div class="line-header"></div>
+        <?php print render($page['highlighted']); ?>
       <?php print render($page['help']); ?>
 
   <div id="main">
@@ -62,9 +73,9 @@
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <!-- <?php if (($title) && (!$is_front)) { ?>
+      <?php if (($title) && (!$node)) { ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php } ?> -->
+      <?php } ?> 
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
@@ -120,7 +131,7 @@
     <div class="wrapper-width">
       <?php print render($page['footer']); ?>
     </div>
+    <?php print render($page['bottom']); ?>
   </div>
 </div>
 
-<?php print render($page['bottom']); ?>

@@ -12,9 +12,9 @@ project = "commerce_ajax_cart"
 datestamp = "1389966808"
 
 
-; Information added by Drupal.org packaging script on 2014-03-10
-version = "7.x-1.0-beta3"
+; Information added by Drupal.org packaging script on 2015-03-13
+version = "7.x-1.0-beta3+15-dev"
 core = "7.x"
 project = "commerce_ajax_cart"
-datestamp = "1394461421"
+datestamp = "1426218782"
 

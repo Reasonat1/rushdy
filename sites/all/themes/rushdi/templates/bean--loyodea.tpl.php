@@ -34,7 +34,7 @@
 		</div>
 	<div id="bean-container-text">
 		<div class="bean-title">
-			<?php print $title; ?>
+			<h1><?php print $title; ?></h1>
 		</div>
 		<div class="bean-slogan">
 			<?php print render($content['field_slogan']); ?>

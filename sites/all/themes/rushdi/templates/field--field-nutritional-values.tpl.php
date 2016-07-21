@@ -53,7 +53,8 @@ HTML comment.
 <div class="click-to-see"><?php print t("see all nutritional values"); ?></div>
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-	<div class="close">X</div>
+	<div class="close"><img src="/sites/all/themes/rushdi/images/close.png"></div>
+	<div class="screen-overlay"></div>
   <?php if (!$label_hidden): ?>
     <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
   <?php endif; ?>

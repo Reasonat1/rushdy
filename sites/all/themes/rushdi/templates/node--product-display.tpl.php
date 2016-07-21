@@ -7,7 +7,13 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<?php if (!empty($content['field_product_color_title'])) {
+  $term = taxonomy_term_load($node->field_product_color_title['und'][0]['tid']);
+  $result = $term->name;
+}
+?>
+
+<article class="wrapper-<?php print $result; ?> node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
      <div class="node-title">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -42,7 +48,7 @@
     hide($content['links']);
     print render($content);
   ?>
-
+  <a href="/products" class="back-products">back to all products</a>
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>

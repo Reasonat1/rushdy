@@ -7,7 +7,12 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<?php if (!empty($content['field_new_recipe_type'])) {
+  $term = taxonomy_term_load($node->field_new_recipe_type['und'][0]['tid']);
+  $result = $term->name;
+}
+?>
+<article class="wrapper-<?php print $result; ?> node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php if ($display_submitted): ?>
@@ -27,20 +32,7 @@
     hide($content['links']);
   ?>
   <div id="recipe-container">
-   <div id="recipe-container-left">
-     <div class="recipe-container-left-main-recipe-image">
-      <?php print render($content['field_recipe_image']); ?>
-     </div>
-     <div class="recipe-container-left-sharing-area">
-      <?php print render($content['field_sharing_recipe']); ?>
-     </div>
-     <div class="recipe-container-left-related-product-area">
-      <?php
-        $my_block = module_invoke('views', 'block_view', 'product_display_view-block_1');
-        print render($my_block['content']); 
-      ?>
-     </div>
-   </div>
+
    <div id="recipe-container-right">
      <div class="recipe-container-right-node-title">
       <?php print render($title_prefix); ?>
@@ -52,17 +44,10 @@
      <?php $recipe_categories = field_get_items('node', $node, 'field_recipe_category'); ?>
      <?php if ($recipe_categories) : ?>
        <div class="recipe-conatiner-right-recipe-tags-icons">
-        <?php foreach ($recipe_categories as $category) : ?>
-          <?php 
-            $icon = field_get_items('taxonomy_term', $category['taxonomy_term'], 'field_category_icon');
-            if (empty($icon)) {
-              continue;
-            }
-            //print check_plain($category['taxonomy_term']->name);
-            $icon = field_view_field('taxonomy_term', $category['taxonomy_term'], 'field_category_icon', array('label' => 'hidden'));
-            print render($icon);
-          ?>
-        <?php endforeach; ?>
+        <?php 
+            $my_block = module_invoke('views', 'block_view', 'category_of_recipes-block');?>
+            <?php print render($my_block['content']); 
+        ?> 
        </div>
      <?php endif; ?>
 	 <div class="recipe-container-left-main-recipe-image-mobile">
@@ -84,7 +69,21 @@
       <?php print render($content['field_preparetion_steps']); ?>
      </div>
    </div>
-    
+       <div id="recipe-container-left">
+     <div class="recipe-container-left-main-recipe-image">
+      <?php print render($content['field_recipe_image']); ?>
+     </div>
+     <div class="recipe-container-left-sharing-area">
+      <?php print render($content['field_sharing_recipe']); ?>
+     </div>
+     <div class="recipe-container-left-related-product-area">
+      <?php
+        $my_block = module_invoke('views', 'block_view', 'product_display_view-block_1');
+        print render($my_block['subject']);
+        print render($my_block['content']); 
+      ?>
+     </div>
+   </div>
   </div>
   <?php print render($content['links']); ?>
   <?php print render($content['comments']); ?>

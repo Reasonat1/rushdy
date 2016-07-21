@@ -52,7 +52,7 @@ Drupal.behaviors.my_custom_behavior = {
 					$("#hp-bean-container-text .hp-bean-slogan").css("margin-bottom",($space)/6.5);
 				}
 		});
-	}*/
+	}
 	if ($("body").hasClass("front")){
 	    	$("#hp-bean-container-image .hp-bean-slogan").css("margin",0);
 	    	$("#hp-bean-container-text #top-text").css("margin-top",0);
@@ -89,7 +89,7 @@ Drupal.behaviors.my_custom_behavior = {
 					$("#block-bean-loyodea .bean-title").css("margin-bottom",($space)/7);
 				}
 		});
-	}
+	}*/
 
 
 
@@ -109,7 +109,59 @@ Drupal.behaviors.my_custom_behavior = {
 		$(".click-to-see").click(function(){
 			$("body").addClass("nutritional-open");
 		});
+
+		$(document).click(function(event) { 
+              if((!$(event.target).closest('.field-name-field-nutritional-values img').length) && (!$(event.target).closest('.click-to-see').length)) {
+				$("body").removeClass("nutritional-open");
+              }        
+          });
+
+		$(".field-name-field-nutritional-values .close").click(function(){
+			$("body").removeClass("nutritional-open");
+		});
 	}
+
+	/********  scroll class  ***********/
+
+      $scroll_pos = 0;
+      $(document).scroll(function() { 
+        $scroll_pos = $(this).scrollTop();
+        if($scroll_pos > 0) {
+            $("body").addClass('scroll');
+        }
+        else {
+            $("body").removeClass('scroll');
+        }
+      });
+
+	/*******  mega menu  *********/
+
+	$(document).ready(function(){
+	    $(".menu-1481").hover(function(){
+	        $("#block-quicktabs-information-block").css("display","block");
+	        },function(){
+	        $("#block-quicktabs-information-block").css("display","none");
+	    });
+	    $(".wrapper-menu-blocks #block-quicktabs-information-block").hover(function(){
+	        $("#block-quicktabs-information-block").css("display","block");
+	        },function(){
+	        $("#block-quicktabs-information-block").css("display","none");
+	    });
+	});
+
+	$(document).ready(function(){
+	    $(".menu-1482").hover(function(){
+	        $("#block-views-product-term-view-block").css("display","block");
+	        },function(){
+	        $("#block-views-product-term-view-block").css("display","none");
+	    });
+	    $(".wrapper-menu-blocks #block-views-product-term-view-block").hover(function(){
+	        $("#block-views-product-term-view-block").css("display","block");
+	        },function(){
+	        $("#block-views-product-term-view-block").css("display","none");
+	    });
+	});
+
 
   }
 };

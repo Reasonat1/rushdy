@@ -85,7 +85,9 @@ scripts[] = js/rushdi.js
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
+regions[top]         	= Top
 regions[header]         = Header
+regions[menu_blocks]    = Menu Blocks
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
