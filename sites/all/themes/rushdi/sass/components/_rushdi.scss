@@ -340,7 +340,7 @@ a.phone{
 	height: 1px;
 	width: 100%;
 	top: 106px;
-	z-index: 300px;
+	z-index: 300;
 }
 
 .scroll{
@@ -1605,6 +1605,7 @@ a.phone{
 		.field-slideshow{
 			float: right;
 			width: 83%!important;
+			height: 100%!important;
 			box-sizing:border-box;
 			z-index: 100;
 			@include res(s-m){

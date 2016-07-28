@@ -2159,7 +2159,7 @@ a.phone {
   height: 1px;
   width: 100%;
   top: 106px;
-  z-index: 300px;
+  z-index: 300;
 }
 
 /* line 347, ../sass/components/_rushdi.scss */
@@ -3768,6 +3768,7 @@ a.phone {
 .node-type-product-display .group-left .field-slideshow {
   float: right;
   width: 83% !important;
+  height: 100% !important;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -3778,37 +3779,37 @@ a.phone {
   }
 }
 @media (max-width: 767px) {
-  /* line 1613, ../sass/components/_rushdi.scss */
+  /* line 1614, ../sass/components/_rushdi.scss */
   .node-type-product-display .group-left .field-slideshow .field-slideshow-slide, .node-type-product-display .group-left .field-slideshow img {
     width: 100% !important;
   }
 }
-/* line 1618, ../sass/components/_rushdi.scss */
+/* line 1619, ../sass/components/_rushdi.scss */
 .node-type-product-display .group-left .field-slideshow img {
   padding: 18px 40px !important;
   background-color: #f2f2f2;
   box-sizing: border-box;
 }
-/* line 1625, ../sass/components/_rushdi.scss */
+/* line 1626, ../sass/components/_rushdi.scss */
 .node-type-product-display .group-right {
   width: 38%;
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 1625, ../sass/components/_rushdi.scss */
+  /* line 1626, ../sass/components/_rushdi.scss */
   .node-type-product-display .group-right {
     width: 100%;
   }
 }
-/* line 1632, ../sass/components/_rushdi.scss */
+/* line 1633, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-field-product-weight {
   text-transform: uppercase;
 }
-/* line 1635, ../sass/components/_rushdi.scss */
+/* line 1636, ../sass/components/_rushdi.scss */
 .node-type-product-display .group-text {
   clear: both;
 }
-/* line 1638, ../sass/components/_rushdi.scss */
+/* line 1639, ../sass/components/_rushdi.scss */
 .node-type-product-display .click-to-see {
   text-transform: uppercase;
   cursor: pointer;
@@ -3817,31 +3818,31 @@ a.phone {
   margin-top: 55px;
   text-decoration: underline;
 }
-/* line 1646, ../sass/components/_rushdi.scss */
+/* line 1647, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-body {
   margin-top: 40px;
 }
-/* line 1648, ../sass/components/_rushdi.scss */
+/* line 1649, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-body p {
   margin-top: 0;
 }
-/* line 1652, ../sass/components/_rushdi.scss */
+/* line 1653, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-nutritional-values {
   display: none;
 }
-/* line 1654, ../sass/components/_rushdi.scss */
+/* line 1655, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-nutritional-values .field-item {
   margin: 0 auto;
   height: 100%;
   width: auto;
 }
-/* line 1659, ../sass/components/_rushdi.scss */
+/* line 1660, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-nutritional-values .field-items {
   height: 80%;
   width: 80%;
   margin: 0 auto;
 }
-/* line 1664, ../sass/components/_rushdi.scss */
+/* line 1665, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-nutritional-values .close {
   color: #fff;
   position: fixed;
@@ -3849,7 +3850,7 @@ a.phone {
   left: 30px;
   cursor: pointer;
 }
-/* line 1672, ../sass/components/_rushdi.scss */
+/* line 1673, ../sass/components/_rushdi.scss */
 .node-type-product-display.nutritional-open .field-name-field-nutritional-values {
   display: block;
   height: 100%;
@@ -3858,14 +3859,14 @@ a.phone {
   top: 0;
   width: 100%;
 }
-/* line 1679, ../sass/components/_rushdi.scss */
+/* line 1680, ../sass/components/_rushdi.scss */
 .node-type-product-display.nutritional-open .field-name-field-nutritional-values .field-items img {
   margin: 70px auto 0;
   display: block;
   max-height: 100%;
   width: auto;
 }
-/* line 1685, ../sass/components/_rushdi.scss */
+/* line 1686, ../sass/components/_rushdi.scss */
 .node-type-product-display.nutritional-open .field-name-field-nutritional-values .screen-overlay {
   position: absolute;
   width: 100%;
@@ -3876,28 +3877,28 @@ a.phone {
   top: 0;
   z-index: -1;
 }
-/* line 1696, ../sass/components/_rushdi.scss */
+/* line 1697, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-bulletin-text {
   margin: 30px 0;
   font-family: "Knockout 30 A", "Knockout 30 B";
 }
-/* line 1699, ../sass/components/_rushdi.scss */
+/* line 1700, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-bulletin-text ul {
   padding: 0;
   margin: 0;
 }
-/* line 1703, ../sass/components/_rushdi.scss */
+/* line 1704, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-bulletin-text li {
   list-style: none outside none;
   font-family: "Knockout 30 A", "Knockout 30 B";
   font-size: 18px;
   margin-bottom: 20px;
 }
-/* line 1709, ../sass/components/_rushdi.scss */
+/* line 1710, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-bulletin-text p {
   margin-bottom: 25px;
 }
-/* line 1713, ../sass/components/_rushdi.scss */
+/* line 1714, ../sass/components/_rushdi.scss */
 .node-type-product-display .back-products {
   font-family: "Knockout 70 A", "Knockout 70 B";
   color: #97d4da;
@@ -3911,29 +3912,29 @@ a.phone {
   padding-top: 20px;
 }
 @media (max-width: 767px) {
-  /* line 1713, ../sass/components/_rushdi.scss */
+  /* line 1714, ../sass/components/_rushdi.scss */
   .node-type-product-display .back-products {
     text-align: center;
     font-size: 32px;
     line-height: 32px;
   }
 }
-/* line 1730, ../sass/components/_rushdi.scss */
+/* line 1731, ../sass/components/_rushdi.scss */
 .node-type-product-display #block-views-recipes-displays-block-3 .block-title {
   margin-top: 70px;
 }
-/* line 1733, ../sass/components/_rushdi.scss */
+/* line 1734, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-field-product-weight {
   float: left;
   margin-right: 45px;
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 1733, ../sass/components/_rushdi.scss */
+  /* line 1734, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-field-product-weight {
     margin-right: 28px;
   }
 }
-/* line 1740, ../sass/components/_rushdi.scss */
+/* line 1741, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-commerce-price {
   font-family: "Knockout 30 A", "Knockout 30 B";
   font-size: 30px;
@@ -3942,33 +3943,33 @@ a.phone {
   margin-right: 45px;
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 1740, ../sass/components/_rushdi.scss */
+  /* line 1741, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-commerce-price {
     margin-right: 28px;
   }
 }
-/* line 1750, ../sass/components/_rushdi.scss */
+/* line 1751, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity {
   float: left;
   margin: -6px 0 0 0;
   position: relative;
 }
 @media (max-width: 480px) {
-  /* line 1750, ../sass/components/_rushdi.scss */
+  /* line 1751, ../sass/components/_rushdi.scss */
   .node-type-product-display .form-item-quantity {
     clear: both;
     margin-bottom: 31px;
     margin-top: 47px;
   }
 }
-/* line 1759, ../sass/components/_rushdi.scss */
+/* line 1760, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity label {
   font-weight: normal;
   float: left;
   margin-right: 10px;
   margin-top: 6px;
 }
-/* line 1765, ../sass/components/_rushdi.scss */
+/* line 1766, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity input {
   width: 60px;
   border: 2px solid #282725;
@@ -3977,7 +3978,7 @@ a.phone {
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 1765, ../sass/components/_rushdi.scss */
+  /* line 1766, ../sass/components/_rushdi.scss */
   .node-type-product-display .form-item-quantity input {
     height: 85px;
     width: 85px;
@@ -3985,7 +3986,7 @@ a.phone {
     margin-top: -22px;
   }
 }
-/* line 1778, ../sass/components/_rushdi.scss */
+/* line 1779, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button {
   background: url("../images/quantity-arrows.png") no-repeat 5px 6px;
   border-radius: 0;
@@ -4000,58 +4001,58 @@ a.phone {
   -webkit-appearance: none;
 }
 @media (max-width: 767px) {
-  /* line 1778, ../sass/components/_rushdi.scss */
+  /* line 1779, ../sass/components/_rushdi.scss */
   .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button {
     background: url("../images/quantity-arrows-mobile.png") no-repeat 7px 14px;
     width: 33px;
     height: 42px;
   }
 }
-/* line 1795, ../sass/components/_rushdi.scss */
+/* line 1796, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button:hover {
   background-color: transparent;
 }
-/* line 1798, ../sass/components/_rushdi.scss */
+/* line 1799, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button a, .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button a:link, .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button a:visited {
   text-decoration: none;
   outline: 0;
 }
-/* line 1803, ../sass/components/_rushdi.scss */
+/* line 1804, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button textarea:focus, .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button input:focus {
   outline: 0;
 }
-/* line 1807, ../sass/components/_rushdi.scss */
+/* line 1808, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link a.button *:focus {
   outline: 0;
   outline-style: none;
   outline-width: 0;
 }
-/* line 1813, ../sass/components/_rushdi.scss */
+/* line 1814, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link-increase {
   float: right;
 }
-/* line 1815, ../sass/components/_rushdi.scss */
+/* line 1816, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link-increase a {
   top: 0;
 }
 @media (max-width: 767px) {
-  /* line 1815, ../sass/components/_rushdi.scss */
+  /* line 1816, ../sass/components/_rushdi.scss */
   .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link-increase a {
     top: -20px;
   }
 }
-/* line 1823, ../sass/components/_rushdi.scss */
+/* line 1824, ../sass/components/_rushdi.scss */
 .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link-decrease a {
   bottom: 0;
   background-position: 5px -10px !important;
 }
 @media (max-width: 767px) {
-  /* line 1823, ../sass/components/_rushdi.scss */
+  /* line 1824, ../sass/components/_rushdi.scss */
   .node-type-product-display .form-item-quantity .commerce-quantity-plusminus-link-decrease a {
     background-position: 7px -24px !important;
   }
 }
-/* line 1833, ../sass/components/_rushdi.scss */
+/* line 1834, ../sass/components/_rushdi.scss */
 .node-type-product-display .field-name-field-product .form-submit {
   background-color: #000;
   color: #fff;
@@ -4066,7 +4067,7 @@ a.phone {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 1833, ../sass/components/_rushdi.scss */
+  /* line 1834, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-name-field-product .form-submit {
     text-indent: -9999px;
     background: url("../images/add-to-cart.png") no-repeat center center #000;
@@ -4077,36 +4078,36 @@ a.phone {
   }
 }
 @media (max-width: 480px) {
-  /* line 1833, ../sass/components/_rushdi.scss */
+  /* line 1834, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-name-field-product .form-submit {
     top: 25px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1370px) {
-  /* line 1862, ../sass/components/_rushdi.scss */
+  /* line 1863, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-name-field-product {
     clear: both;
     padding-top: 30px;
   }
-  /* line 1865, ../sass/components/_rushdi.scss */
+  /* line 1866, ../sass/components/_rushdi.scss */
   .node-type-product-display .field-name-field-product .form-submit {
     float: left;
     margin-left: 25px;
   }
 }
-/* line 1873, ../sass/components/_rushdi.scss */
+/* line 1874, ../sass/components/_rushdi.scss */
 #block-views-recipes-displays-block-3 {
   clear: both;
 }
 
-/* line 1876, ../sass/components/_rushdi.scss */
+/* line 1877, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 {
   clear: both;
   overflow: hidden;
   margin-bottom: 50px;
 }
-/* line 1880, ../sass/components/_rushdi.scss */
+/* line 1881, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .block-title {
   line-height: 1;
   font-family: "Knockout 70 A", "Knockout 70 B";
@@ -4116,19 +4117,19 @@ a.phone {
   font-size: 30px;
 }
 @media (max-width: 767px) {
-  /* line 1880, ../sass/components/_rushdi.scss */
+  /* line 1881, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .block-title {
     margin-top: 0;
   }
 }
-/* line 1891, ../sass/components/_rushdi.scss */
+/* line 1892, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row {
   width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
 }
 @media (max-width: 480px) {
-  /* line 1891, ../sass/components/_rushdi.scss */
+  /* line 1892, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row {
     width: 100%;
     margin: 0 0 20px;
@@ -4136,79 +4137,79 @@ a.phone {
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 1891, ../sass/components/_rushdi.scss */
+  /* line 1892, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row {
     width: 48%;
     margin: 0;
   }
-  /* line 1903, ../sass/components/_rushdi.scss */
+  /* line 1904, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row.even {
     float: right;
   }
 }
 @media (max-width: 767px) {
-  /* line 1907, ../sass/components/_rushdi.scss */
+  /* line 1908, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row img {
     display: block;
     margin: 0 auto;
   }
 }
-/* line 1913, ../sass/components/_rushdi.scss */
+/* line 1914, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row .views-field-title {
   margin-top: 8px;
 }
 @media (max-width: 767px) {
-  /* line 1913, ../sass/components/_rushdi.scss */
+  /* line 1914, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row .views-field-title {
     text-align: center;
   }
 }
-/* line 1918, ../sass/components/_rushdi.scss */
+/* line 1919, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row .views-field-title a {
   padding: 6px 0 0;
   color: #282725;
 }
 @media (max-width: 767px) {
-  /* line 1924, ../sass/components/_rushdi.scss */
+  /* line 1925, ../sass/components/_rushdi.scss */
   #block-views-product-display-view-block-2 .views-row-3, #block-views-product-display-view-block-2 .views-row-4, #block-views-product-display-view-block-2 .views-row-5 {
     display: none;
   }
 }
-/* line 1929, ../sass/components/_rushdi.scss */
+/* line 1930, ../sass/components/_rushdi.scss */
 #block-views-product-display-view-block-2 .views-row-last {
   margin: 0 0 0 0;
 }
 
 /*Article page*/
-/* line 1936, ../sass/components/_rushdi.scss */
+/* line 1937, ../sass/components/_rushdi.scss */
 .node-type-article .node-title {
   padding: 10px;
   margin-top: 55px !important;
 }
-/* line 1940, ../sass/components/_rushdi.scss */
+/* line 1941, ../sass/components/_rushdi.scss */
 .node-type-article .field-name-field-sharing {
   clear: both;
 }
-/* line 1942, ../sass/components/_rushdi.scss */
+/* line 1943, ../sass/components/_rushdi.scss */
 .node-type-article .field-name-field-sharing .field-label {
   font-wieght: normal;
 }
 @media (max-width: 767px) {
-  /* line 1940, ../sass/components/_rushdi.scss */
+  /* line 1941, ../sass/components/_rushdi.scss */
   .node-type-article .field-name-field-sharing {
     display: none;
   }
 }
-/* line 1949, ../sass/components/_rushdi.scss */
+/* line 1950, ../sass/components/_rushdi.scss */
 .node-type-article .field-type-text-with-summary {
   font-size: 18px;
 }
-/* line 1952, ../sass/components/_rushdi.scss */
+/* line 1953, ../sass/components/_rushdi.scss */
 .node-type-article .field-name-field-tags {
   background: url("../images/tag-icon.png") no-repeat left center;
   padding-left: 30px;
 }
-/* line 1955, ../sass/components/_rushdi.scss */
+/* line 1956, ../sass/components/_rushdi.scss */
 .node-type-article .field-name-field-tags .field-item {
   font-size: 18px;
   color: #00b7e1;
@@ -4217,40 +4218,40 @@ a.phone {
 }
 
 /*Products lobby*/
-/* line 1967, ../sass/components/_rushdi.scss */
+/* line 1968, ../sass/components/_rushdi.scss */
 .page-products #block-quicktabs-information-block {
   display: none !important;
 }
 
-/* line 1973, ../sass/components/_rushdi.scss */
+/* line 1974, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 {
   width: 100%;
 }
-/* line 1975, ../sass/components/_rushdi.scss */
+/* line 1976, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .group {
   border-bottom: 1px solid #c7c7c7;
   padding-bottom: 24px;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  /* line 1975, ../sass/components/_rushdi.scss */
+  /* line 1976, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .group {
     border: none;
     padding-bottom: 0;
   }
 }
-/* line 1983, ../sass/components/_rushdi.scss */
+/* line 1984, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .group .content {
   width: 756px;
   max-width: 94%;
   margin: 0 auto;
   padding: 0 3%;
 }
-/* line 1990, ../sass/components/_rushdi.scss */
+/* line 1991, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .group:last-child {
   border: none;
 }
-/* line 1993, ../sass/components/_rushdi.scss */
+/* line 1994, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 h3 {
   text-align: center;
   padding: 9px;
@@ -4262,57 +4263,57 @@ a.phone {
   background-color: #00b7e1;
 }
 @media (max-width: 767px) {
-  /* line 1993, ../sass/components/_rushdi.scss */
+  /* line 1994, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 h3 {
     font-size: 28px;
     padding: 14px;
   }
 }
-/* line 2007, ../sass/components/_rushdi.scss */
+/* line 2008, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-field-field-gallery {
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
-  /* line 2007, ../sass/components/_rushdi.scss */
+  /* line 2008, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-field-field-gallery {
     margin-bottom: 24px;
   }
 }
-/* line 2013, ../sass/components/_rushdi.scss */
+/* line 2014, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row {
   float: left;
   width: 30%;
 }
 @media (max-width: 480px) {
-  /* line 2013, ../sass/components/_rushdi.scss */
+  /* line 2014, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row {
     width: 100%;
     float: none;
     margin-bottom: 65px;
     text-align: center;
   }
-  /* line 2021, ../sass/components/_rushdi.scss */
+  /* line 2022, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row img {
     margin: 0 auto;
     display: block;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 2013, ../sass/components/_rushdi.scss */
+  /* line 2014, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row {
     width: 40%;
   }
-  /* line 2028, ../sass/components/_rushdi.scss */
+  /* line 2029, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row .views-row-even {
     float: right;
   }
 }
-/* line 2032, ../sass/components/_rushdi.scss */
+/* line 2033, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row .views-field-title {
   width: 80%;
   float: left;
 }
-/* line 2035, ../sass/components/_rushdi.scss */
+/* line 2036, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row .views-field-title a {
   font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 26px;
@@ -4320,13 +4321,13 @@ a.phone {
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 2035, ../sass/components/_rushdi.scss */
+  /* line 2036, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row .views-field-title a {
     font-size: 36px;
     font-family: "Knockout 70 A", "Knockout 70 B";
   }
 }
-/* line 2046, ../sass/components/_rushdi.scss */
+/* line 2047, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row .views-field-commerce-price {
   float: right;
   width: 20%;
@@ -4335,29 +4336,29 @@ a.phone {
   padding-top: 2px;
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 2054, ../sass/components/_rushdi.scss */
+  /* line 2055, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row-even {
     float: right;
   }
 }
-/* line 2059, ../sass/components/_rushdi.scss */
+/* line 2060, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row-1.views-row-last {
   float: none;
   margin: 0 auto;
 }
-/* line 2063, ../sass/components/_rushdi.scss */
+/* line 2064, ../sass/components/_rushdi.scss */
 .section-products .view-product-display-view.view-display-id-page_1 .views-row:nth-child(3n+3) {
   margin: 0 5%;
 }
 @media (max-width: 767px) {
-  /* line 2063, ../sass/components/_rushdi.scss */
+  /* line 2064, ../sass/components/_rushdi.scss */
   .section-products .view-product-display-view.view-display-id-page_1 .views-row:nth-child(3n+3) {
     margin: 0 0 40px;
   }
 }
 
 /*Articles lobby*/
-/* line 2074, ../sass/components/_rushdi.scss */
+/* line 2075, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-1 h1.title {
   font-size: 56px;
   font-family: "Knockout 70 A", "Knockout 70 B";
@@ -4365,7 +4366,7 @@ a.phone {
   line-height: 1;
   text-transform: uppercase;
 }
-/* line 2081, ../sass/components/_rushdi.scss */
+/* line 2082, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-1 .masonry-item {
   /*width:100%;
   max-width:406px;*/
@@ -4375,16 +4376,16 @@ a.phone {
   border: 0 none;
 }
 @media (max-width: 767px) {
-  /* line 2081, ../sass/components/_rushdi.scss */
+  /* line 2082, ../sass/components/_rushdi.scss */
   #block-views-articles-view-block-1 .masonry-item {
     max-width: 100%;
   }
-  /* line 2090, ../sass/components/_rushdi.scss */
+  /* line 2091, ../sass/components/_rushdi.scss */
   #block-views-articles-view-block-1 .masonry-item img {
     width: 100%;
   }
 }
-/* line 2094, ../sass/components/_rushdi.scss */
+/* line 2095, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-1 .masonry-item .views-field-title {
   color: #fff;
   padding: 16px;
@@ -4394,11 +4395,11 @@ a.phone {
   line-height: 30px;
   text-transform: none;
 }
-/* line 2102, ../sass/components/_rushdi.scss */
+/* line 2103, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-1 .masonry-item .views-field-title a {
   color: #fff;
 }
-/* line 2107, ../sass/components/_rushdi.scss */
+/* line 2108, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-1 .pager-load-more a {
   font-size: 16px;
   font-family: "Knockout 50 A", "Knockout 50 B";
@@ -4409,55 +4410,55 @@ a.phone {
 }
 
 /*Title colors*/
-/* line 2118, ../sass/components/_rushdi.scss */
+/* line 2119, ../sass/components/_rushdi.scss */
 .purple .purple a {
   background-color: #9e2b68 !important;
 }
 
-/* line 2121, ../sass/components/_rushdi.scss */
+/* line 2122, ../sass/components/_rushdi.scss */
 .blue, .blue a {
   background-color: #00b7e1 !important;
 }
 
-/* line 2124, ../sass/components/_rushdi.scss */
+/* line 2125, ../sass/components/_rushdi.scss */
 .green, .green a {
   background-color: #97ca4b !important;
 }
 
-/* line 2127, ../sass/components/_rushdi.scss */
+/* line 2128, ../sass/components/_rushdi.scss */
 .red {
   background-color: #e84754 !important;
 }
 
-/* line 2130, ../sass/components/_rushdi.scss */
+/* line 2131, ../sass/components/_rushdi.scss */
 .brown, .brown a {
   background-color: #c9883a !important;
 }
 
 /*Contact us page*/
-/* line 2136, ../sass/components/_rushdi.scss */
+/* line 2137, ../sass/components/_rushdi.scss */
 .page-node-56 .node-title {
   width: 100%;
   max-width: 664px;
 }
-/* line 2140, ../sass/components/_rushdi.scss */
+/* line 2141, ../sass/components/_rushdi.scss */
 .page-node-56 .group-left {
   width: 32%;
   float: left;
 }
 @media (max-width: 767px) {
-  /* line 2140, ../sass/components/_rushdi.scss */
+  /* line 2141, ../sass/components/_rushdi.scss */
   .page-node-56 .group-left {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  /* line 2146, ../sass/components/_rushdi.scss */
+  /* line 2147, ../sass/components/_rushdi.scss */
   .page-node-56 .group-left .field-name-field-contact-image {
     display: none;
   }
 }
-/* line 2151, ../sass/components/_rushdi.scss */
+/* line 2152, ../sass/components/_rushdi.scss */
 .page-node-56 .group-left .field-name-field-contact-us-body {
   background-color: #e84754;
   margin-top: 5px;
@@ -4466,27 +4467,27 @@ a.phone {
   box-sizing: border-box;
 }
 @media (max-width: 767px) {
-  /* line 2151, ../sass/components/_rushdi.scss */
+  /* line 2152, ../sass/components/_rushdi.scss */
   .page-node-56 .group-left .field-name-field-contact-us-body {
     margin-bottom: 50px;
   }
 }
-/* line 2160, ../sass/components/_rushdi.scss */
+/* line 2161, ../sass/components/_rushdi.scss */
 .page-node-56 .group-left .field-name-field-contact-us-body p {
   margin: 0px;
 }
-/* line 2165, ../sass/components/_rushdi.scss */
+/* line 2166, ../sass/components/_rushdi.scss */
 .page-node-56 .group-right {
   width: 58%;
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 2165, ../sass/components/_rushdi.scss */
+  /* line 2166, ../sass/components/_rushdi.scss */
   .page-node-56 .group-right {
     width: 100%;
   }
 }
-/* line 2172, ../sass/components/_rushdi.scss */
+/* line 2173, ../sass/components/_rushdi.scss */
 .page-node-56 .field-name-field-contact-email, .page-node-56 .field-name-field-contact-phone-number {
   width: 50%;
   text-align: center;
@@ -4494,20 +4495,20 @@ a.phone {
   padding-top: 77px;
 }
 @media (max-width: 767px) {
-  /* line 2172, ../sass/components/_rushdi.scss */
+  /* line 2173, ../sass/components/_rushdi.scss */
   .page-node-56 .field-name-field-contact-email, .page-node-56 .field-name-field-contact-phone-number {
     width: 50px;
     height: 50px;
     padding: 0;
   }
 }
-/* line 2182, ../sass/components/_rushdi.scss */
+/* line 2183, ../sass/components/_rushdi.scss */
 .page-node-56 .field-name-field-contact-email a, .page-node-56 .field-name-field-contact-phone-number a {
   color: #282725;
   padding-top: 77px;
 }
 @media (max-width: 767px) {
-  /* line 2182, ../sass/components/_rushdi.scss */
+  /* line 2183, ../sass/components/_rushdi.scss */
   .page-node-56 .field-name-field-contact-email a, .page-node-56 .field-name-field-contact-phone-number a {
     font-size: 0;
     width: 50px;
@@ -4516,28 +4517,28 @@ a.phone {
     display: block;
   }
 }
-/* line 2194, ../sass/components/_rushdi.scss */
+/* line 2195, ../sass/components/_rushdi.scss */
 .page-node-56 .field-name-field-contact-email a {
   background: url("../images/email.png") no-repeat top center;
 }
 @media (max-width: 767px) {
-  /* line 2197, ../sass/components/_rushdi.scss */
+  /* line 2198, ../sass/components/_rushdi.scss */
   .page-node-56 .field-name-field-contact-phone-number {
     margin-right: 20px;
   }
 }
-/* line 2201, ../sass/components/_rushdi.scss */
+/* line 2202, ../sass/components/_rushdi.scss */
 .page-node-56 .field-name-field-contact-phone-number a {
   background: url("../images/phone.png") no-repeat top center;
 }
 @media (max-width: 767px) {
-  /* line 2205, ../sass/components/_rushdi.scss */
+  /* line 2206, ../sass/components/_rushdi.scss */
   .page-node-56 .group-mailphone {
     width: 120px;
     margin: 0 auto;
   }
 }
-/* line 2211, ../sass/components/_rushdi.scss */
+/* line 2212, ../sass/components/_rushdi.scss */
 .page-node-56 .field-name-field-text-before-webform {
   margin-top: 50px;
   font-family: "Knockout 30 A", "Knockout 30 B";
@@ -4547,37 +4548,37 @@ a.phone {
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
-  /* line 2211, ../sass/components/_rushdi.scss */
+  /* line 2212, ../sass/components/_rushdi.scss */
   .page-node-56 .field-name-field-text-before-webform {
     margin-top: 20px;
     margin-bottom: 20px;
   }
 }
-/* line 2223, ../sass/components/_rushdi.scss */
+/* line 2224, ../sass/components/_rushdi.scss */
 .page-node-56 form {
   width: 100%;
   float: left;
 }
-/* line 2226, ../sass/components/_rushdi.scss */
+/* line 2227, ../sass/components/_rushdi.scss */
 .page-node-56 form .webform-component {
   width: 48%;
   margin: 0 0 20px 0;
 }
 @media (max-width: 767px) {
-  /* line 2226, ../sass/components/_rushdi.scss */
+  /* line 2227, ../sass/components/_rushdi.scss */
   .page-node-56 form .webform-component {
     width: 100%;
   }
 }
-/* line 2233, ../sass/components/_rushdi.scss */
+/* line 2234, ../sass/components/_rushdi.scss */
 .page-node-56 form .webform-component--full-name, .page-node-56 form .webform-component--email {
   float: left;
 }
-/* line 2236, ../sass/components/_rushdi.scss */
+/* line 2237, ../sass/components/_rushdi.scss */
 .page-node-56 form .webform-component--subject, .page-node-56 form .webform-component--message-content {
   float: right;
 }
-/* line 2239, ../sass/components/_rushdi.scss */
+/* line 2240, ../sass/components/_rushdi.scss */
 .page-node-56 form input {
   border-bottom: 1px solid #282725;
   border-right: none;
@@ -4585,33 +4586,33 @@ a.phone {
   border-top: none;
   padding-left: 3px;
 }
-/* line 2246, ../sass/components/_rushdi.scss */
+/* line 2247, ../sass/components/_rushdi.scss */
 .page-node-56 form label {
   font-weight: normal;
   padding-left: 3px;
   padding-top: 10px;
   line-height: 14px;
 }
-/* line 2252, ../sass/components/_rushdi.scss */
+/* line 2253, ../sass/components/_rushdi.scss */
 .page-node-56 form .form-required {
   color: #282725;
 }
-/* line 2255, ../sass/components/_rushdi.scss */
+/* line 2256, ../sass/components/_rushdi.scss */
 .page-node-56 form textarea {
   border: 1px solid #282725;
 }
-/* line 2258, ../sass/components/_rushdi.scss */
+/* line 2259, ../sass/components/_rushdi.scss */
 .page-node-56 form .grippie {
   display: none;
 }
-/* line 2261, ../sass/components/_rushdi.scss */
+/* line 2262, ../sass/components/_rushdi.scss */
 .page-node-56 form .form-actions {
   font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 14px;
   float: right;
   clear: right;
 }
-/* line 2266, ../sass/components/_rushdi.scss */
+/* line 2267, ../sass/components/_rushdi.scss */
 .page-node-56 form .form-actions input {
   border: none;
   background-color: #282725;
@@ -4620,7 +4621,7 @@ a.phone {
 }
 
 /*Special page*/
-/* line 2278, ../sass/components/_rushdi.scss */
+/* line 2279, ../sass/components/_rushdi.scss */
 .node-type-special-pages .node-title {
   font-size: 32px;
   font-family: "Knockout 50 A", "Knockout 50 B";
@@ -4631,37 +4632,37 @@ a.phone {
   margin-top: 20px;
   padding: 10px;
 }
-/* line 2288, ../sass/components/_rushdi.scss */
+/* line 2289, ../sass/components/_rushdi.scss */
 .node-type-special-pages .paragraphs-items {
   width: 815px;
   margin: 0 auto;
   max-width: 100%;
 }
-/* line 2292, ../sass/components/_rushdi.scss */
+/* line 2293, ../sass/components/_rushdi.scss */
 .node-type-special-pages .paragraphs-items .field-name-field-image-title {
   font-family: "Knockout 30 A", "Knockout 30 B";
   text-transform: uppercase;
   margin: 20px 0;
   text-align: center;
 }
-/* line 2298, ../sass/components/_rushdi.scss */
+/* line 2299, ../sass/components/_rushdi.scss */
 .node-type-special-pages .paragraphs-items .field-name-field-video-title {
   font-family: "Knockout 30 A", "Knockout 30 B";
   text-transform: uppercase;
   margin: 20px 0;
   text-align: center;
 }
-/* line 2304, ../sass/components/_rushdi.scss */
+/* line 2305, ../sass/components/_rushdi.scss */
 .node-type-special-pages .paragraphs-items .field-name-field-image-paragraph, .node-type-special-pages .paragraphs-items .field-name-field-video-embed {
   text-align: center;
 }
-/* line 2308, ../sass/components/_rushdi.scss */
+/* line 2309, ../sass/components/_rushdi.scss */
 .node-type-special-pages .field-type-addthis {
   width: 815px;
   margin: 0 auto;
   max-width: 100%;
 }
-/* line 2313, ../sass/components/_rushdi.scss */
+/* line 2314, ../sass/components/_rushdi.scss */
 .node-type-special-pages .field-name-field-title-color {
   display: none;
 }
@@ -4673,16 +4674,16 @@ a.phone {
 .masonry-width:nth-child(3n+2) {margin-right:2.45% !important; margin-left:2.45% !important;}*/
 /*Article page*/
 @media (min-width: 768px) and (max-width: 3840px) {
-  /* line 2327, ../sass/components/_rushdi.scss */
+  /* line 2328, ../sass/components/_rushdi.scss */
   .node-type-article .recipe-container-left-main-recipe-image-mobile {
     display: none;
   }
-  /* line 2330, ../sass/components/_rushdi.scss */
+  /* line 2331, ../sass/components/_rushdi.scss */
   .node-type-article .article-container-left-sharing-area-mobile {
     display: none;
   }
 }
-/* line 2334, ../sass/components/_rushdi.scss */
+/* line 2335, ../sass/components/_rushdi.scss */
 .node-type-article #article-container-left {
   float: left;
   margin-right: 2%;
@@ -4690,39 +4691,39 @@ a.phone {
   margin-top: 55px;
 }
 @media (max-width: 767px) {
-  /* line 2334, ../sass/components/_rushdi.scss */
+  /* line 2335, ../sass/components/_rushdi.scss */
   .node-type-article #article-container-left {
     display: none;
   }
 }
-/* line 2343, ../sass/components/_rushdi.scss */
+/* line 2344, ../sass/components/_rushdi.scss */
 .node-type-article #article-container-right {
   float: left;
   width: 66%;
 }
 @media (max-width: 767px) {
-  /* line 2343, ../sass/components/_rushdi.scss */
+  /* line 2344, ../sass/components/_rushdi.scss */
   .node-type-article #article-container-right {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  /* line 2350, ../sass/components/_rushdi.scss */
+  /* line 2351, ../sass/components/_rushdi.scss */
   .node-type-article .field-name-field-sharing-article {
     display: none;
   }
 }
-/* line 2355, ../sass/components/_rushdi.scss */
+/* line 2356, ../sass/components/_rushdi.scss */
 .node-type-article .views-field-field-gallery {
   background-color: #efefef;
   padding: 50px 0;
 }
-/* line 2358, ../sass/components/_rushdi.scss */
+/* line 2359, ../sass/components/_rushdi.scss */
 .node-type-article .views-field-field-gallery img {
   display: block;
   margin: 0 auto;
 }
-/* line 2364, ../sass/components/_rushdi.scss */
+/* line 2365, ../sass/components/_rushdi.scss */
 .node-type-article .article-container-right-node-title .node-title {
   font-size: 32px;
   font-family: "Knockout 50 A", "Knockout 50 B";
@@ -4732,18 +4733,18 @@ a.phone {
   margin-bottom: 35px;
 }
 @media (min-width: 768px) and (max-width: 3840px) {
-  /* line 2374, ../sass/components/_rushdi.scss */
+  /* line 2375, ../sass/components/_rushdi.scss */
   .node-type-article .article-container-left-image_mobile {
     display: none;
   }
 }
-/* line 2379, ../sass/components/_rushdi.scss */
+/* line 2380, ../sass/components/_rushdi.scss */
 .node-type-article .article-container-left-image_mobile img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 2386, ../sass/components/_rushdi.scss */
+/* line 2387, ../sass/components/_rushdi.scss */
 #block-views-articles-view-block-2 .block-title {
   font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 26px;
@@ -4753,17 +4754,17 @@ a.phone {
   text-align: center;
 }
 
-/* line 2395, ../sass/components/_rushdi.scss */
+/* line 2396, ../sass/components/_rushdi.scss */
 .article-container-left-related-product-area {
   margin-top: 45px;
   float: left;
   width: 100%;
 }
-/* line 2399, ../sass/components/_rushdi.scss */
+/* line 2400, ../sass/components/_rushdi.scss */
 .article-container-left-related-product-area .view-product-display-view.view-display-id-block_4 {
   margin-top: 24px;
 }
-/* line 2401, ../sass/components/_rushdi.scss */
+/* line 2402, ../sass/components/_rushdi.scss */
 .article-container-left-related-product-area .view-product-display-view.view-display-id-block_4 .views-field-title a {
   font-family: "Knockout 50 A", "Knockout 50 B";
   font-size: 26px;

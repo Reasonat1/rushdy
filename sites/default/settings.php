@@ -217,9 +217,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'sesame_sesame',
-      'username' => 'sesame_sesame',
-      'password' => 'serst2016',
+      'database' => 'rushdi_rushdi',
+      'username' => 'rushdi_rushdi',
+      'password' => 'rurst2016',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
