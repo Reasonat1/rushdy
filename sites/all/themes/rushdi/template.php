@@ -179,3 +179,27 @@ function rushdi_select_as_links__recipe_category($vars) {
 }
 
 
+/**
+* theme_menu_link()
+*/
+function rushdi_menu_link(array $variables) {
+//add class for li
+   $variables['element']['#attributes']['class'][] = 'menu-' . $variables['element']['#original_link']['mlid'];
+//add class for a
+   $variables['element']['#localized_options']['attributes']['class'][] = 'menu-' . $variables['element']['#original_link']['mlid'];
+//dvm($variables['element']);
+  return theme_menu_link($variables);
+}
+
+
+function rushdi_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  if ($view->name != 'store_search_block') {
+    return;
+  }
+  $key = 'AIzaSyCvszID4-rO5V_mBlSj9f4C1nBnJgvjedA';
+  $google_maps = 'https://maps.googleapis.com/maps/api/js?key=' . $key . '&callback=RushdiInitMap';
+  drupal_add_js($google_maps, array('type' => 'external', 'defer' => TRUE));
+  $path = drupal_get_path('theme', 'rushdi');
+  drupal_add_js($path . '/js/srore_search.js');
+}

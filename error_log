@@ -63,3 +63,8 @@
 [17-Jul-2016 17:21:41 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 53
 [17-Jul-2016 17:21:44 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 53
 [17-Jul-2016 17:22:15 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/sesame/public_html/sites/all/themes/rushdi/templates/node.tpl.php on line 54
+[09-Aug-2016 22:19:56 Asia/Jerusalem] PHP Fatal error:  Call to undefined function facetapi_adapter_load() in /home/rushdi/public_html/sites/all/modules/custom_modules/store_search/store_search.module on line 16
+[11-Aug-2016 20:37:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/rushdi/public_html/sites/all/modules/custom_rushdi/custom_rushdi.module on line 41
+[11-Aug-2016 20:37:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/rushdi/public_html/sites/all/modules/custom_rushdi/custom_rushdi.module on line 41
+[11-Aug-2016 20:37:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/rushdi/public_html/sites/all/modules/custom_rushdi/custom_rushdi.module on line 41
+[14-Aug-2016 22:44:01 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/rushdi/public_html/sites/all/modules/custom_modules/store_search/store_search.module on line 22

@@ -137,7 +137,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal;}/*cause of knockout weighting*/
 	font-family: "Knockout 70 A", "Knockout 70 B";
 	font-size:56px;
 	text-transform:uppercase;
-	margin-top:40px;
+	margin-top:20px;
 	line-height:1;
 	margin-bottom:40px;
 }
@@ -152,6 +152,9 @@ a.phone{
     }
 }
 
+table{
+	width: 100%;
+}
 /*******  add this  ***********/
 
 .field-type-addthis{
@@ -218,11 +221,180 @@ a.phone{
 /*******  header  ***********/
 
 .top-wrapper{
-	height: 25px;
 	background-color: $blue;
 	color: #fff;
+	overflow: hidden;
+	font-family: "Knockout 50 A", "Knockout 50 B";
+	font-size: 14px;
+	text-transform: uppercase;
 	a{
 		color: #fff;
+		@include res(s-m){
+			color: $default;
+			font-size: 20px;
+		}
+	}
+	#block-views-cart-icon-view-block{
+		float: right;
+		margin-left: 47px;
+		background:url("../images/shopping-cart-icon.png") no-repeat right center;
+		padding-right: 24px;
+		.empty{
+			@include res(s-m){
+				display: none;
+			}
+		}
+		@include res(s-m){
+			background:url("../images/shopping-cart-icon-mobile.png") no-repeat center center;
+			padding: 0;
+			margin-left: 0;
+			position: absolute;
+			right: 19%;
+			top: 24px;
+			.view-header{
+				a{
+					width: 36px;
+					height: 36px;
+					display: block;
+				}
+				span{
+					display: none;
+				}
+			}
+		}
+		.view-content{
+			display: none;
+		}
+	}
+	#block-block-9{
+		float: right;
+		@include res(s){
+			display: none;
+		}
+		@include res(m){
+			position: absolute;
+			right: 31%;
+			top: 24px;
+		}
+		p{
+			margin: 0;
+		}
+		a{
+			@include res(s-m){
+				width: 80px;
+				text-align: center;
+				line-height: 20px;
+				display: block;
+			}
+		}
+	}
+}
+
+.region-cart{
+	width: 100%;
+	position: fixed;
+	z-index: 500;
+	top: 24px;
+	display: none;
+	&.display-cart{
+		display: block;
+		@include res(s-m){
+			display: none;
+		}	
+	}
+	#block-commerce-cart-cart{
+		@include width;
+		> div{
+			width: 363px;
+			float: right;	
+			.cart-contents, .empty{
+				border: 1px solid $default;
+				padding: 16px 10px;
+				box-sizing: border-box;	
+				background-color: #fff;
+				margin-top: 10px;	
+			}
+		}
+		.view-header, .empty{
+			font-size: 24px;
+			font-family: "Knockout 30 A", "Knockout 30 B";
+			padding-bottom: 12px;
+			p{
+				margin: 0;
+			}
+		}
+	}
+	.views-field-field-gallery{
+		width: 36%!important;
+		float: left!important;
+	}
+	.views-field{
+		width: 64%;
+		float: right;
+	}
+	.views-row{
+		clear: both;
+		padding-top: 20px;
+		border-top:1px solid $blue;
+		padding-bottom: 20px;
+		overflow: hidden;
+	}
+	.views-field-commerce-unit-price{
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		font-size: 14px;
+	}
+	.views-field-line-item-title{
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		font-size: 20px;
+		line-height: 24px;
+		min-height: 57px;
+	}
+	.views-field-quantity{
+		color: #717171;
+		font-size: 12px;
+	}
+	.view-footer{
+		clear: both;
+		.line-item-summary{
+			margin: 0;
+		}
+		.line-item-total{
+			width: 100%;
+			text-align: center;
+			font-family: "Knockout 30 A", "Knockout 30 B";
+			font-size: 20px;
+			border-top: 1px solid $default;
+			border-bottom: 1px solid $default;
+			padding: 9px 0;
+			.line-item-total-label{
+				font-weight: normal;
+			}
+		}
+		.links{
+			width: 100%;
+			margin: 0;
+			display: block;
+			padding-top: 15px;
+			overflow: hidden;
+			li{
+				width: 50%;
+				float: left;
+				padding: 0;
+				text-align: center;
+				a{
+					padding: 10px 30px;
+					display: inline-block;
+					color: #97d4da;
+					font-family: "Knockout 30 A", "Knockout 30 B";
+					font-size: 16px;
+					text-transform: uppercase;
+				}
+			}
+			.line-item-summary-checkout a{
+				color: #fff;
+				background-color: $default;
+			}
+		}
 	}
 }
 
@@ -231,6 +403,9 @@ a.phone{
     position: fixed;
     width: 100%;
     z-index: 400;
+    @include res(s-m){
+    	border-top: 24px solid $blue;
+    }
  }
 
 .nutritional-open{
@@ -266,7 +441,7 @@ a.phone{
 		transition: all 0.5s;
         -webkit-transition: all 0.5s;
         @include res(s-m){
-        	padding-top: 16px;
+        	padding-top: 14px;
         }
 		#block-bean-social-icons-header{
 			float: right;
@@ -284,7 +459,7 @@ a.phone{
 				margin-left:0;
 			}
 		}
-		#block-megamenu-main-menu{
+		#block-system-main-menu{
 			float: right;
 			@include res(s-m){
 				width: 100%;
@@ -295,12 +470,16 @@ a.phone{
 					margin-top: -1px;
 				}
 			}
-			.megamenu-skin-minimal {
+			.menu {
+				margin: 0;
+				padding: 0;
 			    background-color: transparent;
 				text-transform:uppercase;
 				li {
 					z-index: 0;
-					padding-bottom: 20px;
+					padding-bottom: 12px;
+					display: inline-block;
+					list-style-type: none;
 					@include res(s-m){
 						width: 100%;
 						text-align: center;
@@ -346,7 +525,7 @@ a.phone{
 .scroll{
 	#header{
 		padding-top: 2px;
-		padding-bottom: 5px;
+		padding-bottom: 1px;
 		#logo{
 			width: 90px;
 			padding-top: 7px;
@@ -364,17 +543,26 @@ a.phone{
 	.region-header{
 		padding-top: 0!important;
 		@include res(s-m){
-			margin-top: -18px;
+			margin-top: -20px;
 		}
 	}
 	.mobile-menu{
-		top: 34px;
+		top: 8px;
 		span{
 			margin-bottom: 7px;
 		}
 	}
 	&.menu-open .mobile-menu{
-		top: 30px;
+		top: 5px;
+	}
+	#block-views-cart-icon-view-block, #block-block-9{
+		@include res(s-m){
+			top: 6px;
+		}
+	}
+	#block-system-main-menu li{
+		margin-top: 6px;
+    	padding-bottom: 7px;
 	}
 }
 
@@ -679,7 +867,7 @@ a.phone{
 	}
 	#block-block-6 {	
 		margin: 0;
-		margin-top:100px;
+		margin-top:20px;
 		font-family: "Knockout 30 A", "Knockout 30 B";
 		font-size:13px;
 		@include res(s-m){ 
@@ -764,7 +952,7 @@ a.phone{
   cursor: pointer;
   height: 36px;
   position: absolute;
-  top: 47px;
+  top: 24px;
   right: 3%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -966,8 +1154,11 @@ a.phone{
 			color: $blue;
 		}
 	}
+	.field-name-field-slogan{
+		font-size: 22px;
+	}
 	.field-name-field-hp-slogan {
-		font-size: 24px;
+		font-size: 25px;
 		line-height:32px;
 		color: $blue;
 		line-height: 21px;
@@ -1064,7 +1255,8 @@ a.phone{
 				background-color:$red;
 				letter-spacing:1px;
 				padding:3px 6px;
-				font-size:20px;
+				font-size:25px;
+				line-height: 28px;
 				text-align: center;
 				min-height: 48px;
 				display: -webkit-box;
@@ -1187,6 +1379,9 @@ a.phone{
 }
 /*Recipe page*/
 .node-type-recipes {
+	article{
+		margin-top: 23px;
+	}
 	@include res(xl) {
 		.recipe-container-left-main-recipe-image-mobile {
 			display:none;
@@ -1199,7 +1394,6 @@ a.phone{
 		float:left;
 		margin-right:2%;
 		width:32%;
-		margin-top:55px;
 		@include res(s-m){ 
 			display:none;
 		}
@@ -1220,7 +1414,6 @@ a.phone{
 		}
 	}
 	.views-field-field-gallery{
-		background-color: #efefef;
 		padding: 50px 0;
 		img{
 			display: block;
@@ -1243,7 +1436,6 @@ a.phone{
 		background:$red;
 		text-align:center;
 		color:#fff;
-		margin-top:55px;
 		padding: 10px;
 		margin-bottom: 20px;
 		@include res(s-m){ 
@@ -1451,7 +1643,7 @@ a.phone{
 		.views-field-title{
 			position: relative;
 			a{
-				padding:10px 5px 33px;
+				padding:10px 5px 40px;
 				font-size: 28px;
 				line-height: 27px;
 				.field-content{
@@ -1461,7 +1653,7 @@ a.phone{
 		}
 		.categories{
 				position: absolute;
-				bottom: 0;
+				bottom: 5px;
 				text-align: center;
 				width: 100%;
 				left: 0;
@@ -1645,7 +1837,8 @@ a.phone{
 		text-decoration: underline;
 	}
 	.field-name-body{
-		margin-top: 40px;
+		padding-top: 40px;
+		clear: both;
 		p{
 			margin-top: 0;
 		}
@@ -1733,9 +1926,13 @@ a.phone{
 	}
 	.field-field-product-weight{
 		float: left;
-		margin-right: 45px;
+		margin-right: 38px;
 		@include res(m){
 			margin-right: 28px;
+		}
+		@include res(s){
+			top: -33px;
+			position: relative;
 		}
 	}
 	.field-commerce-price{
@@ -1743,19 +1940,71 @@ a.phone{
 		font-size: 30px;
 		line-height: 24px;
 		float: left;
-		margin-right: 45px;
+		margin-right: 38px;
+		margin-top: -4px;
+		table{
+			margin: 0;
+			@include res(s){
+				text-align: left;
+				td{
+					padding: 0;
+				}
+			}
+			tr{
+				border:none;
+			}
+			.price-amount{
+				font-size: 30px;
+			}
+			.commerce-price-savings-formatter-list td{
+				font-size: 17px;
+				text-align: center;
+			}
+			.commerce-price-savings-formatter-price td{
+				color: $default;
+			}
+		}
 		@include res(m){
-			margin-right: 28px;
+			margin-right: 17px;
+		}
+		@include res(s){
+			clear: both;
+			margin-top: -20px;
+			height: 65px;
 		}
 	}
-	.form-item-quantity{
+	.field-name-field-product{
+		.form-submit{
+    		background-color: #000;
+    		color: #fff;
+    	    font-family: "Knockout 50 A","Knockout 50 B";
+		    font-size: 14px;
+		    padding: 12px 18px;
+		    border: none;
+		    padding: 10px 18px 9px;
+    		position: relative;
+    		text-transform: uppercase;
+    		top: -6px;
+    		float: right;
+    		@include res(s-m){
+		    	width: 100%;
+		    	font-size: 25px;
+    		}
+		}
+	}
+}
+
+.form-item-quantity, .views-field-edit-quantity .form-item{
 		float: left;
 		margin: -6px 0 0 0;
 		position: relative;
-		@include res(s){
-    		clear: both;
-    		margin-bottom: 31px;
-    		margin-top: 47px;
+		@include res(s-m){
+    		margin-bottom: 20px;
+    		float: right;
+    		margin-top: -7px;
+    	}
+    	@include res(s){
+    		margin-top: -38px;
     	}
 		label{
 			font-weight: normal;
@@ -1776,7 +2025,7 @@ a.phone{
 				margin-top: -22px;
 			}
 		}
-		.commerce-quantity-plusminus-link a.button{
+	.commerce-quantity-plusminus-link a.button{
 			background: url("../images/quantity-arrows.png") no-repeat 5px 6px;
 		    border-radius: 0;
 		    height: 18px;
@@ -1828,33 +2077,6 @@ a.phone{
 					background-position: 7px -24px!important;
 				}
 			}
-		}
-	}
-	.field-name-field-product{
-		.form-submit{
-    		background-color: #000;
-    		color: #fff;
-    	    font-family: "Knockout 50 A","Knockout 50 B";
-		    font-size: 14px;
-		    padding: 12px 18px;
-		    border: none;
-		    padding: 10px 18px 9px;
-    		position: relative;
-    		text-transform: uppercase;
-    		top: -6px;
-    		float: right;
-    		@include res(s-m){
-    			text-indent: -9999px;
-		    	background: url("../images/add-to-cart.png") no-repeat center center #000;
-		    	width: 85px;
-		    	height: 85px;
-		    	padding: 0;
-		    	top: -28px;
-    		}
-    		@include res(s){
-    			top: 25px;
-    		}
-		}
 	}
 }
 
@@ -2116,7 +2338,7 @@ a.phone{
 }
 
 /*Title colors*/
-.purple .purple a {
+.purple, .purple a {
 	background-color: $purple !important;
 }
 .blue, .blue a {
@@ -2286,7 +2508,7 @@ a.phone{
 		margin-top: 20px;
 		padding: 10px;
 	}
-	.paragraphs-items  {
+	.paragraphs-item-long-text, .paragraphs-item-image-paragraph {
 		width:815px;
 		margin:0 auto;
 		max-width: 100%;
@@ -2354,7 +2576,6 @@ a.phone{
 		}
 	}
 	.views-field-field-gallery{
-		background-color: #efefef;
 		padding: 50px 0;
 		img{
 			display: block;
@@ -2409,4 +2630,950 @@ a.phone{
 	}
 }
 
+/**********   paragraph style   ***********/
 
+.field-name-field-sharing-recipe{
+	margin-top: 30px!important;
+}
+
+.field-name-field-paragraphs{
+	.field-item{
+		clear: both;
+		overflow: hidden;
+	}
+	.field-name-field-paragraph-title{
+		margin: 25px 0 45px;
+		text-transform: uppercase;
+		font-size: 29px;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		text-align: center;
+	}
+}
+
+.paragraphs-item-top-down-style{
+	.views-row{
+		float: left;
+		margin-right: 2.5%;
+		overflow: hidden;
+		@include res(s-m){
+			margin: 0 0 20px 0;
+		}
+			.views-field-title a, .views-field-title-1 a{
+				color:#fff;
+				font-family: "Knockout 50 A", "Knockout 50 B";
+				font-size:20px;
+				text-align:center;
+				background: $purple;
+				padding:3px 6px;
+				display:block;
+				margin-bottom:5px;
+				min-height: 60px;
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				align-items: center;
+    			justify-content: center;				
+    			text-align: center;
+    			text-transform: uppercase;
+			}
+			.views-field-title-1 a{
+				margin: 5px 0 0 0;
+			}
+	}
+	.views-row:nth-child(odd){
+		@include res(m){
+			float: left;
+		}
+		.views-field-title-1{
+			display: none;
+		}
+	}
+	.views-row:nth-child(even){
+		@include res(m){
+			float: right;
+		}
+		.views-field-title{
+			display: none;
+			@include res(s){
+				display: block;
+			}
+		}
+	}
+	.views-row{
+		@include res(s){
+			width: 100%!important;
+			.views-field-title-1{
+				display: none;
+			}
+		}
+	}
+	.views-row-1, .views-row-4{
+		width: 18%;
+		@include res(m){
+			width: 42%;
+		}
+	}
+	.views-row-2, .views-row-3{
+		width: 28.25%;
+		@include res(m){
+			width: 56%;
+		}
+	}
+	.views-row-4{
+		margin-right: 0;
+	}
+	img{
+		height: 100%;
+	    max-width: none;
+	    width: auto;
+	    display: block;
+	    margin: 0 auto;
+	}
+}
+
+.paragraphs-item-5-items-reference{
+	.field-name-field-paragraph-title{
+		margin-top: 65px;
+	}
+	.views-row{
+		float: left;
+		width: 18%;
+		margin-right: 2.5%;
+		@include res(s-m){
+			width: 48%;
+			margin-right: 4%;
+			margin-bottom: 20px;
+		}
+	}
+	.views-row:nth-child(even){
+		@include res(s-m){
+			margin-right: 0;
+		}
+	}
+	.views-row-last{
+		margin-right: 0;
+		@include res(s-m){
+			display: none;
+		}
+	}
+	.views-field-title{
+		margin-top: 7px;
+		a{
+			font-size: 26px;
+			color: $default;
+			font-family: "Knockout 30 A", "Knockout 30 B";
+		}
+	}
+}
+
+.paragraphs-item-3-items-paragraph{
+	.field-name-field-paragraph-title{
+		margin-top: 75px;
+	}	
+}
+
+.block-webform{
+	width: 760px;
+	margin: 0 auto;
+	max-width: 100%;
+	.node-title{
+		margin: 90px 0 58px;
+		padding: 0;
+		color: $default;
+		background-color: transparent;
+	}
+	form{
+		width: 100%;
+		float: left;
+		.webform-component{
+			width: 48%;
+			margin: 0 0 20px 0;
+			@include res(s-m){
+				width: 100%;
+			}
+		}
+		.webform-component--full-name, .webform-component--title, .webform-component--company, .webform-component--email{
+			float: left;
+		}
+		.webform-component--subject, .webform-component--message-content{
+			float: right;
+		}
+		textarea{
+			height: 127px;
+		}
+		input{
+			border-bottom: 1px solid $default;
+			border-right: none;
+			border-left: none;
+			border-top: none;
+			padding-left: 3px;
+		}
+		label{
+			font-weight: normal;
+			padding-left: 3px;
+			padding-top: 10px;
+			line-height: 14px;
+		}
+		.form-required{
+			color: $default;
+		}
+		textarea{
+			border: 1px solid $default;
+		}
+		.grippie{
+			display: none;
+		}
+		.form-actions{
+			font-family: "Knockout 50 A", "Knockout 50 B";
+			font-size: 14px;
+			width: 100%;
+			clear: both;
+			input{
+				float: right;
+				border: none;
+				background-color: $default;
+				color: #fff;
+				padding: 10px 38px;
+			}
+		}
+	}
+}
+
+/**********   instegram  *********/
+
+#block-block-8{
+	clear: both;
+	.block-title{
+		text-transform: uppercase;
+		font-size: 29px;
+		font-family: "Knockout 50 A", "Knockout 50 B";
+		margin-bottom: 0;
+		text-align: left;
+	}
+}
+
+/******   breadcrumbs  ***********/
+
+.page-products{
+	.breadcrumb{
+		display: none;
+	}
+}
+
+.breadcrumb{
+	padding-top: 23px;
+	color: #717171;
+	font-size: 12px;
+	a{
+		color: #717171;
+	}
+}
+
+/*******  cart  & checkout ***********/
+
+.page-cart{
+	#page-title{
+		float: left;
+	}
+	.empty{
+		clear: both;
+	}
+	.view-commerce-cart-form{
+		#edit-actions{
+			#edit-checkout{
+				display: none;
+			}
+			#edit-submit{
+				padding: 13px 30px 10px;
+				display: inline-block;
+				color: #97d4da;
+				font-family: "Knockout 30 A", "Knockout 30 B";
+				font-size: 16px;
+				text-transform: uppercase;
+				float: right;
+				background-color: #fff;
+				border:none;
+				@include res(s-m){
+					display: none;
+				}
+			}
+		}
+		.line-item-summary{
+			margin-bottom: 0;
+		}
+		.view-header{
+			.total{
+			    font-family: "Knockout 70 A","Knockout 70 B";
+			    font-size: 56px;
+			    margin-bottom: 40px;
+			    margin-top: 20px;
+			    text-transform: uppercase;
+			    line-height: 56px;
+			    margin-left: 5px;
+			    float: left;
+			}
+	   	}
+	   	.line-item-total{
+	   		font-family: "Knockout 30 A","Knockout 30 B";
+		    font-size: 29px;
+	   	}
+	}
+	.view-header, .footer{
+		.button{
+			padding-top: 23px;
+			a{
+				padding: 10px 30px;
+				display: inline-block;
+				color: #97d4da;
+				font-family: "Knockout 30 A", "Knockout 30 B";
+				font-size: 16px;
+				text-transform: uppercase;
+				float: right;
+				@include res(s-m){
+					width: 50%;
+					box-sizing:border-box;
+					text-align: center;
+					padding: 10px;
+				}
+			}
+			a.checkout{
+				color: #fff;
+				background-color: $default;
+			}
+			a.continue{
+				@include res(s-m){
+					float: left;
+				}
+			}
+		}
+	}
+	.view-header .button{
+		@include res(s-m){
+			display: none;
+		}
+	}
+	.footer-after-total{
+		font-size: 12px;
+		text-align: right;
+		border-bottom: 1px solid $blue;
+		padding-bottom: 26px;
+		color: #717171;
+	}
+	.view-content{
+		clear: both;
+	}
+}
+
+.view-commerce-cart-form, #edit-cart-contents, .view-commerce-cart-summary{
+	.view-content{
+		table{
+			thead{
+				th{
+					color: #9a9a9a;
+					font-size: 16px;
+				    text-transform: uppercase;
+				    border-bottom :1px solid $blue;
+					padding-bottom: 20px;
+					margin-bottom: 30px;
+					font-weight: normal;
+				}
+			}
+			tbody{
+				td{
+					position: relative;
+					padding-bottom: 30px;
+					padding-top: 30px;
+				}
+				tr{
+					background-color: #fff;
+					border-bottom :1px solid $blue;
+				}
+				.views-field-line-item-title{
+					font-family: "Knockout 30 A", "Knockout 30 B";
+					font-size: 24px;
+					.title{
+						font-family: "Knockout 30 A", "Knockout 30 B";
+						margin-bottom: 25px;
+						font-size: 24px;
+						@include res(s-m){
+							margin-bottom: 10px;
+						}
+					}
+					.weight{
+				    	text-transform: uppercase;
+				    	font-family: 'Open Sans', sans-serif;
+				    	@include res(s-m){
+				    		display: none;
+				    	}
+					}
+					.remove input{
+						color: #717171;
+	    				font-size: 12px;
+	    				position: absolute;
+	    				bottom: 30px;
+	    				background-color: transparent;
+	    				border:none;
+	    				box-shadow: none;
+	    				font-family: 'Open Sans', sans-serif;
+	    				padding: 0;
+	    				@include res(s-m){
+	    					position: relative;
+	    					bottom: 0;
+	    				}
+					}
+					.qty{
+						display: none;
+						@include res(s-m){
+							display: block;
+						}
+					}
+				}
+				.views-field-commerce-total{
+					font-family: "Knockout 30 A", "Knockout 30 B";
+					margin-bottom: 25px;
+					font-size: 29px;
+				}
+			}
+			.views-field-field-gallery{
+				width: 21%;
+			}
+			.views-field-line-item-title{
+				width: 40%;
+			}
+			.views-field-commerce-total{
+				text-align: right;
+				padding-right: 0;
+			}
+			.views-field-edit-quantity{
+				@include res(s-m){
+					display: none;
+				}
+				.label{
+					font-weight: normal;
+					float: left;
+					margin-right: 10px;
+				}
+				.form-item{
+					margin-top: -5px;
+				}
+			}
+		}
+	}
+}
+
+#edit-cart-contents, .view-commerce-cart-summary{
+	td{
+		padding: 10px 0;
+	}
+	.views-field-quantity{
+		@include res(s-m){
+			display: none;
+		}
+	}
+}
+
+.page-checkout{
+	.fieldset-legend{
+	    display: block;
+	    font-family: "Knockout 70 A","Knockout 70 B";
+	    font-size: 26px;
+	    padding: 35px 0 10px;
+	    position: relative;
+	    text-transform: uppercase;
+	}
+	.cart_contents{
+		.fieldset-legend{
+			padding-top: 0;
+		}
+	}
+	fieldset{
+		border:none;
+		padding: 0;
+		margin: 0;
+		.description{
+	    	margin: 0;
+	    	color: #717171;
+	    	font-size: 12px;
+	    }
+		.form-item{
+			margin: 0 0 10px;
+		}
+	}
+	.cart_contents, .checkout-review{
+		.view-footer{
+			tbody{
+				border:none;
+			}
+			tr{
+				background-color: #fff;
+				border:none;
+			}
+			.component-total{
+					font-family: "Knockout 30 A", "Knockout 30 B";
+					margin-bottom: 25px;
+					font-size: 29px;
+			}
+			td{
+				padding-bottom: 14px;
+			}
+			.commerce-order-handler-area-order-total .commerce-price-formatted-components{
+				width: 220px;
+			}
+		}
+	}
+	.commerce_coupon{
+		.form-item-commerce-coupon-coupon-code{
+			float: left;
+			@include res(m){
+				width: 79%;
+			}
+		}
+		.form-submit{
+		    border: medium none;
+		    color: #fff;
+		    display: inline-block;
+		    font-family: "Knockout 30 A","Knockout 30 B";
+		    font-size: 16px;
+		    margin-left: 5%;
+		    margin-top: 24px;
+		    padding: 7px 30px 6px;
+		    text-transform: uppercase;
+			background-color: $default;
+			width: auto;
+			@include res(s){
+				margin: 0;
+			}
+			@include res(m){
+				width: 20%;
+				float: right;
+				margin: 24px 0 0 0;
+				padding: 7px 0 6px;
+			}
+		}
+	}
+	.checkout-buttons{
+		margin-top: 30px;
+	}
+	.checkout-continue, .checkout-cancel, .form-submit{
+		    border: medium none;
+		    color: #fff;
+		    display: inline-block;
+		    font-family: "Knockout 30 A","Knockout 30 B";
+		    font-size: 16px;
+		    margin-right: 17px;
+		    padding: 7px 30px 6px;
+		    text-transform: uppercase;
+			background-color: $default;	
+	}
+	.checkout-cancel, .checkout-back {
+		color: #97d4da;
+		background-color: #fff;
+		padding-left: 15px;
+	}
+	.form-item-customer-profile-billing-commerce-customer-address-und-0-premise,
+	.form-item-customer-profile-shipping-commerce-customer-address-und-0-premise{
+			display: none;
+	}
+	.account{
+		input{
+			width: 30%;
+			@include res(s-m){
+				width: 100%;
+			}
+		}
+	}
+	.form-item-commerce-coupon-coupon-code{
+		width: 30%;
+		@include res(s){
+			width: 100%;
+		}	
+		input{
+			width: 100%;
+		}
+	}
+	.field-type-addressfield .form-wrapper > div{
+		width: 30%;
+		float: left;
+		margin-right: 5%;
+		@include res(s){
+			width: 100%;
+		}
+		@include res(m){
+			width: 48%;
+			margin-right: 4%;
+		}
+		input, select{
+			width: 100%;
+		}
+	}
+	.street-block{
+		margin-right: 0!important;
+		@include res(m){
+			margin-right: 4%!important;
+		}
+	}
+	.name-block{
+		.form-type-textfield{
+			width: 100%;
+		}
+		@include res(m){
+			margin-right: 0!important;
+		}
+	}
+	.addressfield-container-inline.locality-block{
+		clear: both;
+		width: 100%!important;
+		margin-right: 0!important;
+		.form-item{
+			width: 30%;
+			float: left;
+			margin-right: 5%;
+			@include res(s){
+				width: 100%;
+			}
+			@include res(m){
+				width: 48%;
+				margin-right: 4%!important;
+			}	
+			input{
+				width: 100%;
+			}
+		}
+		.form-item-customer-profile-billing-commerce-customer-address-und-0-postal-code,
+		.form-item-customer-profile-shipping-commerce-customer-address-und-0-postal-code{
+			@include res(m){
+				margin-right: 0!important;
+			}
+		}
+	}
+	.checkout_review .checkout-review{
+		.pane-title{
+			background-color: #fff;
+			display: block;
+		    font-family: "Knockout 70 A","Knockout 70 B";
+		    font-size: 26px;
+		    padding: 35px 0 10px;
+		    position: relative;
+	    	text-transform: uppercase;
+		}
+		td{
+			padding: 0!important;
+		}
+		tr{
+			border:none;
+		}
+		.view .view-content{
+			td{
+				padding: 30px 0!important;
+			}
+			tr{
+				border-bottom: 1px solid $blue;
+			}
+		}
+		.view .view-footer{
+			td{
+				padding-bottom: 14px!important;
+			}
+		}
+	}
+	.checkout-help{
+		margin-bottom: 20px;
+	}
+}
+
+
+/********   map page ************/
+
+#rushdi-map {
+	width:100%;
+	height:500px;
+	float: left;
+	@include res(s-m){
+		display: none;
+	}
+}
+
+#block-views-store-search-block-block-1 {
+	padding-top: 30px;
+	h2 {
+		font-family: "Knockout 70 A","Knockout 70 B";
+		font-size:56px;
+		text-transform:uppercase;
+		padding-bottom:50px;
+	}
+	.view-header{
+		margin-top: 10px;
+	}
+	.view-id-store_search_block {
+		.right{
+			width:28%;
+			float: right;
+			@include res(s-m){
+				width: 100%;
+			}
+		}
+		.left{
+			width: 70%;
+			float: left;
+			@include res(s-m){
+				width: 100%;
+			}
+		}
+		.view-content{
+			height:500px;
+			overflow-y:scroll;
+			display:block;
+			margin-top: 12px;
+			.views-row {
+				font-size: 16px;
+    			line-height: 20px;
+				padding:10px;
+				.views-field-title {
+					font-family: "Knockout 50 A","Knockout 50 B";
+					text-transform:uppercase;
+				}
+				.views-field-field-location-2{
+					padding-top: 10px; 
+				}
+				.views-field-field-phone-number{
+					padding-top:30px;
+					.views-label-field-phone-number{
+						float:left;
+						padding-right:5px;
+					}
+				}
+				.views-field-field-geofield-distance{
+					position:absolute;
+					clip: rect(1px, 1px, 1px, 1px);
+					height: 1px;
+					overflow:hidden;
+				}
+			}
+			.views-row:nth-child(odd) {
+				background-color:#eaf6f8;
+			}
+		}
+		.view-filters{
+			#views-exposed-form-store-search-block-block-1{
+				float: right;
+				width: calc(100% - 120px);
+			}
+			.views-exposed-form .views-exposed-widget{
+				padding: 0;
+			}
+			.views-widget-filter-field_geofield_distance{
+				width: calc(100% - 135px);
+			}
+		}
+		#edit-field-geofield-distance-wrapper{
+			.form-item-field-geofield-distance-distance, .form-item-field-geofield-distance-unit, span {
+				position:absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+				height: 1px;
+				overflow:hidden;
+			}
+			.form-type-geofield-proximity{
+				margin: 0;
+				width: 100%;
+			}
+			#edit-field-geofield-distance-origin {
+				border:0px;
+				border-bottom: 1px solid $default;
+				width: 100%;
+			}
+			.in-field-labels-processed{
+				z-index:100;
+				font-weight:normal;
+			}
+		}
+		.views-submit-button {
+			float:right;
+			#edit-submit-store-search-block{
+				color: white;
+				font-family: "Knockout 50 A","Knockout 50 B";
+				font-size: 14px;
+				text-transform: uppercase;
+				padding: 8px 12px 5px 14px;
+				background-color: $default;
+				border:none;
+				margin: 0;
+				width: 105px;
+			}
+		}
+	}
+	.distance{
+		float:right;
+		color:#9ACD32;
+	}
+	#list-title{
+		color: $default;
+		font-size: 18px;
+		text-transform:uppercase;
+		font-family: "Knockout 50 A","Knockout 50 B";
+		padding-top: 3px;
+	}
+	#my-location{
+	    color: #97d4da;
+	    float: left;
+	    font-family: "Knockout 30 A","Knockout 30 B";
+	    font-size: 16px;
+	    padding-right: 18px;
+	    text-transform: uppercase;
+		background: url("../images/nav_arrow.png") no-repeat right 10px;
+		float: left;
+		padding-top: 4px;
+		width: 85px;
+	}
+}
+
+.form-required{
+	color: $red;
+}
+
+.page-node-229{
+	.node-title{
+		color: black;
+		font-family: "Knockout 70 A","Knockout 70 B";
+		font-size: 56px;
+		line-height: 48px;
+		text-align: left;
+		background-color: transparent;
+		padding: 0;
+	}
+}
+
+/*******  message  *********/
+
+.messages{
+	padding: 10px;
+	background-image: none;
+	background-color: #fff; 
+	color: $default;
+	&.status{
+		border:2px solid $green;
+		a{
+			color: $green;
+		}
+	}
+	&.error{
+		border:2px solid $red;
+		a{
+			color: $red;
+		}		
+	}
+}
+
+/*****  press kit  *******/
+
+#block-bean-press-block-boxes{
+	width: 760px;
+	max-width: 100%;
+	margin: 0 auto;
+	.field-name-field-press-bundle > .field-items{
+		> .field-item{
+			float: left;
+			width: 26.666667%;
+			margin-right: 10%;
+			margin-bottom: 80px;
+			@include res(s){
+				width: 100%;
+				margin-bottom: 20px;
+				margin-right: 0!important;
+			}
+		}
+		> .field-item:nth-child(3n){
+			margin-right: 0;
+		}
+	}
+	.field-name-field-press-kit-image{
+		height: 200px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		img{
+			margin: 0 auto;
+			display: block;
+		}
+		@include res(m){
+			height: 180px;
+			margin-bottom: 0;
+		}
+		@include res(s){
+			height: auto;
+			margin-bottom: 5px;
+		}
+	}
+	.field-name-field-press-kit-link{
+		font-family: "Knockout 30 A", "Knockout 30 B";
+		text-align: center;
+		a{
+			color: $default;
+		}
+	}
+}
+
+#block-bean-press-kit-downloader{
+	border-top: 1px solid $default;
+	padding-top: 80px;
+	position: relative;
+	margin-bottom: 50px;
+	.block-title{
+		width: 800px;
+		margin: 0 auto;
+		max-width: 100%;
+		background-color: $red;
+		color: #fff;
+	    font-size: 30px;
+	    line-height: 1;
+	    margin-bottom: 3px;
+	    text-align: center;
+	    font-family: "Knockout 50 A", "Knockout 50 B";
+	    padding: 10px;
+	}
+	.content{
+		width: 800px;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	.field-name-field-press-text{
+		width: 45%;
+		margin-top: 40px;
+		float: left;
+		@include res(s-m){
+			width: 100%;
+		}
+		p{
+			margin: 0;
+		}
+	}
+	.field-name-field-downloadble-file{
+		position: absolute;
+		bottom: 0;
+		right: 25%;
+		padding: 10px;
+		@include res(s-m){
+		    bottom: auto;
+		    clear: both;
+		    padding-top: 30px;
+		    position: relative;
+		    right: 0;
+		    text-align: center;
+		}
+		.file{
+			background-color:$default;
+			color:white;
+			font-size:14px;
+			font-family: "Knockout 50 A","Knockout 50 B";
+			padding:10px;
+			text-transform:uppercase;
+			a{
+				color:white;
+			}
+		}
+		.file-icon, .file-size{
+			display: none;
+			margin-top: 20px;
+		}
+	}
+}

@@ -7,6 +7,8 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
+          <?php print render($page['cart']); ?>
+
 
       <div class="sticky-area">
     <div class="mobile-menu close">
@@ -71,13 +73,13 @@
 
     <div id="content" class="column" role="main">
       <?php print $breadcrumb; ?>
+      <?php print $messages; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (($title) && (!$node)) { ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
       <?php } ?> 
       <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
       <?php print render($tabs); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>

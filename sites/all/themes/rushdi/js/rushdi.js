@@ -162,9 +162,44 @@ Drupal.behaviors.my_custom_behavior = {
 	    });
 	});
 
+	$(document).ready(function(){
+	    $("#block-views-cart-icon-view-block").hover(function(){
+	        $(".region-cart").addClass("display-cart");
+	        },function(){
+	        $(".region-cart").removeClass("display-cart");
+	    });
+	    $(".region-cart #block-commerce-cart-cart .content").hover(function(){
+	        $(".region-cart").addClass("display-cart");
+	        },function(){
+	        $(".region-cart").removeClass("display-cart");
+	    });
+	});
+
+
 
   }
 };
 
 
 })(jQuery, Drupal, this, this.document);
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) {
+                var message = Drupal.t('Please fill out this field');
+                e.target.setCustomValidity(message);
+            }
+   			if (e.target.validity.typeMismatch) {
+   				var message = Drupal.t('Please fill out a valid email');
+				e.target.setCustomValidity(message);
+	   		}
+        };
+        elements[i].oninput = function(e) {
+            e.target.setCustomValidity("");
+        };
+    }
+
+})

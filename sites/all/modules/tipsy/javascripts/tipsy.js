@@ -24,7 +24,7 @@
       }
       if (Drupal.settings.tipsy.custom_selectors) {
         var selectors = Drupal.settings.tipsy.custom_selectors;
-        $(selectors).each(function(){
+        $.each(selectors, function(){
           var selector = $(this)[0].selector;
           var options = $(this)[0].options;
           var tooltipElement = $(selector);
