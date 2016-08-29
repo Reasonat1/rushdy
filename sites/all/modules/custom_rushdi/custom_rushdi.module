@@ -1,0 +1,48 @@
+<?php
+ 
+
+function custom_rushdi_page_alter(&$page) {
+  // Make sure you're on the right page
+  if ($_GET['q'] == 'cart') {
+    drupal_set_title('My cart');
+  }
+}
+
+function custom_rushdi_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id)  {
+  case 'views_form_commerce_cart_form_default':
+      foreach ($form['edit_delete'] as $row_id => $row) {
+        if(isset($form['edit_delete'][$row_id]['#value'])){
+            $form['edit_delete'][$row_id]['#value'] = 'Remove item';
+            }
+        }
+  break;
+  }
+}
+
+/*****  change text when cart empty  ********/
+
+
+
+function custom_rushdi_theme_registry_alter(&$theme_registry) {
+  global $theme_key;
+  static $executed = array();
+  if (isset($executed[$theme_key])) {
+    return;
+  }
+  $executed[$theme_key] = TRUE;
+$theme_registry["commerce_cart_empty_page"]['function'] = "custom_rushdi_commerce_cart_empty_page";
+$theme_registry["commerce_cart_empty_block"]['function'] = "custom_rushdi_commerce_cart_empty_block";
+
+}
+
+
+function custom_rushdi_commerce_cart_empty_page() {
+  return t('<div class="empty">You have no product in your cart.<a href="/products"> Go ahead</a> and add some Sesame love.</div>');
+}
+
+function custom_rushdi_commerce_cart_empty_block() {
+  return t('<div class="empty">You have no product in your cart.<a href="/products"> Go ahead</a> and add some Sesame love.</div>');
+}
+
+

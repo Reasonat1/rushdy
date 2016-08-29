@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * Code for the store search.
+ */
+
+function store_search_views_post_render(&$view, &$output, &$cache) {
+	
+
+ if ($view->name != 'store_search_block') {
+    return;
+  }
+
+  if (empty($view->result)) {
+	 drupal_add_js(array('store_map_data' => ''), 'setting'); 
+    return;
+  }
+  
+ //drupal_add_js(array('store_map_datas' => $view->result), 'setting');
+
+  foreach ($view->result as $key=>$value) {
+	  $my_distans=$value->field_data_field_location_field_geofield_distance;
+	  $my_entity=$value->_field_data["nid"]["entity"];	
+  
+//$id = $value->entity;
+//$entity = entity_load_single('node', $id);
+$store_js[]=array(
+  'title'=>$my_entity->title,
+  'adress'=>$my_entity->field_store_address,
+  'distans'=>$my_distans,
+  'geo'=>$my_entity->field_location_2["und"][0]);
+  }
+
+  
+  drupal_add_js(array('store_map_data' => $store_js), 'setting');
+ 
+}

@@ -1,0 +1,5 @@
+
+name = Custom Rushdi Module
+core = 7.x
+package = Tikke
+files[]= custom_rushdi.module

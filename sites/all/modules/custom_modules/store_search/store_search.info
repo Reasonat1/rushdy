@@ -1,0 +1,23 @@
+name = store search
+core = 7.x
+
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = metatag
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = search_api_views
+dependencies[] = views
+
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[metatag][] = global
+features[metatag][] = global:403
+features[metatag][] = global:404
+features[metatag][] = global:frontpage
+features[metatag][] = node
+features[metatag][] = taxonomy_term
+features[metatag][] = user
+features[search_api_index][] = stores
+features[search_api_server][] = Database_server
+features[views_view][] = store_search_view

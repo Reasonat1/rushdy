@@ -1,0 +1,11 @@
+.in-field-labels-form-processed .form-type-password ,
+.in-field-labels-form-processed .form-type-textfield ,
+.in-field-labels-form-processed .form-type-textarea {
+  position: relative;
+}
+.in-field-labels-form-processed .form-type-password label ,
+.in-field-labels-form-processed .form-type-textfield label ,
+.in-field-labels-form-processed .form-type-textarea label {
+  position: absolute;
+}
+
